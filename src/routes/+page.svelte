@@ -6,12 +6,17 @@
   export let data: PageData = { posts: [] };
 </script>
 
+<svelte:head>
+  <title>Juho Välimäki's Personal Website • https://vlimki.dev</title>
+  <meta name="description" content="Juho Välimäki's Blog" />
+</svelte:head> 
+
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
     <p class="text">I'm a self-taught software/web engineer with roughly four years of development experience. I'm very interested in machine learning and mathematics, and that's what I am currently dedicating my time to pursuing.</p>
-    <p>On the website I plan to write mostly about all things related to machine learning, mathematics and software engineering.</p>
-    <p>Contact by e-mail at <b><a href="mailto:root@vlimki.dev">root@vlimki.dev</a></b>.</p>
+    <p>On the website I plan to write mostly about all things related to machine learning, mathematics and software engineering. I look forward to writing about the new things I learn and discover, hoping it'll be of use for someone else as well.</p>
+    <p>Contact me by e-mail at <b><a href="mailto:root@vlimki.dev">root@vlimki.dev</a></b>.</p>
     <h2 class="mb-[-5px]">Latest Posts</h2>
     <ul>
     {#each data.posts as post}

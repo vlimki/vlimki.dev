@@ -93,7 +93,11 @@ nav a {
   line-height: 1.3rem;
 }
 
-a:not(nav a):not(.post) {
+.code {
+  font-family: "Roboto Mono";
+}
+
+a:not(nav a):not(.post):not(.footer-link) {
   color: #0471d7;
   font-weight: 500;
 }

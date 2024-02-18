@@ -3,10 +3,19 @@
   import { formatDate } from '$lib/utils';
 
   export let data: PageData;
+  let query = "";
 </script>
 
-<h1 class="text-center">Posts</h1>
-{#each data.posts as post}
+<svelte:head>
+  <title>Writing • Juho Välimäki</title> 
+  <meta name="description" content="Juho Välimäki's Blog" />
+</svelte:head> 
+
+<div class="flex flex-col w-full items-center justify-center">
+  <h1 class="text-center">Posts</h1>
+  <input type="text" class="code my-4 code w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search..." bind:value={query} />
+</div>
+{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase())) as post}
   <a href={`/writing/${post.slug}`} class="post">
     <h2>{post.title}</h2>
     <p class="text-[#666666] mt-[-10px]">{post.description}</p>

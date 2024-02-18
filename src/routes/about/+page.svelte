@@ -1,1 +1,2 @@
-<h1 class="text-center">Coming soon.</h1>
+<h1 class="">About</h1>
+<p>Coming soon.</p>
