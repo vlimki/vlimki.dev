@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Merriweather";
+  color: #333333;
+  background: #fbfbfb;
+} 
+
+* {
+  line-height: 1.8rem;
+}
+
+code:not(nav a code) {
+  font-family: "Roboto Mono";
+  color: #aaaaaa;
+}
+
+nav a {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@layer base {
+  h1 {
+    font-size: 27px;
+  }
+
+  h2 {
+    @apply text-xl;
+    @apply mt-5;
+    @apply mb-2;
+    @apply font-semibold;
+  }
+
+  h3 {
+    @apply mt-4;
+    @apply mb-2;
+    @apply font-medium;
+    @apply text-lg;
+  }
+
+  pre[class*=language-] {
+    @apply bg-[#ffffff];
+    @apply rounded-lg;
+    @apply text-sm;
+    line-height: 1.5rem;
+    font-family: "Roboto Mono";
+    @apply mt-3; 
+  }
+  pre::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+    @apply rounded-full;
+    background: #ebebeb;
+  }
+
+/* Track */
+  pre::-webkit-scrollbar-track {
+    background: #fbfbfb;
+    @apply rounded-sm;
+  }
+
+/* Handle */
+  pre::-webkit-scrollbar-thumb {
+    background: #ebebeb;
+    @apply rounded-md;
+  }
+
+/* Handle on hover */
+  pre::-webkit-scrollbar-thumb:hover {
+    background: #0471d7;
+  }
+
+  p {
+  }
+
+  ul {
+    @apply list-disc;
+    @apply text-sm;
+  }
+
+  ul li {
+    @apply ml-5;
+    @apply my-2;
+  }
+}
+
+.text-xs {
+  line-height: 1.3rem;
+}
+
+a:not(nav a):not(.post) {
+  color: #0471d7;
+  font-weight: 500;
+}
+
+a:not(.post):hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+p:not(nav p) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.8rem;
+}
+
