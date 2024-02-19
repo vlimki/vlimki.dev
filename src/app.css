@@ -34,6 +34,7 @@ nav a {
     @apply mt-5;
     @apply mb-2;
     @apply font-semibold;
+    @apply flex flex-row-reverse w-full items-center justify-end;
   }
 
   h3 {
@@ -111,4 +112,19 @@ p:not(nav p) {
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 1.8rem;
+}
+
+
+h2:hover .icon {
+  z-index: 100;
+  display: block;
+  margin-left: 10px;
+  background-image: url("$lib/assets/link.png");
+  background-size: 16px 16px;
+}
+
+.icon-link, .icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 0px;
 }
