@@ -24,9 +24,35 @@ nav a {
   margin-right: 20px;
 }
 
+.img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  top: 100%;
+  left: 100%;
+  border: 1px solid #ebebeb;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container * {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 @layer base {
   h1 {
     font-size: 27px;
+    line-height: 2.5rem;
   }
 
   h2 {
@@ -34,7 +60,7 @@ nav a {
     @apply mt-5;
     @apply mb-2;
     @apply font-semibold;
-    @apply flex flex-row-reverse w-full items-center justify-end;
+    @apply flex flex-row-reverse items-center justify-end;
   }
 
   h3 {
@@ -50,7 +76,8 @@ nav a {
     @apply text-sm;
     line-height: 1.5rem;
     font-family: "Roboto Mono";
-    @apply mt-3; 
+    border: 1px solid #ebebeb;
+    @apply mt-7; 
   }
   pre::-webkit-scrollbar {
     height: 8px;
@@ -76,17 +103,12 @@ nav a {
     background: #0471d7;
   }
 
-  p {
-  }
-
   ul {
     @apply list-disc;
-    @apply text-sm;
   }
 
   ul li {
-    @apply ml-5;
-    @apply my-2;
+    @apply ml-6;
   }
 }
 
@@ -109,14 +131,13 @@ a:not(.post):hover {
 }
 
 p:not(nav p) {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   line-height: 1.8rem;
 }
 
 
 h2:hover .icon {
-  z-index: 100;
   display: block;
   margin-left: 10px;
   background-image: url("$lib/assets/link.png");

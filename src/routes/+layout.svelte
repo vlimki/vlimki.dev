@@ -24,8 +24,8 @@
       <p class="">•</p>
         <a href="/about"><code class={path.startsWith("/about") ? "font-semibold" : ""}>About</code></a>
       </div>
-      <div class="text-white items-center hidden md:block">
-        <a href="/"><code>vlimki.dev</code></a>
+      <div class="text-[#fbfbfb] items-center hidden md:block">
+        <code><p class="text-[#fbfbfb]">vlimki.dev</p></code>
       </div>
     </nav>
     <PageBreak />

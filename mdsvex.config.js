@@ -12,7 +12,7 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [remarkMath, slug],
-	rehypePlugins: [rehypeKatex, headings]
+	rehypePlugins: [rehypeKatex, headings],
 });
 
 export default config;

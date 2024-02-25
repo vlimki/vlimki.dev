@@ -21,8 +21,11 @@ Here's some example LaTeX: $\sum\limits_{n=1}^{6}{2x^2}$
 $$
 J(w,b) = \frac{1}{2m}\sum\limits^{m}_{i=1}{(\hat y_i - y_i)^2}
 $$
+
 <FooterText text="A bigger LaTeX block" />
 
+
+And now for some code:
 
 ```python
 def cost(x, y, w, b):
@@ -36,5 +39,10 @@ def cost(x, y, w, b):
 ## Lorem Ipsum
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+$$
+\frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{x^2}{2}}dx
+$$
 
-<Image text="A test image." src="/bg.jpeg" />
+<div class="image-container">
+    <Image text="A test image showcasing some graphs of polynomial functions." src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjillwilliams.github.io%2FGraphs-of-Polynomial-Functions%2Fimages%2Fpic7.png&f=1&nofb=1&ipt=8f4751849f64f22e73c853f621505876654f98d2ff54b4ddd5f0acbdb613fb7d&ipo=images" />
+</div>

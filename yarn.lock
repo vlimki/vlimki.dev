@@ -2541,6 +2541,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+sv-popup@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/sv-popup/-/sv-popup-0.5.3.tgz#f2752657d7cb646cef440aa1d58d0a3b88b0e0ca"
+  integrity sha512-i7sXWRDiubPrfmYIohqRYUcVFcoG1TaUNkzF4YfIShO5QXuPS3GU2i6xt4jGBuzjTAAjcv03hEelwRLgA1orqw==
+  dependencies:
+    svelte "^3.59.2"
+
 svelte-check@^3.6.2:
   version "3.6.4"
   resolved "https://registry.npmjs.org/svelte-check/-/svelte-check-3.6.4.tgz"
@@ -2586,6 +2593,11 @@ svelte-preprocess@^5.1.0, svelte-preprocess@^5.1.3:
     magic-string "^0.30.5"
     sorcery "^0.11.0"
     strip-indent "^3.0.0"
+
+svelte@^3.59.2:
+  version "3.59.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.59.2.tgz#a137b28e025a181292b2ae2e3dca90bf8ec73aec"
+  integrity sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==
 
 svelte@^4.2.8:
   version "4.2.11"
