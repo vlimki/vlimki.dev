@@ -7,9 +7,11 @@
 </script>
 
 <Modal button={false}>
-  <Content>
-      <img class="rounded-xl" src={src} />
-      <p class="bg-white rounded-xl p-2 px-5 code" >{text}</p>
+  <Content class="overflow-hidden">
+      <div class="flex flex-col">
+        <img class="img2 mt-20" src={src} />
+        <p class="bg-white rounded-xl p-2 px-5 code" >{text}</p>
+      </div>
   </Content>
   <div class="flex flex-col items-center">
   <Trigger>
@@ -19,3 +21,17 @@
   </div>
 </Modal>
 
+<style>
+.img2 {
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background: #ffffff;
+  top: 100%;
+  left: 100%;
+}
+</style>

@@ -44,5 +44,5 @@ $$
 $$
 
 <div class="image-container">
-    <Image text="A test image showcasing some graphs of polynomial functions." src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjillwilliams.github.io%2FGraphs-of-Polynomial-Functions%2Fimages%2Fpic7.png&f=1&nofb=1&ipt=8f4751849f64f22e73c853f621505876654f98d2ff54b4ddd5f0acbdb613fb7d&ipo=images" />
+    <Image text="A test image showcasing some graphs of polynomial functions." src="/posts/math-test/polynomials.png" />
 </div>
