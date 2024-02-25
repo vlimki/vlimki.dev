@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>About - Juho Välimäki</title>
+  <meta name="description" content="Juho Välimäki's Blog" />
+</svelte:head> 
 
 <div class="flex flex-row">
   <img class="hidden sm:block max-h-[220px] rounded-full aspect-square object-cover" src="/pfp.png" />
