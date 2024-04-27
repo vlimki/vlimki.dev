@@ -1,6 +1,6 @@
 <svelte:head>
   <title>About - Juho Välimäki</title>
-  <meta name="description" content="Juho Välimäki's Blog" />
+  <meta name="description" content="I'm an aspiring and ambition-driven machine learning engineer." />
 </svelte:head> 
 
 <div class="flex flex-row">

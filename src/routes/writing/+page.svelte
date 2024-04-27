@@ -4,11 +4,12 @@
 
   export let data: PageData;
   let query = "";
+  let titles = data.posts.map(x => x.title).slice(0, 3).join(" • ");
 </script>
 
 <svelte:head>
   <title>Writing • Juho Välimäki</title> 
-  <meta name="description" content="Juho Välimäki's Blog" />
+  <meta name="description" content={titles} />
 </svelte:head> 
 
 <div class="flex flex-col w-full items-center justify-center">

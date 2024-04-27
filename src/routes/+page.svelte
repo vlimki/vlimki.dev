@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-  <title>Juho Välimäki's Personal Website • https://vlimki.dev</title>
-  <meta name="description" content="Juho Välimäki's Blog" />
+  <title>Personal Website of Juho Välimäki • https://vlimki.dev</title>
+  <meta name="description" content="Software Developer & Aspiring ML engineer" />
 </svelte:head> 
 
 <div class="flex flex-col justify-between">
