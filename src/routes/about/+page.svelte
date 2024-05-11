@@ -8,8 +8,7 @@
   <div class="sm:ml-10">
     <h1 class="">About</h1>
     <p>Hey - I'm Juho Välimäki, an aspiring and ambition-driven machine learning engineer. At first I got into machine learning because I saw it as the only sensible route for the future (due to product advancements like ChatGPT) - but soon enough it completely replaced my interest for web engineering.</p>
-    <br />
-    <p>My interests (in order) include:</p>
+    My interests (in order) include:
     <ul>
       <li>machine learning + mathematics</li>
       <li>self-improvement</li>
@@ -17,7 +16,6 @@
       <li>playing the guitar + music production.</li>
     </ul>
 
-    <br />
     <p>For anyone interested in connecting - don't hesitate to send me an email at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a>.</p>
   </div>
 </div>

@@ -12,7 +12,7 @@
 
 
 <div class="max-w-screen overflow-hidden flex flex-col items-center justify-center">
-  <div class="w-full md:w-2/3 xl:w-1/2 2xl:w-[43%] h-full px-7 pb-10">
+  <div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full px-7 pb-10">
     <nav class="flex flex-row w-full items-center justify-center md:justify-between mt-5 code text-md">
       <div class="hidden md:block items-center">
         <a href="/"><b><code>vlimki.dev</code></b></a>

@@ -23,8 +23,8 @@
 <ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />-->
 <h1>{data.frontmatter.title}</h1>
 <div class="flex flex-row items-center mb-3">
-  <p><code>{formatDate(new Date(data.frontmatter.date))}</code></p>
-  <p class="mx-2 text-[#aaaaaa]">•</p>
+  <code>{formatDate(new Date(data.frontmatter.date))}</code>
+  <div class="mx-2 text-[#aaaaaa]">•</div>
   <!--<code>[</code>-->
   {#each data.frontmatter.tags as tag}
     <code class="bg-[#f0f0f0] rounded-md text-sm text-[#0471d7] mx-1 px-2">{tag}</code>

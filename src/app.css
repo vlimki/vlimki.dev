@@ -19,7 +19,7 @@
 html {
   font-family: "Merriweather";
   color: #333333;
-  background: #fbfbfb;
+  background: #fdfdfd;
 } 
 
 * {
@@ -145,10 +145,16 @@ a:not(.post):hover {
   text-decoration: underline;
 }
 
-p:not(nav p) {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  line-height: 1.7rem;
+ul p, a p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.4rem;
+}
+
+p:not(nav p):not(ul p):not(.post p) {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.8rem;
 }
 
 
