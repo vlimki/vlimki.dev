@@ -22,16 +22,28 @@
 </Modal>
 
 <style>
-.img2 {
-  width: auto;
-  height: auto;
-  max-width: 80vw;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 10px;
-  border: 1px solid #ebebeb;
-  background: #ffffff;
-  top: 100%;
-  left: 100%;
-}
+	.img2 {
+  		width: auto;
+		height: auto;
+		max-width: 80vw;
+  		max-height: 80vh;
+  		object-fit: contain;
+  		border-radius: 10px;
+  		border: 1px solid #ebebeb;
+  		background: #ffffff;
+  		top: 100%;
+  		left: 100%;
+	}
+
+	.img {
+  		width: auto;
+  		height: auto;
+  		max-width: 100%;
+  		max-height: 500px;
+  		object-fit: contain;
+  		border-radius: 10px;
+  		top: 100%;
+		left: 100%;
+  		border: 1px solid #ebebeb;
+	}
 </style>

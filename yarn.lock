@@ -20,6 +20,13 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@babel/runtime@^7.21.0":
+  version "7.24.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.6.tgz#5b76eb89ad45e2e4a0a8db54c456251469a3358e"
+  integrity sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@emnapi/runtime@^0.45.0":
   version "0.45.0"
   resolved "https://registry.yarnpkg.com/@emnapi/runtime/-/runtime-0.45.0.tgz#e754de04c683263f34fd0c7f32adfe718bbe4ddd"
@@ -960,6 +967,13 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
+
+date-fns@^2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
 
 debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -2238,6 +2252,11 @@ refractor@^4.8.0:
     hastscript "^7.0.0"
     parse-entities "^4.0.0"
 
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
+
 rehype-autolink-headings@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/rehype-autolink-headings/-/rehype-autolink-headings-7.1.0.tgz#531087e155d9df053944923efd47d99728f3b196"
@@ -2395,6 +2414,11 @@ sander@^0.5.0:
     graceful-fs "^4.1.3"
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
+
+scn@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/scn/-/scn-1.0.19.tgz#4826acdffe7b6aa76824912ee7c71862538950dc"
+  integrity sha512-xOpcug2SXyG4bFQTvA58/kExFNE/gHdy2NLhg/v9azjhar4i3/ig179+Ec/+jf3PpQC8clf33On0dd+NIkN3BQ==
 
 semver@^7.5.3, semver@^7.5.4:
   version "7.6.0"
@@ -2657,6 +2681,14 @@ svelte@^4.2.8:
     locate-character "^3.0.0"
     magic-string "^0.30.4"
     periscopic "^3.1.0"
+
+sveltekit-tweet@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/sveltekit-tweet/-/sveltekit-tweet-0.0.17.tgz#ff5a77abf0806c45fc217ee42b6377a918bd91d6"
+  integrity sha512-WOnFFnW7bcjrLSA3vfK8kzFF54ZKJe1vAGXWt+AwhrriDui2lcslAuRLOwG+GFUVhGXtUjqd2lliR7nGC4RdLg==
+  dependencies:
+    date-fns "^2.30.0"
+    scn "^1.0.19"
 
 tailwindcss@^3.4.1:
   version "3.4.1"

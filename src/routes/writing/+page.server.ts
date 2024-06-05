@@ -3,7 +3,7 @@ import { slugFromPath } from '$lib/slugFromPath';
 
 const MAX_POSTS = 10;
 
-export const load: PageServerLoad = async (_) => {
+export const load: PageServerLoad = async ({ url }) => {
 	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
 
 	const postPromises = Object.entries(modules).map(([path, resolver]) =>
@@ -17,9 +17,15 @@ export const load: PageServerLoad = async (_) => {
 	);
 
 	const posts = await Promise.all(postPromises);
-	const publishedPosts = posts.filter((post) => post.published).slice(0, MAX_POSTS);
+	let publishedPosts = posts.filter((post) => post.published);
+
+	let tags = [...new Set(publishedPosts.map(p => p.tags))];
+
 
 	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 
-	return { posts: publishedPosts };
+	//let tag = url.searchParams.get("tag");
+
+
+	return { posts: publishedPosts.slice(0, MAX_POSTS), tags: tags.join(",") };
 };

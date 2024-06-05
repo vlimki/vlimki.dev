@@ -4,51 +4,188 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@font-face {
-    font-family: 'Computer Modern';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/cmunbi.eot'); /* IE9 Compat Modes
-    src: local(''), url('/fonts/cmunbi-500.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 url('/fonts/cmunbi-500.woff2') format('woff2'),
-        /* Super Modern Browsers url('/fonts/cmunbi-500.woff') format('woff'),
-        /* Modern Browsers url('/fonts/cmunbi-500.ttf') format('truetype'),
-        /* Safari, Android, iOSurl('/fonts/cmunbi-500.svg') format('svg'); /* Legacy iOS
-}*/
-
 html {
-  font-family: "Merriweather";
-  color: #333333;
-  background: #fdfdfd;
+  font-family: "charterregular";
+  color: #181818;
+  background: #fcfcfc;
 } 
 
-* {
-  line-height: 1.7rem;
+@layer base {
+	h1 {
+		@apply text-xl;
+	}
+	h2 {
+		@apply text-lg;
+		@apply flex flex-row-reverse items-center justify-end;
+		@apply mt-3
+	}
+	h3 {
+		@apply text-base;
+	}
+	p, li {
+		@apply text-sm;
+	}
+
+	code {
+		@apply text-xs;
+	}
+
+	span {
+		color: #333333;
+		height: 50%;
+		font-size: 99%;
+	}
+
+	p {
+		margin-top: 5px;
+		margin-bottom: 15px;
+	}
+	pre[class*=language-] {
+    	@apply bg-white;
+	    @apply rounded-lg;
+    	@apply text-xxxs !important;
+	    @apply mb-6; 
+    	line-height: 1.5rem;
+	    font-family: "Roboto Mono";
+    	border: 1px solid #ebebeb;
+		margin-top: -10px;
+	}
+	ul {
+    	@apply list-disc;
+  	}
+  	ul li {
+		@apply ml-8;
+  	}
+  	ol {
+    	@apply list-decimal;
+  	}
+  	ol li {
+		@apply ml-8
+  	}
+	@media (min-width: theme('screens.sm')) {
+		h1 {
+			@apply text-xxl;
+		}
+		h2 {
+			@apply text-xl;
+		}
+		h3 {
+			@apply text-lg;
+		}
+
+        p, li {
+			@apply text-base;
+		}
+
+		code {
+			@apply text-sm;
+		}
+    }
 }
 
-code:not(nav a code) {
+code {
   font-family: "Roboto Mono";
-  color: #aaaaaa;
+  color: #777777;
 }
 
-nav a {
-  margin-left: 20px;
-  margin-right: 20px;
+
+li::marker {
+	font-weight: 600;
 }
 
-.img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 10px;
-  top: 100%;
-  left: 100%;
-  border: 1px solid #ebebeb;
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.image-container {
+a {
+	color: #0471d7;
+}
+
+h2:hover .icon {
+  display: block;
+  margin-left: 10px;
+  background-image: url("$lib/assets/link.png");
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.icon-link, .icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 0px;
+}
+
+/* ---------- ARTICLE STYLING ----------- */
+article blockquote {
+	margin-top: -10px;
+	border-left: 3px solid #dddddd;
+}
+
+article blockquote p {
+	font-family: "charteritalic";
+	color: #666666;
+	font-size: 20px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+article blockquote p b {
+	font-family: "charterregular";
+	color: #181818;
+	font-weight: 500;
+	font-size: 19px;
+}
+
+article code:not(pre code) {
+	border: 1px solid #ebebeb;
+	background: white;
+	color: #444444 !important;
+	padding: 3px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-radius: 10px;
+}
+
+article p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+article ol, article ul {
+	margin-top: -20px;
+}
+
+/* ------------ SCROLLBAR -------------- */
+pre::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+	border-radius: 9999px;
+    background: #ebebeb;
+}
+
+/* Track */
+pre::-webkit-scrollbar-track {
+    background: #fbfbfb;
+	border-radius: 10px;
+}
+
+/* Handle */
+pre::-webkit-scrollbar-thumb {
+    background: #ebebeb;
+	border-radius: 16px;
+}
+
+/* Handle on hover */
+pre::-webkit-scrollbar-thumb:hover {
+    background: #0471d7;
+}
+
+
+/*.image-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -59,114 +196,36 @@ nav a {
 .image-container * {
   margin-right: 5px;
   margin-left: 5px;
+}*/
+
+@font-face {
+    font-family: 'charterregular';
+    src: url('/fonts/charter_regular-webfont.woff2') format('woff2'),
+         url('/fonts/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@layer base {
-  h1 {
-    font-size: 27px;
-    line-height: 2.5rem;
-  }
-
-  h2 {
-    @apply text-xl;
-    @apply mt-5;
-    @apply mb-3;
-    @apply flex flex-row-reverse items-center justify-end;
-  }
-
-  h3 {
-    @apply mt-4;
-    @apply mb-2;
-    @apply text-lg;
-  }
-
-  h3:not(ul h3) {
-    @apply font-semibold;
-  }
-
-  pre[class*=language-] {
-    @apply bg-[#ffffff];
-    @apply rounded-lg;
-    @apply text-sm;
-    line-height: 1.5rem;
-    font-family: "Roboto Mono";
-    border: 1px solid #ebebeb;
-    @apply mt-6; 
-    @apply mb-6; 
-  }
-  pre::-webkit-scrollbar {
-    height: 8px;
-    width: 10px;
-    @apply rounded-full;
-    background: #ebebeb;
-  }
-
-/* Track */
-  pre::-webkit-scrollbar-track {
-    background: #fbfbfb;
-    @apply rounded-sm;
-  }
-
-/* Handle */
-  pre::-webkit-scrollbar-thumb {
-    background: #ebebeb;
-    @apply rounded-md;
-  }
-
-/* Handle on hover */
-  pre::-webkit-scrollbar-thumb:hover {
-    background: #0471d7;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
-  ul li {
-    @apply ml-6;
-  }
+@font-face {
+    font-family: 'charteritalic';
+    src: url('/fonts/charter_italic-webfont.woff2') format('woff2'),
+         url('/fonts/charter_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.text-xs {
-  line-height: 1.3rem;
+@font-face {
+    font-family: 'charterbold_italic';
+    src: url('/fonts/charter_bold_italic-webfont.woff2') format('woff2'),
+         url('/fonts/charter_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.code {
-  font-family: "Roboto Mono";
-}
-
-a:not(nav a):not(.post):not(.footer-link) {
-  color: #0471d7;
-  font-weight: 500;
-}
-
-a:not(.post):hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-ul p, a p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  line-height: 1.4rem;
-}
-
-p:not(nav p):not(ul p):not(.post p) {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  line-height: 1.8rem;
-}
-
-
-h2:hover .icon {
-  display: block;
-  margin-left: 10px;
-  background-image: url("$lib/assets/link.png");
-  background-size: 16px 16px;
-}
-
-.icon-link, .icon {
-  height: 16px;
-  width: 16px;
-  margin-right: 0px;
+@font-face {
+    font-family: 'charterbold';
+    src: url('/fonts/charter_bold-webfont.woff2') format('woff2'),
+         url('/fonts/charter_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

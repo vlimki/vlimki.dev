@@ -1,10 +1,23 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { formatDate } from '$lib/utils';
+  import Tag from '$lib/components/Tag.svelte';
+  import PageBreak from '$lib/components/PageBreak.svelte';
+  import SelectedTag from '$lib/components/SelectedTag.svelte';
+  import Post from '$lib/components/Post.svelte';
+  import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+
+  let tag = "LOADING"
+  onMount(() => {
+	tag = $page.url.searchParams.get('tag') || '';
+  })
 
   export let data: PageData;
+
   let query = "";
   let titles = data.posts.map(x => x.title).slice(0, 3).join(" • ");
+
 </script>
 
 <svelte:head>
@@ -14,18 +27,32 @@
 
 <div class="flex flex-col w-full items-center justify-center">
   <h1 class="text-center">Posts</h1>
-  <input type="text" class="code my-4 code w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search..." bind:value={query} />
+  <div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] xl:w-[60%]">
+  	{#each data.tags.split(",") as t}
+		{#if tag == t}
+			<SelectedTag text={t} />
+		{:else}
+			<Tag text={t} />
+		{/if} 
+	{/each}
+  </div>
+  <input type="text" class="my-4 w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search..." bind:value={query} />
 </div>
-{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase())) as post}
-  <a href={`/writing/${post.slug}`} class="post">
-    <h2>{post.title}</h2>
-    <p class="text-[#666666] mt-[-10px]">{post.description}</p>
-    <div class="flex flex-row items-center mt-[-20px]">
-      <p><code>{formatDate(new Date(post.date))}</code></p>
-      <p class="mx-2 text-[#aaaaaa]">•</p>
-      {#each post.tags as tag}
-        <code class="bg-[#f0f0f0] rounded-md text-sm text-[#0471d7] mx-1 px-2">{tag}</code>
-      {/each}
-    </div>
-  </a>
+<PageBreak />
+
+{#if tag === "LOADING"}
+	<h1>Loading...</h1>
+{:else}
+<div class="flex flex-col">
+{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).filter(x => (x.tags.includes(tag) || tag.length === 0)) as post}
+	<Post post={post} />
 {/each}
+</div>
+{/if}
+
+<style>
+	input {
+		font-family: "Roboto Mono";
+		font-size: 14px;
+	}
+</style>

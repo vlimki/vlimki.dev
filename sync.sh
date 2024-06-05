@@ -1,4 +1,7 @@
+git add .
+git commit -m 'Automated commit for $(date +"%d-%m-%Y")'
+git push
+
 yarn build
-ssh $1 'rm ~/build -rf'
-rsync build $1:/root/ -r
-ssh $1 'rm /var/www/html/* -rf; cp ~/build/* /var/www/html -r'
+ssh $1 'sh "rm /var/www/html/* -rf"'
+rsync build/ $1:/var/www/html/ -r
