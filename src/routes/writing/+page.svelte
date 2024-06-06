@@ -27,7 +27,7 @@
 
 <div class="flex flex-col w-full items-center justify-center">
   <h1 class="text-center">Posts</h1>
-  <div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] xl:w-[60%]">
+  <!---<div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] xl:w-[60%]">
   	{#each data.tags.split(",") as t}
 		{#if tag == t}
 			<SelectedTag text={t} />
@@ -35,7 +35,7 @@
 			<Tag text={t} />
 		{/if} 
 	{/each}
-  </div>
+  </div>-->
   <input type="text" class="my-4 w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search..." bind:value={query} />
 </div>
 <PageBreak />
