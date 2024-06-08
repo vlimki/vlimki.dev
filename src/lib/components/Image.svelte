@@ -5,7 +5,7 @@
   export let text;
 </script>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center my-3">
   <img alt={text} src={src} />
   <FooterText {text} />
 </div>

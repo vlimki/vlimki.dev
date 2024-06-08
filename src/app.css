@@ -37,6 +37,10 @@ html {
 		letter-spacing: 0.1px;
 	}
 
+	article strong span {
+		font-weight: 600;
+	}
+
 	strong, b {
 		@apply text-[16px]
 	}
@@ -140,8 +144,43 @@ h2:hover .icon {
 }
 
 /* ---------- ARTICLE STYLING ----------- */
+article {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+article table {
+	margin-top: 10px;
+}
+
+article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr {
+	width: 100%;
+}
+
+article hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+article th {
+	border: 1px solid #aaaaaa;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+article td {
+	border: 1px solid #aaaaaa;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+		padding-right: 10px;
+}
+
 article blockquote {
-	margin-top: -10px;
 	border-left: 3px solid #dddddd;
 }
 
@@ -175,12 +214,12 @@ article code:not(pre code) {
 }
 
 article p {
-	margin-top: 15px;
-	margin-bottom: 20px;
+	margin-top: 9px;
+	margin-bottom: 9px;
 }
 
 article ol, article ul {
-	margin-top: -20px;
+	margin-top: -10px;
 }
 
 article h2, article h3 {
