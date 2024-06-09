@@ -23,7 +23,7 @@ I figured it'd be good to over basic calculus concepts again to establish a good
 The **limit** L of a function $f(x)$ as $x$ approaches $a$ is denoted as $\lim\limits_{x \to a}{f(x)} = L$. <br />
 Simply: **What value is $f(x)$ getting closer to as $x$ gets closer to $a$?** Limits are a very intuitive concept. For example, it would be easy to imply that $f(x) = k$ approaches $k$ no matter what value $x$ approaches, since the value never changes anyway. Hence, $\lim\limits_{x \to a}{k} = k$. Similarly, it would be easy to imply that $\lim\limits_{x \to 2}{x^2} = 4$.
 
-For a limit to exist, the function must approach the same value **from both directions**. This is where [one-sided-limits](https://en.wikipedia.org/wiki/One-sided_limit) come into play.
+For a limit to exist at $x = a$, the function must approach the same value **from both directions**. This is where [one-sided-limits](https://en.wikipedia.org/wiki/One-sided_limit) come into play. When it does, the function is considered to be **continuous** at $x = a$. A function is considered continous on the interval $[a, b]$ when it has a limit at every value of $x$.
 
 Limits get slightly trickier when there is something like division by zero involved. Algebraic manipulation is often required. There's also [L'Hôpital's Rule](https://en.wikipedia.org/wiki/L'H%C3%B4pital's_rule) for solving limits with an indeterminate form, like $\frac{0}{0}$ or $\frac{\infty}{\infty}$.
 
@@ -64,7 +64,9 @@ In reality however, an image like this wouldn't be possible since $h$ would be a
 
 **Example 1.** Evaluate $\frac{d}{dx} f(x)$, where $f(x) = x^2$
 
-**Solution:** $\frac{d}{dx} f(x) = \lim\limits_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim\limits_{h \to 0} \frac{(x+h)^2 - x^2}{h} = \lim\limits_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} = \lim\limits_{h \to 0} \frac{h(2x + h)}{h} = \lim\limits_{h \to 0}(2x + h) = 2x$
+**Solution:**
+1. Substitute into the definition: $\lim\limits_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim\limits_{h \to 0} \frac{(x+h)^2 - x^2}{h}$
+2. Simplify: $\lim\limits_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} = \lim\limits_{h \to 0} \frac{h(2x + h)}{h} = \lim\limits_{h \to 0}(2x + h) = 2x$
 
 <PageBreak />
 

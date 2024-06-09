@@ -65,12 +65,12 @@ html {
 	pre[class*=language-] {
     	@apply bg-white;
 	    @apply rounded-lg;
+			@apply w-full;
     	@apply text-xxxs !important;
 	    @apply mb-6; 
     	line-height: 1.5rem;
 	    font-family: "Roboto Mono";
     	border: 1px solid #ebebeb;
-		margin-top: -10px;
 	}
 	ul {
     	@apply list-disc;
