@@ -22,11 +22,11 @@ Now, the answer to this question is actually a bit trickier. There really is no 
 
 Consider the function $f(x) = 1 - x^2$ over the interval $[0, 1]$. It looks like this:
 
-<Image src="/images/posts/day2/sinx.png" text="Graphic of f(x). (Source: ChatGPT/matplotlib)" />
+<Image src="/images/posts/day2/fx.png" text="Graphic of f(x). (Source: ChatGPT/matplotlib)" />
 
 The way to approximate the area would be to draw rectangles under the curve. The rectangles would be of height $f(x)$ and of a width that can be decided based on $n$, the number of rectangles we want to draw. Let's try this with $n=4$:
 
-<Image src="/images/posts/day2/sinx-rectangles-1.png" text="Graphic of f(x) with 4 rectangles approximating the area. (Source: ChatGPT/matplotlib)" />
+<Image src="/images/posts/day2/fx-rectangles-1.png" text="Graphic of f(x) with 4 rectangles approximating the area. (Source: ChatGPT/matplotlib)" />
 
 
 Ugh. Seems like quite a rough approximation, doesn't it? It does overshoot quite a bit. This is called the **upper sum** of $f(x)$. The upper sum uses the point of the maximum value of $f(x)$ in the subinterval the rectangle forms.
@@ -38,7 +38,7 @@ $$
 
 What if one used the point of the minimum value of $f(x)$ in the rectangle (also known as the partition P)'s subinterval? That's when you get what's called a **lower sum**. Here's a graphical illustration of that too:
 
-<Image src="/images/posts/day2/sinx-rectangles-lower.png" text="Graphic of f(x) with 4 rectangles approximating the lower sum. (Source: ChatGPT/matplotlib)" />
+<Image src="/images/posts/day2/fx-rectangles-lower.png" text="Graphic of f(x) with 4 rectangles approximating the lower sum. (Source: ChatGPT/matplotlib)" />
 
 Now the calculation would go like this:
 
@@ -48,7 +48,7 @@ $$
 
 Another way of approximating the area is what's called the **midpoint rule**. The midpoint rule uses the midpoint of each rectangle, as opposed to the maximum or the minimum value. The area approximation given by the midpoint rule is always between the lower and the upper sums. See:
 
-<Image src="/images/posts/day2/sinx-rectangles-midpoint.png" text="Graphic of f(x) with 4 rectangles approximating the midpoint sum. (Source: ChatGPT/matplotlib)" />
+<Image src="/images/posts/day2/fx-rectangles-midpoint.png" text="Graphic of f(x) with 4 rectangles approximating the midpoint sum. (Source: ChatGPT/matplotlib)" />
 
 The midpoint approximation is often the most precise. The calculation follows the same principle:
 
@@ -58,7 +58,7 @@ $$
 
 The precision of all of these approximations will improve as the amount of rectangles ($n$) increases. Let's try $n=10$ instead:
 
-<Image src="/images/posts/day2/sinx-rectangles-2.png" text="Graphic of f(x) with 10 rectangles approximating the upper sum. (Source: ChatGPT/matplotlib)" />
+<Image src="/images/posts/day2/fx-rectangles-2.png" text="Graphic of f(x) with 10 rectangles approximating the upper sum. (Source: ChatGPT/matplotlib)" />
 
 That's better. The approximation is still a bit rough though. But that's fine. This is only to illustrate the principle. Let's try doing this in Python to save the job of calculating these manually.
 
