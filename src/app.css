@@ -66,9 +66,9 @@ html {
     	@apply bg-white;
 	    @apply rounded-lg;
 			@apply w-full;
-    	@apply text-xxxs !important;
+			@apply text-[12px];
 	    @apply mb-6; 
-    	line-height: 1.5rem;
+    	line-height: 1.2rem;
 	    font-family: "Roboto Mono";
     	border: 1px solid #ebebeb;
 	}
@@ -105,6 +105,10 @@ html {
 
 		strong, b {
 			@apply text-[18px]
+		}
+		pre[class*=language-] {
+    	@apply text-xxxs !important;
+    	line-height: 1.5rem;
 		}
   }
 }
@@ -149,14 +153,30 @@ article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
+	overflow: hidden;
 }
 
 article table {
 	margin-top: 10px;
+	display: block;
+	max-width: 100%;
+	overflow-x: scroll !important;
+}
+
+article div {
+	display: block;
+	max-width: 100%;
+	overflow-x: scroll;
 }
 
 article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr {
 	width: 100%;
+	max-width: 100%;
+}
+
+article * li {
+	max-width: calc(100% - 2rem);
 }
 
 article hr {
