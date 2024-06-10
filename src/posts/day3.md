@@ -1,6 +1,6 @@
 ---
 title: "Linear & Logistic Regression - Day 3 of ML"
-description: "Going over basic linear regression and logistic regression."
+description: "What if you wanted to fit a line into data?"
 published: true
 date: '2024-06-10'
 slug: 'day3'
