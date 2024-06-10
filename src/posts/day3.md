@@ -4,7 +4,7 @@ description: "What if you wanted to fit a line into data?"
 published: true
 date: '2024-06-10'
 slug: 'day3'
-tags: ['journey']
+tags: ['journey', 'ml']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';
