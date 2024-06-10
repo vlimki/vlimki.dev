@@ -187,7 +187,7 @@ $$
 \int_a^{b} f(x) \, dx = \left[ F(x) \right]_1^{4} = (4^{\frac{3}{2}} + \frac{4}{4}) - (1^{\frac{3}{2}} + \frac{4}{1}) = (8 + 1) - (1 + 4) = 4
 $$
 
-Cool! Let's try evaluating the indefinite indefinite integral we were looking at before.
+Cool! Let's try evaluating the definite integral we were looking at before.
 
 **Example 2**: Evaluate $\int_{0}^{1}{(1 - x^2)\,dx}$. <br/>
 **Solution**: The antiderivative of $f$ is $F(x) = (x - \frac{x^3}{3})$.

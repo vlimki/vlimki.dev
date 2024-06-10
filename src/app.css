@@ -170,7 +170,7 @@ article div {
 	overflow-x: scroll;
 }
 
-article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr {
+article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr, article blockquote {
 	width: 100%;
 	max-width: 100%;
 }
