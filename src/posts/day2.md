@@ -2,9 +2,9 @@
 title: "Integrals & Riemann sums - Day 2 of ML"
 description: "Looking into integrals and Riemann sums."
 published: true
-date: '2024-06-9'
+date: '2024-06-09'
 slug: 'day2'
-tags: ['journey', 'calculus']
+tags: ['journey', 'math', 'calculus']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

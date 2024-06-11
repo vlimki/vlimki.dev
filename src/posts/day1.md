@@ -4,7 +4,7 @@ description: "Revisiting what I've studied in calculus before - limits and deriv
 published: true
 date: '2024-06-08'
 slug: 'day1'
-tags: ['journey', 'calculus']
+tags: ['journey', 'math', 'calculus']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

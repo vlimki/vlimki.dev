@@ -83,6 +83,9 @@ def f(x, w, b):
 
 ...
 
+x = np.linspace(0, 10000, 3480)
+y = f(x, w, b)
+
 plt.plot(x, y, color='red')
 plt.scatter(X, Y)
 plt.legend()
@@ -99,10 +102,6 @@ plt.show()
 Let's try calculating the MSE for this line:
 
 ```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
 def loss(w, b, x, y):
     # prediction
     pred = f(x, w, b)
