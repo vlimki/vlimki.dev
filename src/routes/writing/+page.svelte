@@ -36,7 +36,7 @@
 		{/if} 
 	{/each}
   </div>-->
-  <input type="text" class="my-4 w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search..." bind:value={query} />
+  <input type="text" class="my-4 w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search by title or tag..." bind:value={query} />
 </div>
 <PageBreak />
 
@@ -44,7 +44,7 @@
 	<h1>Loading...</h1>
 {:else}
 <div class="flex flex-col">
-{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase())).filter(x => (x.tags.includes(tag) || tag.length === 0)) as post}
+{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase()) || x.tags.filter(t => t.startsWith(query.toLowerCase())).length > 0) as post}
 	<Post post={post} />
 {/each}
 </div>

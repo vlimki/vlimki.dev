@@ -14,7 +14,7 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
-    <p class="text">Hey, I'm aspiring to become a "cracked" machine learning engineer. Previously a software/web engineer with 4+ years of experience. This website is mainly for me to document my ML engineering journey and become a better writer.</p>
+    <p class="text">Hey, I'm aspiring to become a "cracked" machine learning engineer. I come from a software/web engineering background with 4+ years of experience. This website is mainly for me to document my ML engineering journey and become a better writer.</p>
 	<p>The <a href="/writing">writing</a> section of this website contains my daily logs of the things I learn in machine learning or mathematics, often in the form of a resource that can be freely used for learning.</p>
 	<p>Don't hesitate to contact me by e-mail at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a> or on X at <a href="https://x.com/vlimkidev" target="_blank" rel="noreferrer">@vlimkidev</a>. I'd be more than happy to network with like-minded individuals.</p>
 
