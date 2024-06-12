@@ -47,10 +47,15 @@ html {
 
 	p, li {
 		@apply text-sm;
+		line-height: 1.5rem;
 	}
 
 	code {
 		@apply text-xs;
+	}
+
+	nav a * {
+		@apply text-[15px] !important;
 	}
 
 	span:not(.katex-display span) {
@@ -77,12 +82,14 @@ html {
   	}
   	ul li {
 		@apply ml-8;
+		@apply mb-1;
   	}
   	ol {
     	@apply list-decimal;
   	}
   	ol li {
-		@apply ml-8
+		@apply ml-8;
+		@apply mb-1;
   	}
 	@media (min-width: theme('screens.sm')) {
 		h1 {
@@ -95,8 +102,14 @@ html {
 			@apply text-[20px];
 		}
 
+		nav a * {
+			@apply text-[16px] !important;
+		}
+
+
     p, li {
 			@apply text-base;
+			line-height: 1.7rem;
 		}
 
 		code {
@@ -148,6 +161,10 @@ h2:hover .icon {
 }
 
 /* ---------- ARTICLE STYLING ----------- */
+article ul, article ol {
+	margin-bottom: 10px;
+}
+
 article {
 	text-align: left;
 	display: flex;
