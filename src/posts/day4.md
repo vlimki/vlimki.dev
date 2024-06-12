@@ -22,6 +22,3 @@ Imagine rolling a die. Assuming perfectly fair circumstances, the chances of you
 Unfortunately, it's not always that trivial, and this is where machine learning can help. For example, imagine that the die has a slightly irregular weight distribution, so that the probability of you throwing any face is unknown. A good way of figuring the probabilities out would be to generate a sample dataset of the throws you get and building a model based on that dataset to predict the next throws. That's called a probabilistic model, and is at the core of how machine learning works.
 
 **Multidimensional data** is the simplest form of data - for example, a CSV file, an Excel sheet - it is simply an $n \times m$ matrix, which is essentially just $n$ **feature vectors** $\vec x_1 \dots \vec x_n$ (also referred to as data points) of size $m$. $m$ is also considered the **dimension** of the data set. If $m=1$, the dataset is referred to as **univariate** data, but if $m>1$, it's referred to as **multivariate** data.
-
-- Probability theory is useful for modeling expected outcomes, statistics is useful for analyzing sample outcomes
-

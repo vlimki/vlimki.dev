@@ -47,7 +47,6 @@ html {
 
 	p, li {
 		@apply text-sm;
-		line-height: 1.5rem;
 	}
 
 	code {
@@ -109,7 +108,6 @@ html {
 
     p, li {
 			@apply text-base;
-			line-height: 1.7rem;
 		}
 
 		code {
