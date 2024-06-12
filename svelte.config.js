@@ -12,7 +12,10 @@ const config = {
 	preprocess: [preprocess(), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+      entries: ['*', '/writing/day0', '/writing/day1', '/writing/day2', '/writing/day3', '/writing/day4', '/writing/chatgpt-bias']
+    }
 	}
 };
 
