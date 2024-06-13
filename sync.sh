@@ -3,5 +3,6 @@ git commit -m "Automated commit for $(date +'%d-%m-%Y')"
 git push
 
 yarn build
-ssh $1 'rm /var/www/html/* -rf'
-rsync build/ $1:/var/www/html/ -r
+ssh $1 'rm /root/web/build -rf'
+rsync build $1:/root/web/ -r
+ssh $1 'cd /root/web/build; yarn install --frozen-lockfile; pm2 restart 0'

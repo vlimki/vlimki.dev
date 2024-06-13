@@ -4,7 +4,7 @@
 			import { formatDate } from '$lib/utils';
 </script>
 
-<a href={`/writing/${post.slug}`} class="mb-6">
+<a href={`/writing/${post.slug}`} class="mb-6 hover:no-underline">
     <h3 class="text-[#252525]">{post.title}</h3>
     <p class="!my-0 !mb-1 text-[#666666] text-[15px] sm:text-[16px] leading-5 sm:leading-[1.7rem] md:text-[17px]">{post.description}</p>
     <div class="flex flex-row items-center flex-wrap wrap">
@@ -15,9 +15,3 @@
   		{/each}
     </div>
 </a>
-
-<style>
-	a:hover {
-		text-decoration: none !important;
-	}
-</style>

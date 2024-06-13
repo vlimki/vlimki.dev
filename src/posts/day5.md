@@ -14,7 +14,7 @@ tags: ['journey', 'math', 'statistics']
 
 I found that writing code to represent these things is a bit redundant, it wouldn't really help much intuition-wise either. Perhaps it'll be a different case when going over statistics in-depth.
 
-However, I'm probably planning to do linear algebra next as opposed to diving deeper into statistics. Perhaps there will be more coding on on it.
+However, I'm probably planning to do a LOT of linear algebra next as opposed to diving deeper into statistics. Perhaps there will be more coding involved.
 ___
 
 ## Introduction To Probability Theory 

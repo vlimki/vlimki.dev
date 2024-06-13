@@ -117,17 +117,17 @@ def mse(w, X, b, Y):
         x = X.iloc[i]
         y = Y.iloc[i]
         
-        total_cost += loss(w, b, x, y)
+        total_cost += loss(w, b, x, y) ** 2
 
     return (1 / n) * total_cost
 ```
 
 ```python
 >>> print(mse(X, Y, w, b))
-610113.208467742
+281826785588.3111
 ```
 
-Yikes! That is quite a large error. Let's try changing the parameters a bit. Say we set $w$ to $1000$ and $b$ to $10$:
+That is quite a large error. Let's try changing the parameters a bit. Say we set $w$ to $1000$ and $b$ to $10$:
 
 ```python
 w = 1000
@@ -138,10 +138,12 @@ b = 10
 
 ```python
 >>> print(mse(X, Y, w, b))
-70634.45846774193
+233602604396.46835
 ```
 
-That is slightly better. However, this kind of manual labor is tedious and imprecise. Doing this algorithmically would be much better (and more fun!).
+That is slightly better. The error is still really large but that's mainly due to the dataset being very widely spread and dealing with large values.
+
+Anyway, this kind of manual labor is tedious and imprecise. Doing this algorithmically would be much better (and more fun!).
 
 ## Logistic regression
 
