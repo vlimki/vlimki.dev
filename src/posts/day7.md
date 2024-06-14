@@ -1,6 +1,6 @@
 ---
 title: "The Start of The Linear Algebra Grind - Day 7 of ML"
-description: "Becoming cracked at linear algebra with Gilbert Strang's book."
+description: "Exploring systems of linear equations graphically."
 published: true
 date: '2024-06-14'
 slug: 'day7'
@@ -10,7 +10,9 @@ tags: ['journey', 'math', 'linalg']
     import Image from '$lib/components/Image.svelte';
 </script>
 
-**Time spent**: <br /> **Total**: h/10000h
+**Time spent**: 2h<br /> **Total**: 18h/10000h
+
+I'm gonna be doing a LOT of linear algebra now. I have a great book for it - Gilbert Strang's *Linear Algebra and Its Applications*. Don't expect much but linear algebra in the upcoming days... or weeks.
 ___
 
 Let's get straight to the point. The central problem of linear algebra is solving **linear equations**. We'll later be looking at numeric and algorithmic ways to solve them, but let's first take a look at some graphical methods.
