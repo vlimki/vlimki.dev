@@ -10,15 +10,15 @@ tags: ['journey', 'math', 'linalg']
     import Image from '$lib/components/Image.svelte';
 </script>
 
-**Time spent**: h<br /> **Total**: 18h/10000h
+**Time spent**: 3h<br /> **Total**: 21h/10000h
 
-I also covered Gaussian elimination today but I didn't write anything down about it since I found it largely uninteresting and rather trivial. I'm probably going to implement it in code eventually though.
+If you have no prior linear algebra knowledge, I'd suggest reading [yesterday's post](https://vlimki.dev/writing/day7) before reading this one. I also covered Gaussian elimination today but I didn't write anything down about it since I found it largely uninteresting and rather trivial. I'm probably going to implement it in code eventually though.
 ___
 
 Keeping track of all of the operations of elimination would be incredibly inconvenient with the notation we looked at previously. This is what **matrix notation** solves. We'll be looking at principles of **matrix multiplication** as well.
 
 ## Principles of Matrices
-Consider the following system we were using [yesterday](https://vlimki.dev/writing/day7) as an example:
+Consider the following system we were using yesterday as an example:
 $$
 2u + v + w = 5\newline
 4u - 6v = -2 \newline
