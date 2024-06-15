@@ -27,10 +27,10 @@
   </div>
 	<PageBreak />
 	<h2>Experience & Technical Skills</h2>
-	<p>I've done freelancing and volunteering work in different areas of software engineering - mostly related to web development, but I've also worked on things like AI-based web scraping and mobile applications.</p><p>Here are some notable projects I've been involved in:</p>
+	<p>I've done freelancing and volunteering work in different areas of software engineering - mostly related to web development, but also things like AI-based web scraping and mobile applications.</p><p>Here are some notable projects I've been involved in:</p>
 	<ul class="mt-[-10px]">
 		<li>Frontend Developer & Designer @ <a target="_blank" rel="noreferrer" href="https://umr.media">UMR Media</a> | 05/2024 - Today</li>
-		<li>Discord Bot Lead @ <a href="https://projectskilltree.com">Project Skill Tree</a> | 08/2022 - 02/2023</li>
+		<li>Discord Bot Lead @ <a target="_blank" rel="noreferrer" href="https://projectskilltree.com">Project Skill Tree</a> | 08/2022 - 02/2023</li>
 	</ul>
 
 	<p>Technologies I know my way around include Svelte, JS/TS, Rust, TailwindCSS, Next.js and Flutter.</p>

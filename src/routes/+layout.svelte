@@ -37,7 +37,7 @@
     	    <a target="_blank" rel="noreferrer" href="https://twitter.com/vlimkidev" class="mx-5 !text-[16px] sm:!text-base">X</a>
         	<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base">Email</a>
       </div>
-      <code class="footercode text-xxs text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="https://vlimki.dev">vlimki.dev</a> | Based in 🇫🇮</code>
+      <code class="footercode text-xxs text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="/">vlimki.dev</a> | Based in 🇫🇮</code>
       </div>
   </div>
 </div>

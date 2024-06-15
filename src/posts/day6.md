@@ -1,6 +1,6 @@
 ---
 title: "Gradient Descent - Day 6 of ML"
-description: "Covering a fundamental optimization algorithm before moving onto linear algebra."
+description: "Briefly covering a fundamental ML optimization algorithm."
 published: true
 date: '2024-06-13'
 slug: 'day6'

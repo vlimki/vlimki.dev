@@ -8,16 +8,19 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
-  let tag = "LOADING"
-  onMount(() => {
-	tag = $page.url.searchParams.get('tag') || '';
-  })
-
   export let data: PageData;
 
   let query = "";
   let titles = data.posts.map(x => x.title).slice(0, 3).join(" • ");
 
+	const filterByTag = (data, query) => {
+		if(data.tag === null) {
+			return data.posts.filter(p => p.title.toLowerCase().includes(query.toLowerCase()))
+		}
+
+		return data.posts.filter(p => p.tags.includes(data.tag) && (p.tags.filter(t => t.includes(query.toLowerCase())).length > 0 || p.title.toLowerCase().includes(query.toLowerCase())))
+
+	}
 </script>
 
 <svelte:head>
@@ -27,28 +30,24 @@
 
 <div class="flex flex-col w-full items-center justify-center">
   <h1 class="text-center">Posts</h1>
-  <!---<div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] xl:w-[60%]">
+  <div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] sm:w-[80%] lg:w-[60%]">
   	{#each data.tags.split(",") as t}
-		{#if tag == t}
+		{#if data.tag == t}
 			<SelectedTag text={t} />
 		{:else}
 			<Tag text={t} />
 		{/if} 
 	{/each}
-  </div>-->
+  </div>
   <input type="text" class="!text-[13px] sm:!text-[15px] my-4 w-[95%] sm:w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search by title or tag..." bind:value={query} />
 </div>
 <PageBreak />
 
-{#if tag === "LOADING"}
-	<h1>Loading...</h1>
-{:else}
 <div class="flex flex-col">
-{#each data.posts.filter(x => x.title.toLowerCase().includes(query.toLowerCase()) || x.tags.filter(t => t.startsWith(query.toLowerCase())).length > 0) as post}
+{#each filterByTag(data, query) as post}
 	<Post post={post} />
 {/each}
 </div>
-{/if}
 
 <style>
 	input {
