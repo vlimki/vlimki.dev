@@ -1,5 +1,5 @@
 ---
-title: "Exercises - Day 9 of ML"
+title: "Math Exercises - Day 9 of ML"
 description: "Didn't write anything down. Did some exercises but slacked off otherwise"
 published: true
 date: '2024-06-16'
@@ -10,7 +10,7 @@ tags: ['journey']
     import Image from '$lib/components/Image.svelte';
 </script>
 
-**Time spent**: 0.5h<br /> **Total**: 21h/10000h
+**Time spent**: 0.5h<br /> **Total**: 21.5h/10000h
 
 ___
 
