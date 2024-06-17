@@ -10,7 +10,7 @@ tags: ['journey', 'math', 'linalg']
     import Image from '$lib/components/Image.svelte';
 </script>
 
-**Time spent**: 3h<br /> **Total**: 24h/10000h
+**Time spent**: 3h<br /> **Total**: 24.5h/10000h
 
 Looks like I've spent my first 24h studying ML, nice.
 
