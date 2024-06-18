@@ -1,5 +1,5 @@
 ---
-title: "Day 10 of Machine Learning"
+title: "Day 11 of Machine Learning"
 description: "I looked into SVMs and decision trees."
 published: true
 date: '2024-06-18'
