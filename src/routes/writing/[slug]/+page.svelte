@@ -14,6 +14,25 @@
 <svelte:head>
   <title>{data.frontmatter.title} • Juho Välimäki</title> 
   <meta name="description" content={data.frontmatter.description} />
+		<meta property="og:type" content="website" />
+	  <meta property="og:url" content="https://vlimki.dev/" />
+  	<meta property="og:title" content={`${data.frontmatter.title} • Juho Välimäki`} />
+	  <meta property="og:description" content={data.frontmatter.description} />
+  	<meta property="og:image" content="https://vlimki.dev/favicon.png" />
+	  <meta property="og:image:alt" content="Website logo" />
+
+  	<!-- Twitter -->
+  	<meta property="twitter:url" content="https://vlimki.dev/" />
+  	<meta property="twitter:title" content={`${data.frontmatter.title} • Juho Välimäki`} />
+	  <meta property="twitter:description" content={data.frontmatter.description} />
+	  <meta
+  	  property="twitter:image"
+    	content="https://vlimki.dev/favicon.png"
+	  />
+  	<meta
+    	property="twitter:image:alt"
+	    content="Website logo"
+  	/>
 </svelte:head> 
 
 <!--<PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
