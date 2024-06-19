@@ -54,14 +54,3 @@
 
 	<p>Technologies I know my way around include Svelte, JS/TS, Rust, TailwindCSS, Next.js and Flutter.</p>
 </div>
-
-<style>
-	p a {
-		color: #0471d7;
-	}
-
-	p a:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
-</style>

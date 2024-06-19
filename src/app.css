@@ -11,6 +11,15 @@ html {
   background: #fcfcfc;
 } 
 
+p a {
+	color: #0471d7;
+}
+
+	p a:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
 
 * {
     text-rendering: optimizeLegibility;
