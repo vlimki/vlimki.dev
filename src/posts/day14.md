@@ -98,7 +98,7 @@ $$
 k \cdot \vec w^0 = k\frac{\vec w}{||\vec w||}
 $$
 
-So as we're on the decision boundary $\vec w\vec x + b = 0$, we know that $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$ is at the upper support vector.
+So as we're standing on the decision boundary $\vec w \cdot \vec x + b = 0$, we know that the closest point on the upper support vector is $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$. So we need to solve for $k$ to be able to determine the distance between the two points. This is how we get the distance between the decision boundary and the support vector --- in other words, the margin.
 
 This expression simplifies as follows:
 $$
@@ -126,7 +126,7 @@ In case you're not familiar with Lagrange multipliers, I'd suggest doing some in
 
 Let's formulate the Lagrangian function $L$:
 $$
-L(\vec w, b, \vec \alpha) = ||\vec w||^2 - \sum\limits_{i=1}^n{\alpha_i[(\vec w \cdot \vec x + b) - 1]}
+L(\vec w, b, \vec \alpha) = \frac{1}{2}||\vec w||^2 - \sum\limits_{i=1}^n{\alpha_i[(\vec w \cdot \vec x + b) - 1]}
 $$
 
 To get the optimal parameters $w$ and $b$, we take the partial derivative of $L$ with respect to them and set them to 0:
