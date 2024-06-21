@@ -98,7 +98,7 @@ $$
 k \cdot \vec w^0 = k\frac{\vec w}{||\vec w||}
 $$
 
-So as we're on the decision boundary $\vec w\vec x + b = 0$, we know that $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$.
+So as we're on the decision boundary $\vec w\vec x + b = 0$, we know that $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$ is at the upper support vector.
 
 This expression simplifies as follows:
 $$
