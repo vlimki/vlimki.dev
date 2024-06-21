@@ -1,8 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { slugFromPath } from '$lib/slugFromPath';
 
-const MAX_POSTS = 10;
-
 export const load: PageServerLoad = async ({ url }) => {
 	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
 
@@ -29,5 +27,5 @@ export const load: PageServerLoad = async ({ url }) => {
 	let tag = url.searchParams.get("tag");
 
 
-	return { posts: publishedPosts.slice(0, MAX_POSTS), tags: tags.join(","), tag: tag };
+	return { posts: publishedPosts, tags: tags.join(","), tag: tag };
 };
