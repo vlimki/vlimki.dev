@@ -10,9 +10,9 @@ tags: ['journey', 'ml', 'math']
     import Image from '$lib/components/Image.svelte';
 </script>
 
-**Time spent**: 6h<br /> **Total**: 37.5h/10000h
+**Time spent**: 7h<br /> **Total**: 38.5h/10000h
 
-Had to go even deeper into SVMs to properly articulate all of my knowledge into this post. This is probably my most in-depth post thus far.
+I had to go even deeper into SVMs to properly articulate all of my knowledge into this post. This is probably my most in-depth post thus far.
 ___
 
 **Support vector machines (SVM)** are an elegant and intuitive solution to classification problems. They're a relatively new model, having their first prototype developed in 1992 at AT&T Bell Laboratories.
@@ -22,20 +22,16 @@ Essentially, what SVM tries to do is find a **decision boundary** that separates
 
 <Image src="/images/posts/day14/svm.png" text="Visualization of a Support Vector Machine. (ChatGPT/matplotlib)" />
 
-Here the decision boundary is the solid line in the middle. All examples below the line are negative, and all examples above the line are positive. The dashed lines are called **support vectors**. They are identified with the nearest data points of each class to the decision boundary. The optimization problem of the SVM is to maximize the distance between the decision boundary and the nearest point. This is called the **margin**. It's simply just the distance from the decision boundary to the support vectors.
+Here the decision boundary is the solid line in the middle. All examples below that line are negative, and all examples above it are positive. The dashed lines are called **support vectors**. They are identified with the data points of each class nearest to the decision boundary. The optimization problem of the SVM is to maximize the distance between the decision boundary and the nearest point. This is called the **margin**. It's simply just the distance from the decision boundary to the support vectors.
 
-The decision boundary and support vectors are **hyperplanes**. The equation for the decision boundary is $\vec w \cdot \vec x + b = 0$, and the equations for the upper and lower support vectors are $\vec w \cdot \vec x + b = 1$ and $\vec w \cdot \vec x + b = -1$ respectively.
+The decision boundary and support vectors are not actually lines, but **hyperplanes**. The equation for the decision boundary is $\vec w \cdot \vec x + b = 0$, and the equations for the upper and lower support vectors are $\vec w \cdot \vec x + b = 1$ and $\vec w \cdot \vec x + b = -1$ respectively.
 
 However, I find it more intuitive to think of them in the form of $\vec w \cdot \vec x = c$, where $c = -b$. Let's stick to this for now, and develop from here (I accidentally put a capitalized C in the graphic). This model of thinking just shifts the decision boundary away from the origin, as it isn't there in our picture either. So maybe it'll help.
-
-Wait, what if the dataset makes it impossible for us to have a margin that is $1$ or more whilst preserving correct classification? By definition of the SVM, the margin must **always** be 1 or more. However, there are two different types of SVMs:
-1. **Hard-margin SVM**s, where no data points are "inside" the margins, all are strictly at least $1$ unit away from the decision boundary.
-2. **Soft-margin SVM**s, where there exist data points "inside the margins", so the distance between them and the decision boundary is less than $1$, but the data points are still classified correctly.
 
 Since our example is in 2D, we have two features $x_1$ and $x_2$, and their corresponding weights $w_1$ and $w_2$. Hence the equation for the decision boundary can be turned into:
 
 $$
-\vec w \cdot \vec x = c \implies w_1x_1 + w_2x_2 = c
+\vec w \cdot \vec x = c \implies w_1x_1 + w_2x_2 = c \implies w_1x_1 + w_2x_2 + b = 0
 $$
 
 For intuition's sake, imagine $x_2 = y$.
@@ -48,9 +44,9 @@ $$
 
 <Image src="/images/posts/day14/xyeq3.png" text="Visualization of the line x + y = 3 (or x + y - 3 = 0)." />
 
-And indeed, it starts looking a bit similar as well. Anyway, the SVM just tries to measure on which side of the line the point is.
+And indeed, it starts looking a bit similar as well. Anyway, the SVM just tries to measure on which side of the hyperplane the point is.
 
-The weight vector $\vec w$ is orthogonal to the decision boundary, which helps to give the **signed distance** for how far away the data point is from the decision boundary:
+The weight vector $\vec w$ will always be orthogonal to the decision boundary (and you'll see why later in this post), which helps to give the **signed distance** for how far away the data point is from the decision boundary:
 
 <Image src="/images/posts/day14/weightvec.png" text="Visualization of the weight vector. (ChatGPT/matplotlib)" />
 
@@ -61,7 +57,7 @@ $$
 d(x) = \frac{\vec w \cdot \vec x + b}{||\vec w||}
 $$
 
-where $\vec w \cdot \vec x + b$ is the value of the decision function for SVMs, and the denominator $||\vec w||$ is the norm of the weight vector. This normalizes the distance, so that the length of the weight vector doesn't influence the value. The sign of this distance for some feature vector $\vec x$ determines whether the SVM classifies it as a positive or negative example. Let's see how this works geometrically. Just forget the bias term $b$ for now:
+where $\vec w \cdot \vec x + b$ is the value of the decision function for the SVM, and the denominator $||\vec w||$ is the norm of the weight vector. This normalizes the distance, so that the length of the weight vector doesn't influence the value. The sign of this distance for some feature vector $\vec x$ determines whether the SVM classifies it as a positive or negative example. Let's see how this works geometrically. Just forget the bias term $b$ for now:
 
 <Image src="/images/posts/day14/svm-full-visualization.png" text="Visualization of the distance function. (ChatGPT/matplotlib)" />
 
@@ -74,31 +70,35 @@ Indeed, it does look familiar.
 ## The Mathematics
 
 Now that we've developed some geometric intuition for SVMs, let's go over the mathematical aspect to actually learn how we can implement them ourselves.
-For this part, forget the $c$ (which is $-b$) term and visualize that our decision boundary is at the origin (since it gets shifted by the bias term $b$), $\vec w \cdot \vec x = c \implies \vec w \cdot \vec x + b = 0$.
+For this part, forget the $c$ (which is $-b$) term and visualize that our decision boundary goes through the origin (since it gets shifted by there by the bias term $b$), $\vec w \cdot \vec x = c \implies \vec w \cdot \vec x + b = 0$.
 
-Also take note that it's easy to confuse the equation for the decision boundary $\vec w \cdot \vec x + b = 0$ with the actual model, which is to take the sign of $\vec w \cdot \vec x_i + b$.
+Also take note that it's easy to confuse the equation for the decision boundary $\vec w \cdot \vec x + b = 0$ with the actual decision function, which is essentially just the sign of $\vec w \cdot \vec x_i + b$.
 
 > **The goal of an SVM is to find the hyperplane that maximizes the margin between the nearest data points of different classes while correctly classifying the training data points.**
 
-Let's break this down. Let's first take our dataset of labeled examples $\{(\vec x_i, y_i)\}_{i=1}^N$.
+Let's break this down. Let's first take our dataset of labeled examples $S = \{(\vec x_i, y_i)\}_{i=1}^N$.
 
 In order for the SVM to classify all examples correctly, it must follow these two conditions:
 1. $\vec w \cdot \vec x_i + b \leq - 1$ for all $y_-$,
 2. $\vec w \cdot \vec x_i + b \geq 1$ for all $y_+$.
 
-These two constraints can be summarized into just one constraint: $y_i(\vec w \cdot \vec x_i + b) \geq 1$. 
+These two constraints can be summarized into just one constraint: $y_i(\vec w \cdot \vec x_i + b) \geq 1$. This effectively says that every point must be at least 1 unit away (which is the minimum margin for SVMs, by definition) from the decision boundary.
 
-For soft-margin SVMs the constraint is $y_i(\vec w \cdot \vec x_i + b) \geq 1 - \xi_i$, where $\xi$ is the slack variable --- or in other words the amount by which the point is "inside" the margin.
+Wait, what if the dataset makes it impossible for us to have a margin that is $1$ or more whilst preserving correct classification? By definition of the SVM, the margin must **always** be 1 or more. However, there are two different types of SVMs:
+1. **Hard-margin SVM**s, where no data points are "inside" the margins, all are strictly at least $1$ unit away from the decision boundary.
+2. **Soft-margin SVM**s, where there exist data points "inside the margins", so the distance between them and the decision boundary is less than $1$, but the data points are still classified correctly.
+
+For soft-margin SVMs the constraint is $y_i(\vec w \cdot \vec x_i + b) \geq 1 - \xi$, where $\xi$ is the slack variable --- or in other words the amount by which the point nearest to the decision boundary is "inside" the margin.
 
 So the optimization problem is to maximize the margin whilst following the constraint. Let's first look into how we get the margin. Recall this image:
 <Image src="/images/posts/day14/weightvec.png" text="Visualization of a Support Vector Machine. (ChatGPT/matplotlib)" />
 
-Imagine you're on some point on the hyperplane of the decision boundary $\vec w \cdot \vec x + b = 0$ (or in the image $\vec w \cdot \vec x = c$). To get to a point on the support vector the most direct route, we must go in the direction of the blue weight vector $w$. So we need to go $k$ units in the direction of the unit vector of $w$:
+Imagine you're on some point on the the decision boundary $\vec w \cdot \vec x + b = 0$ (or in the image $\vec w \cdot \vec x = c$). To get to a point on the support vector the most direct route, we must go in the direction of the blue weight vector $w$. So we need to go $k$ units in the direction of the unit vector of $w$:
 $$
 k \cdot \vec w^0 = k\frac{\vec w}{||\vec w||}
 $$
 
-So as we're standing on the decision boundary $\vec w \cdot \vec x + b = 0$, we know that the closest point on the upper support vector is $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$. So we need to solve for $k$ to be able to determine the distance between the two points. This is how we get the distance between the decision boundary and the support vector --- in other words, the margin.
+So as we're standing on the decision boundary $\vec w \cdot \vec x + b = 0$, we know that the closest point on the upper support vector is going to be $\vec w(\vec x + k\frac{\vec w}{||\vec w||}) + b = 1$. So we need to solve for $k$ to be able to determine the distance between the two points. From there we see the distance between the decision boundary and the support vector --- in other words, the margin.
 
 This expression simplifies as follows:
 $$
@@ -158,7 +158,7 @@ $$
 $$
 (recall the partial derivative of $L$ w.r.t $\vec w$) for all the points where $\alpha^*_i > 0$.
 
-From here can calculate the bias vector $b$ from any of the support vectors. We know that for any support vector $(\vec x_s, y_s)$ the following must hold:
+From here we can calculate the bias vector $b$ from any of the support vectors. We know that for any support vector $(\vec x_s, y_s)$ the following must hold:
 $$
 y_s(\vec w \cdot \vec x_s + b) = 1
 $$
@@ -203,3 +203,5 @@ There are also other hyperparamaters for SVMs which I haven't explored yet, but 
 Further reading:
 - [Support Vector Machine - Wikipedia](https://en.wikipedia.org/wiki/Support_vector_machine)
 - [MIT 6.034, Lecture 16. Support Vector Machines](https://www.youtube.com/watch?v=_PwhiWxHK8o)
+
+--- Juho - [https://vlimki.dev](https://vlimki.dev)
