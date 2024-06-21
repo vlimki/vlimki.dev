@@ -86,7 +86,9 @@ In order for the SVM to classify all examples correctly, it must follow these tw
 1. $\vec w \cdot \vec x_i + b \leq - 1$ for all $y_-$,
 2. $\vec w \cdot \vec x_i + b \geq 1$ for all $y_+$.
 
-These two constraints can be summarized into just one constraint: $y_i(\vec w \cdot \vec x_i + b) \geq 1$.
+These two constraints can be summarized into just one constraint: $y_i(\vec w \cdot \vec x_i + b) \geq 1$. 
+
+For soft-margin SVMs the constraint is $y_i(\vec w \cdot \vec x_i + b) \geq 1 - \xi_i$, where $\xi$ is the slack variable --- or in other words the amount by which the point is "inside" the margin.
 
 So the optimization problem is to maximize the margin whilst following the constraint. Let's first look into how we get the margin. Recall this image:
 <Image src="/images/posts/day14/weightvec.png" text="Visualization of a Support Vector Machine. (ChatGPT/matplotlib)" />
@@ -114,7 +116,7 @@ So, we need to maximize $\frac{1}{||w||}$. How is that done? Well, by minimizing
 
 So now the optimization problem is to find:
 $$
-\min(\frac{1}{2}||\vec w||^2), \,\, so\,\,\,that \,\,\, y_i(\vec w \cdot \vec x_i + b) \geq 1\,\,\, \forall i \in \{1..N\}
+\min(\frac{1}{2}||\vec w||^2), \,\, \,\,\, y_i(\vec w \cdot \vec x_i + b) \geq 1\,\,\, \forall i \in \{1..N\}
 $$
 
 ### Solving The Problem With Lagrange Multipliers
@@ -136,7 +138,7 @@ $$
 
 From the partial derivative we get $w = \sum\limits_{i=1}^n{\alpha_iy_ix_i}$. Let's substitute it back to the Lagrangian function to get the dual form:
 $$
-\max\limits_{\alpha_1 \dots \alpha_N}\sum\limits_{i=1}^{N}\alpha_i - \frac{1}{2}\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{N} y_i y_j \alpha_i \alpha_j (\vec x_i \cdot \vec x_j),\,\,\,\sum\limits_{i=1}^N \alpha_iy_i = 0 \,\, and \,\, \alpha_i \geq 0\,\,\, \forall i \in \{1..N\}
+\max\limits_{\alpha_1 \dots \alpha_N}\sum\limits_{i=1}^{N}\alpha_i - \frac{1}{2}\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{N} y_i y_j \alpha_i \alpha_j (\vec x_i \cdot \vec x_j),\,\,\,\sum\limits_{i=1}^N \alpha_iy_i = 0, \,\, \,\, \alpha_i \geq 0\,\,\, \forall i \in \{1..N\}
 $$
 
 Quite a scary expression... So, essentially we want to get the optimal values for the Lagrangian multipliers $\alpha_1 \ldots \alpha_n$ so that we maximize the expression after it. The double sum at the end accounts for the interactions between every pair of two data points by their Lagrange multipliers, labels and the dot product of their feature vectors. The other constraint comes from the partial derivative of $L$ with respect to the parameter $b$.
@@ -187,6 +189,12 @@ There are other kernels, the most known of which is the [radial basis function (
 $C$ is a regularization parameter that tries to balance maximizing the margin and minimizing the classification error.
 - A high $C$ value tries to classify every single example correctly, which may lead to worse generalization.
 - A low $C$ value allows for some misclassification but does that at the cost of potentially improving generaliztion.
+
+With the regularization parameter $C$, the optimization problem of the SVM becomes:
+$$
+\min(\frac{1}{2}||\vec w||^2) + C\sum\limits_{i=1}^N{\xi_i}, \,\,\,\,\, y_i(\vec w \cdot \vec x_i + b) \geq 1 - \xi_i \,\,\,\,\, \forall i \in \{1..N\}
+$$
+where again $\xi$ is the slack variable for some data point $x_i$.
 
 ___
 
