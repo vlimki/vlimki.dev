@@ -15,6 +15,7 @@ export const load: PageServerLoad = async ({ url }) => {
 	);
 
 	const posts = await Promise.all(postPromises);
+	posts
 	let publishedPosts = posts.filter((post) => post.published);
 
 	const tags = publishedPosts.map(p => p.tags).flat(1).filter((elem, idx, self) => {
