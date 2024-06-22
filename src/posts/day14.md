@@ -204,4 +204,4 @@ Further reading:
 - [Support Vector Machine - Wikipedia](https://en.wikipedia.org/wiki/Support_vector_machine)
 - [MIT 6.034, Lecture 16. Support Vector Machines](https://www.youtube.com/watch?v=_PwhiWxHK8o)
 
---- Juho - [https://vlimki.dev](https://vlimki.dev)
+--- Juho, [https://vlimki.dev](https://vlimki.dev)

@@ -1,5 +1,5 @@
 ---
-title: "Math Exercises - Day 9 of ML"
+title: "Day 9 of Machine Learning"
 description: "Didn't write anything down. Did some exercises but slacked off otherwise"
 published: true
 date: '2024-06-16'
