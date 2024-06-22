@@ -177,10 +177,10 @@ And there we go! We have now found the optimal parameters $w$ and $b$ for the SV
 
 If our data isn't linearly separable in the dimension we're in, we can use a **kernel trick** to transform the data into the dimension above.
 
-Let's take the **quadratic kernel** as an example. Say we're in the second dimension and we have some feature vector $<a, b>$. The quadratic kernel is simply a mapping from $(a, b)$ to $(a^2, \sqrt{2}ab, b^2)$ for all elements. Or in other word Now we're suddenly in the third dimension.
+Let's take the **quadratic kernel** as an example. Say we're in the second dimension and we have some 2D feature vector $(a, b)$. The quadratic kernel is simply a mapping from $(a, b)$ to $(a^2, \sqrt{2}ab, b^2)$ for all elements. Now we're suddenly in the third dimension.
 <Image src="/images/posts/day14/quadratic.png" text="Visualization of the quadratic kernel. (ChatGPT/matplotlib)" />
 
-Now our data is linearly separable by a plane. The quadratic kernel is actually used quite rarely, but it was good for illustrating the point of kernels.
+Now our data is linearly separable by a plane. The quadratic kernel is actually used quite rarely, but it's good for illustrating the point of kernels.
 
 There are other kernels, the most known of which is the [radial basis function (RBF) kernel](https://en.wikipedia.org/wiki/Radial_basis_function_kernel).
 
