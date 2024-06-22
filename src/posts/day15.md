@@ -97,6 +97,6 @@ We can also delete features that may be irrelevant to the model to make the mode
 I think we've gone over the most frequently used feature engineering techniques now. There sure are more, but I think this fits the scope of the post well.
 
 Further reading:
-- [Feature Engineering - The 100-Page ML Book (Andriy Burkov)](https://www.dropbox.com/scl/fi/aofj8t4ssagoi6y4si8ol/Chapter5.pdf?rlkey=ylrotl49w7o34bzul7bm5g82f&e=2&dl=0)
+- [Chapter 5, The 100-Page ML Book (Andriy Burkov)](http://themlbook.com/wiki/doku.php)
 
 --- Juho, https://vlimki.dev
