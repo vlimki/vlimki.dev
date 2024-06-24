@@ -1,25 +1,21 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import { formatDate } from '$lib/utils';
   import Tag from '$lib/components/Tag.svelte';
   import PageBreak from '$lib/components/PageBreak.svelte';
   import SelectedTag from '$lib/components/SelectedTag.svelte';
   import Post from '$lib/components/Post.svelte';
-  import { page } from '$app/stores';
-  import { onMount } from 'svelte';
 
   export let data: PageData;
 
   let query = "";
   let titles = data.posts.map(x => x.title).slice(0, 3).join(" • ");
 
-	const filterByTag = (data, query) => {
+	const filterByTag = (data, query: string) => {
 		if(data.tag === null) {
-			return data.posts.filter(p => p.title.toLowerCase().includes(query.toLowerCase()))
+			return data.posts.filter((p: Post) => p.title.toLowerCase().includes(query.toLowerCase()))
 		}
 
-		return data.posts.filter(p => p.tags.includes(data.tag) && (p.tags.filter(t => t.includes(query.toLowerCase())).length > 0 || p.title.toLowerCase().includes(query.toLowerCase())))
-
+		return data.posts.filter((p: Post) => p.tags.includes(data.tag) && (p.tags.filter((t: string) => t.includes(query.toLowerCase())).length > 0 || p.title.toLowerCase().includes(query.toLowerCase())))
 	}
 </script>
 

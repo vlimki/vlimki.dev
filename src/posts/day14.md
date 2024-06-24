@@ -4,7 +4,7 @@ description: "Today we're exploring an elegant classification model - the Suppor
 published: true
 date: '2024-06-21'
 slug: 'day14'
-tags: ['journey', 'ml', 'math']
+tags: ['journey', 'ml']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';
@@ -116,7 +116,7 @@ So, we need to maximize $\frac{1}{||w||}$. How is that done? Well, by minimizing
 
 So now the optimization problem is to find:
 $$
-\min(\frac{1}{2}||\vec w||^2), \,\, \,\,\, y_i(\vec w \cdot \vec x_i + b) \geq 1\,\,\, \forall i \in \{1..N\}
+\min(\frac{1}{2}||\vec w||^2), \,\,\, \text{subject to} \,\,\, y_i(\vec w \cdot \vec x_i + b) \geq 1\,\,\, \forall i \in \{1..N\}
 $$
 
 ### Solving The Problem With Lagrange Multipliers
@@ -138,7 +138,7 @@ $$
 
 From the partial derivative we get $w = \sum\limits_{i=1}^n{\alpha_iy_ix_i}$. Let's substitute it back to the Lagrangian function to get the dual form:
 $$
-\max\limits_{\alpha_1 \dots \alpha_N}\sum\limits_{i=1}^{N}\alpha_i - \frac{1}{2}\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{N} y_i y_j \alpha_i \alpha_j (\vec x_i \cdot \vec x_j),\,\,\,\sum\limits_{i=1}^N \alpha_iy_i = 0, \,\, \,\, \alpha_i \geq 0\,\,\, \forall i \in \{1..N\}
+\max\limits_{\alpha_1 \dots \alpha_N}\sum\limits_{i=1}^{N}\alpha_i - \frac{1}{2}\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{N} y_i y_j \alpha_i \alpha_j (\vec x_i \cdot \vec x_j)\newline \text{subject to} \,\, \sum\limits_{i=1}^N \alpha_iy_i = 0, \,\, \,\, \alpha_i \geq 0\,\,\, \forall i \in \{1..N\}
 $$
 
 Quite a scary expression... So, essentially we want to get the optimal values for the Lagrangian multipliers $\alpha_1 \ldots \alpha_n$ so that we maximize the expression after it. The double sum at the end accounts for the interactions between every pair of two data points by their Lagrange multipliers, labels and the dot product of their feature vectors. The other constraint comes from the partial derivative of $L$ with respect to the parameter $b$.

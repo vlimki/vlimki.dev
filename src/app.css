@@ -102,6 +102,7 @@ p a {
 	@media (min-width: theme('screens.sm')) {
 		h1 {
 			@apply text-xxl;
+			line-height: 2rem;
 		}
 		h2 {
 			@apply text-xl;

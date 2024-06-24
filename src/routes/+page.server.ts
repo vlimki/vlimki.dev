@@ -17,7 +17,6 @@ export const load: PageServerLoad = async (_) => {
 	);
 
 	const posts = await Promise.all(postPromises);
-	console.log(posts)
 	const publishedPosts = posts.filter((post) => post.published).sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1)).slice(0, MAX_POSTS);
 
 	return { posts: publishedPosts };

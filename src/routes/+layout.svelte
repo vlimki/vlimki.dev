@@ -27,8 +27,7 @@
       <div class="min-w-[92px] max-w-[92px] text-[#fbfbfb] items-center hidden md:block">
       </div>
     </nav>
-    <PageBreak width="80%" />
-    <div class="pb-2" />
+    <PageBreak />
     <slot />
   	<PageBreak />
   	<div class="flex ftr flex-row items-center justify-center sm:justify-between">

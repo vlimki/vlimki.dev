@@ -15,18 +15,14 @@ export const load: PageServerLoad = async ({ url }) => {
 	);
 
 	const posts = await Promise.all(postPromises);
-	posts
 	let publishedPosts = posts.filter((post) => post.published);
 
 	const tags = publishedPosts.map(p => p.tags).flat(1).filter((elem, idx, self) => {
     return idx === self.indexOf(elem);
 	})
 
-
 	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
-
 	let tag = url.searchParams.get("tag");
-
 
 	return { posts: publishedPosts, tags: tags.join(","), tag: tag };
 };

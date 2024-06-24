@@ -1,12 +1,6 @@
 <script lang="ts">
-  import type { PageData } from './$types';
-  import type { SvelteComponentTyped } from 'svelte/internal';
   import Tag from '$lib/components/Tag.svelte';
   import { formatDate } from '$lib/utils';
-
-  /*import PageHead from '$lib/components/PageHead.svelte';
-  import ArticleTitle from '$lib/components/ArticleTitle.svelte';
-  import ArticleMeta from '$lib/components/ArticleMeta.svelte';*/
 
   export let data;
 </script>
@@ -35,9 +29,6 @@
   	/>
 </svelte:head> 
 
-<!--<PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
-<ArticleTitle title={data.frontmatter.title} />
-<ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />-->
 <h1>{data.frontmatter.title}</h1>
 <div class="flex flex-row items-center mt-1 flex-wrap wrap">
   <code>{formatDate(new Date(data.frontmatter.date))}</code>
