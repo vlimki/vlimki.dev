@@ -4,7 +4,7 @@ description: 'The state of bias in ChatGPT is rather intriguing.'
 published: true
 date: '2024-05-11'
 slug: 'chatgpt-bias'
-tags: ['chatgpt']
+tags: ['chatgpt', 'llms']
 ---
 
 There has barely been any talk about ChatGPT's bias lately. Did OpenAI fix the bias issues, or did everyone just forget about it? The latter option would certainly be reasonable since other more blatant bias issues with LLMs have been surfacing the media (and yes, I'm looking at you Gemini).

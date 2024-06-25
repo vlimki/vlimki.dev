@@ -189,6 +189,10 @@ article table {
 	overflow-x: scroll !important;
 }
 
+article blockquote {
+	padding-right: 20px;
+}
+
 article div {
 	display: block;
 	max-width: 100%;
