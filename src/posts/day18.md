@@ -54,7 +54,7 @@ Let's go over some math concepts from information theory before we see how they'
 
 The entropy $H(D)$ is defined as:
 $$
-H(D) = -\sum_{i=1}^{C}{p_i log_2(p_i)}
+H(D) = -\sum_{i=1}^{C}{p_i \log_2(p_i)}
 $$
 
 where:
