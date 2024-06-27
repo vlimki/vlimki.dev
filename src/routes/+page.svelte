@@ -37,6 +37,7 @@
 	<p>The <a href="/writing">writing</a> section of this website contains my daily logs of the things I learn in machine learning or mathematics, often in the form of a resource that can be freely used for learning.</p>
 	<p>Don't hesitate to contact me by e-mail at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a> or send me a message on X at <a href="https://x.com/vlimkidev" target="_blank" rel="noreferrer">@vlimkidev</a>. I'd be more than happy to network with like-minded individuals.</p>
 
+
     <h2 class="mt-4 mb-2">Latest Posts</h2>
 	<div class="flex flex-col">
 	    {#each data.posts as post}
@@ -53,4 +54,5 @@
 	</ul>
 
 	<p>Technologies I know my way around include Svelte, JS/TS, Rust, TailwindCSS, Next.js and Flutter.</p>
+	<p>This website is written in Svelte. The source code for the website and blog posts is freely accessible on GitHub at <a href="https://github.com/vlimki/vlimki.dev">vlimki/vlimki.dev</a>.</p>
 </div>

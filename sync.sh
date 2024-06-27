@@ -1,5 +1,9 @@
 git add .
-git commit -m "Automated commit for $(date +'%d-%m-%Y')"
+
+commit_msg=${2:-"automated commit for $(date +'%d-%m-%Y')"}
+
+git commit -m "$commit_msg"
+
 git push
 
 yarn build
