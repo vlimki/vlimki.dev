@@ -1,9 +1,9 @@
 ---
-title: "Day 22 of Machine Learning"
+title: "Day 23 of Machine Learning"
 description: "Nothing done today."
 published: true
-date: '2024-06-29'
-slug: 'day22'
+date: '2024-06-30'
+slug: 'day23'
 tags: ['journey']
 ---
 <script>
