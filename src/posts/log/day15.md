@@ -4,7 +4,8 @@ description: "Briefly going over some ways to optimize our datasets before feedi
 published: true
 date: '2024-06-22'
 slug: 'day15'
-tags: ['journey', 'ml', 'engineering']
+tags: ['log', 'ml', 'engineering']
+post: true
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

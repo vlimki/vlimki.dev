@@ -22,6 +22,8 @@
 	    <p class="!my-0 text-xs text-[#555555]">•</p>
         <a href="/writing"><code class={path.startsWith("/writing") ? "font-semibold text-[#444444]" : ""}>Writing</code></a>
       	<p class="!my-0 text-xs text-[#555555]">•</p>
+        <a href="/log"><code class={path.startsWith("/log") ? "font-semibold text-[#444444]" : ""}>Log</code></a>
+      	<p class="!my-0 text-xs text-[#555555]">•</p>
         <a href="/about"><code class={path.startsWith("/about") ? "font-semibold text-[#444444]" : ""}>About</code></a>
       </div>
       <div class="min-w-[92px] max-w-[92px] text-[#fbfbfb] items-center hidden md:block">

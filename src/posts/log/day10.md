@@ -4,7 +4,8 @@ description: "A brief look into elementary matrices."
 published: true
 date: '2024-06-17'
 slug: 'day10'
-tags: ['journey', 'math', 'linalg']
+post: true
+tags: ['log', 'math', 'linalg']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

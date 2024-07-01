@@ -21,6 +21,7 @@ declare namespace App {
     description: string;
     tags: string[];
     date: string;
+	post: bool;
     published: bool;
   }
 

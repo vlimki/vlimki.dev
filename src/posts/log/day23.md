@@ -4,7 +4,8 @@ description: "Nothing done today."
 published: true
 date: '2024-06-30'
 slug: 'day23'
-tags: ['journey']
+tags: ['log']
+post: false
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

@@ -4,7 +4,8 @@ description: "The start of my plan to become a machine learning engineer."
 published: true
 date: '2024-06-07'
 slug: 'day0'
-tags: ['journey']
+post: true
+tags: ['log']
 ---
 
 I think there's something motivating about the idea of being so good at a subject that it's almost inhumane. That's precisely what the term "cracked" describes - a term that has been floating around in the engineering space on X. To have an understanding of a subject so deep and so broad that nobody can compete. I couldn't help but to become motivated by these small-to-medium-sized X accounts who casually put like 8-11 hours into ML **per day**. Really? THAT's my competition? My efforts haven't been even close to deliberate enough to stand a chance against some of these people.

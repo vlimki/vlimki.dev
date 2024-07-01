@@ -4,7 +4,8 @@ description: "Continuing with linear algebra."
 published: true
 date: '2024-06-15'
 slug: 'day8'
-tags: ['journey', 'math', 'linalg']
+post: true
+tags: ['log', 'math', 'linalg']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

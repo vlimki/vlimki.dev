@@ -4,7 +4,8 @@ description: "\"Machine learning is just a bunch of if-statements under the hood
 published: true
 date: '2024-06-25'
 slug: 'day18'
-tags: ['journey', 'ml']
+tags: ['log', 'ml']
+post: true
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

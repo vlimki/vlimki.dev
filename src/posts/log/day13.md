@@ -4,7 +4,8 @@ description: "Did my first Kaggle competition and looked further into SVMs"
 published: true
 date: '2024-06-20'
 slug: 'day13'
-tags: ['journey']
+tags: ['log']
+post: false
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

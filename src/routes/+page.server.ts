@@ -4,7 +4,7 @@ import { slugFromPath } from '$lib/slugFromPath';
 const MAX_POSTS = 3;
 
 export const load: PageServerLoad = async (_) => {
-	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
+	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);
 
 	const postPromises = Object.entries(modules).map(([path, resolver]) =>
 		resolver().then(
@@ -17,7 +17,7 @@ export const load: PageServerLoad = async (_) => {
 	);
 
 	const posts = await Promise.all(postPromises);
-	const publishedPosts = posts.filter((post) => post.published).sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1)).slice(0, MAX_POSTS);
+	const publishedPosts = posts.filter((post) => post.published && post.post).sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1)).slice(0, MAX_POSTS);
 
 	return { posts: publishedPosts };
 };

@@ -4,7 +4,8 @@ description: "First part of the code-centric approach to stats series."
 published: true
 date: '2024-06-11'
 slug: 'day4'
-tags: ['journey', 'math', 'statistics']
+post: true
+tags: ['log', 'math', 'statistics']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

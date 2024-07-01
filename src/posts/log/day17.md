@@ -4,7 +4,8 @@ description: "Continuing with linear algebra: LU decomposition, matrix inverses,
 published: true
 date: '2024-06-24'
 slug: 'day17'
-tags: ['journey', 'math', 'linalg']
+tags: ['log', 'math', 'linalg']
+post: true
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

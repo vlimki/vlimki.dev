@@ -4,7 +4,8 @@ description: "Today we're exploring an elegant classification model - the Suppor
 published: true
 date: '2024-06-21'
 slug: 'day14'
-tags: ['journey', 'ml']
+post: true
+tags: ['log', 'ml']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

@@ -4,7 +4,8 @@ description: "I looked into SVMs and decision trees."
 published: true
 date: '2024-06-18'
 slug: 'day11'
-tags: ['journey']
+post: false
+tags: ['log']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

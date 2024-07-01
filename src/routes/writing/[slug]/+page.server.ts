@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 import { renderTweets } from 'sveltekit-tweet/server';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
+	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);
 
 	let match: { path?: string; resolver?: App.MdsvexResolver } = {};
 

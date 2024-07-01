@@ -4,7 +4,8 @@ description: "Exploring systems of linear equations graphically."
 published: true
 date: '2024-06-14'
 slug: 'day7'
-tags: ['journey', 'math', 'linalg']
+post: true
+tags: ['log', 'math', 'linalg']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

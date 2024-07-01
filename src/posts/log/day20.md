@@ -4,7 +4,8 @@ description: "Friendship ended with Python, Haskell is my new friend."
 published: true
 date: '2024-06-27'
 slug: 'day20'
-tags: ['journey']
+tags: ['log']
+post: false
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

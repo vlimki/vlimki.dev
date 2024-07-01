@@ -4,7 +4,8 @@ description: "Didn't write anything down. Did some exercises but slacked off oth
 published: true
 date: '2024-06-16'
 slug: 'day9'
-tags: ['journey']
+post: false
+tags: ['log']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

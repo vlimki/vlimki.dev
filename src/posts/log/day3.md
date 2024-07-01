@@ -3,8 +3,9 @@ title: "Linear & Logistic Regression - Day 3 of ML"
 description: "What if you wanted to fit a line into data?"
 published: true
 date: '2024-06-10'
+post: true
 slug: 'day3'
-tags: ['journey', 'ml']
+tags: ['log', 'ml']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

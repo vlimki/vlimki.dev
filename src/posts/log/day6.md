@@ -4,7 +4,8 @@ description: "Briefly covering a fundamental ML optimization algorithm."
 published: true
 date: '2024-06-13'
 slug: 'day6'
-tags: ['journey', 'math', 'calculus']
+post: true
+tags: ['log', 'math', 'calculus']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

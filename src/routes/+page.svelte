@@ -33,11 +33,9 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
-    <p class="text">Hey, I'm aspiring to become a "cracked" machine learning engineer. I come from a software/web engineering background with roughly four years of experience. This website is mainly for me to document my ML engineering journey and it works as a means of me becoming a better writer.</p>
-	<p>The <a href="/writing">writing</a> section of this website contains my daily logs of the things I learn in machine learning or mathematics, often in the form of a resource that can be freely used for learning.</p>
+    <p class="text">Hey, I'm aspiring to become a cracked machine learning engineer. I'm currently focusing on becoming extremely good at mathematics and learning Haskell. This website is mainly for me to document my ML engineering journey and it works as a means of me becoming a better writer.</p>
+	<p>The <a href="/writing">writing</a> section of this website contains blog posts and articles from my daily <a href="/log">logs</a> of the things I learn in machine learning or mathematics. I've tried to compile them to a format that allows them to be used as learning resources.</p>
 	<p>Don't hesitate to contact me by e-mail at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a> or send me a message on X at <a href="https://x.com/vlimkidev" target="_blank" rel="noreferrer">@vlimkidev</a>. I'd be more than happy to network with like-minded individuals.</p>
-
-
     <h2 class="mt-4 mb-2">Latest Posts</h2>
 	<div class="flex flex-col">
 	    {#each data.posts as post}
@@ -47,7 +45,7 @@
   </div>
 	<PageBreak />
 	<h2>Experience & Technical Skills</h2>
-	<p>I've done freelancing and volunteering work in different areas of software engineering - mostly related to web development, but also things like AI-based web scraping and mobile applications.</p><p>Here are some notable projects I've been involved in:</p>
+	<p>I come from a software engineering background with roughly four years of experience. I've done freelancing and volunteering work in different areas of software — mostly related to web development, but also things like AI-based web scraping and mobile applications.</p><p>Here are some notable projects I've been involved in:</p>
 	<ul class="mt-[-10px]">
 		<li>Frontend Developer & Designer @ <a target="_blank" rel="noreferrer" href="https://umr.media">UMR Media</a> | 05/2024 - Today</li>
 		<li>Discord Bot Lead @ <a target="_blank" rel="noreferrer" href="https://projectskilltree.com">Project Skill Tree</a> | 08/2022 - 02/2023</li>

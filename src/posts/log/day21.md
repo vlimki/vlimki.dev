@@ -4,7 +4,8 @@ description: "Learned Haskell and implemented gradient descent."
 published: true
 date: '2024-06-28'
 slug: 'day21'
-tags: ['journey']
+post: false
+tags: ['log']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

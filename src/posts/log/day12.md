@@ -4,7 +4,8 @@ description: "Didn't do anything basically. A plan for the upcoming days."
 published: true
 date: '2024-06-19'
 slug: 'day12'
-tags: ['journey']
+post: false
+tags: ['log']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

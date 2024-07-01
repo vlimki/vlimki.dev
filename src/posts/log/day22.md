@@ -4,7 +4,8 @@ description: "Studied more Haskell."
 published: true
 date: '2024-06-29'
 slug: 'day22'
-tags: ['journey']
+tags: ['log']
+post: false
 ---
 <script>
     import Image from '$lib/components/Image.svelte';

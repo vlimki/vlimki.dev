@@ -4,7 +4,8 @@ description: "Continuing on statistics and probability."
 published: true
 date: '2024-06-12'
 slug: 'day5'
-tags: ['journey', 'math', 'statistics']
+post: true
+tags: ['log', 'math', 'statistics']
 ---
 <script>
     import Image from '$lib/components/Image.svelte';
