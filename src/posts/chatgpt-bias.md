@@ -2,6 +2,7 @@
 title: "Is ChatGPT Still Biased?"
 description: 'The state of bias in ChatGPT is rather intriguing.'
 published: true
+post: true
 date: '2024-05-11'
 slug: 'chatgpt-bias'
 tags: ['chatgpt', 'llms']
