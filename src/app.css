@@ -217,16 +217,9 @@ article div {
 	overflow-x: scroll;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-article p::-webkit-scrollbar, article * li::-webkit-scrollbar, article ul::-webkit-scrollbar, article ol::-webkit-scrollbar, article h2::-webkit-scrollbar, article h3::-webkit-scrollbar, article h1::-webkit-scrollbar, article hr::-webkit-scrollbar, article blockquote {
-  display: none;
-}
-
 article p, article * li, article ul, article ol, article h2, article h3, article h1, article hr, article blockquote {
 	width: 100%;
 	max-width: 100%;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
 }
 
 article * li {
