@@ -41,7 +41,7 @@ p a {
 	}
 
 	article h3, strong, b {
-		color: #303030;
+		color: #181818;
 		@apply font-bold;
 		letter-spacing: 0.1px;
 	}
@@ -67,7 +67,7 @@ p a {
 	}
 
 	span:not(.katex-display span) {
-		color: #333333;
+		color: #181818;
 		font-size: 100%;
 	}
 
