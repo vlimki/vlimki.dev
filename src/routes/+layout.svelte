@@ -2,6 +2,19 @@
   import '../app.css';
   import PageBreak from '$lib/components/PageBreak.svelte';
   import { page } from '$app/stores';
+	import * as ackeeTracker from 'ackee-tracker';
+	import { onMount } from 'svelte';
+
+	const ackeeServer = import.meta.env.VITE_ACKEE_SERVER;
+  const ackeeDomainId = import.meta.env.VITE_ACKEE_DOMAIN_ID;
+
+  onMount(() => {
+    const instance = ackeeTracker.create(ackeeServer, {
+      detailed: true
+    });
+
+    instance.record(ackeeDomainId);
+  });
 
   let path: string;
 
@@ -9,7 +22,6 @@
     path = $page.route.id || "";
   }
 </script>
-
 
 <div class="max-w-screen overflow-hidden flex flex-col items-center justify-center">
   <div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full px-7 pb-10">
