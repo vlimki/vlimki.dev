@@ -221,8 +221,8 @@ Anyway, matrix-matrix multiplication follows the same principles as matrix-vecto
 <Image src="https://media1.tenor.com/m/PAFe_C-vNHYAAAAC/matrix-math.gif" text="A GIF visualization of matrix multiplication. (Source: Tenor)" />
 
 So essentially,
-1. You go to the first row on the first matrix
-2. You multiply every column of the second matrix with that row
+1. You go to the first row on the first matrix.
+2. You multiply every column of the second matrix with that row.
 3. You go to the next row and repeat step 2.
 
 Do a LOT of exercises on matrix multiplication, it really does take a while to get proficient at it. It's also very prone to human error. Fortunately most of the computing is done by computer nowadays, so understanding the principle and the semantics is more important than being able to carry out all the computations yourself.
