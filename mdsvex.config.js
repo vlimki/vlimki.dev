@@ -5,10 +5,14 @@ import rehypeExternalLinks from 'rehype-external-links';
 import slug from 'remark-slug';
 import rehypePostfixFootnoteAnchors from 'rehype-postfix-footnote-anchors';
 import headings from 'rehype-autolink-headings';
+import { createHighlighter } from "@bitmachina/highlighter";
+
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
-
+  highlight: {
+		highlighter: await createHighlighter({ theme: "css-variables" }),
+	},
 	smartypants: {
 		dashes: 'oldschool'
 	},

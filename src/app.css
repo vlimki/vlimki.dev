@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +10,81 @@ html {
   color: #181818;
   background: #fcfcfc;
 } 
+
+:root {
+  --shiki-color-background: #27272a;
+  --shiki-color-text: #54433a;
+  --shiki-token-constant: #904180;
+  --shiki-token-string: #6ee7b7;
+  --shiki-token-comment: #b1a39b;
+  --shiki-token-keyword: #3a684a;
+  --shiki-token-parameter: #54433a;
+  --shiki-token-function: #a06d00;
+  --shiki-token-string-expression: #6ee7b7;
+  --shiki-token-punctuation: #54433a;
+}
+
+code {
+  font-family: "Noto Sans Mono";
+	font-weight: 500;
+	font-size: 14px;
+}
+
+pre {
+  display: block;
+	overflow: scroll;
+	border: 1px solid #ebebeb;
+	width: 100%;
+	border-radius: 10px;
+	background: #fefefe;
+	margin-top: 10px;
+}
+
+pre[data-code-title]:before {
+	font-family: "Charter";
+	font-weight: 600;
+	color: #333333;
+  min-height: calc(3rem + 1px);
+  content: attr(data-code-title);
+  display: block;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: solid 1px #ebebeb;
+	margin-bottom: 7px;
+}
+
+code[data-line-numbers] > span[data-line-number] {
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+
+code[data-line-numbers] > span[data-line-number]::before {
+  /* Insert the line number data attribute before the line */
+  content: attr(data-line-number);
+  /* Other styling */
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  text-align: right;
+  color: gray;
+}
+
+pre {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    max-width: 100%; /* Set the maximum width as per your requirement */
+    border: 1px solid #ddd;
+    padding: 10px;
+    white-space: pre; /* Preserves whitespace and keeps the code formatting */
+}
+
+pre code {
+    display: flex;
+    flex-direction: column;
+}
 
 p a {
 	color: #0471d7;
@@ -74,16 +149,6 @@ p a {
 	p {
 		margin-top: 5px;
 		margin-bottom: 15px;
-	}
-	pre[class*=language-] {
-    	@apply bg-white;
-	    @apply rounded-lg;
-			@apply w-full;
-			@apply text-[12px];
-	    @apply mb-6; 
-    	line-height: 1.2rem;
-	    font-family: "Roboto Mono";
-    	border: 1px solid #ebebeb;
 	}
 	ul {
     	@apply list-disc;
@@ -153,7 +218,7 @@ p a {
   }
 
 code {
-  font-family: "Roboto Mono";
+  font-family: "Noto Sans Mono";
   color: #777777;
 }
 

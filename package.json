@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@bitmachina/highlighter": "1.0.0-alpha.6",
 		"@sveltejs/adapter-node": "^5.0.1",
 		"ackee-tracker": "^5.1.0",
 		"dotenv": "^16.4.5",

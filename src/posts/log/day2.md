@@ -63,7 +63,7 @@ The precision of all of these approximations will improve as the amount of recta
 
 That's better. The approximation is still a bit rough though. But that's fine. This is only to illustrate the principle. Let's try doing this in Python to save the job of calculating these manually.
 
-```python
+```python showLineNumbers title="Code: Riemann Sums in Python"
 import numpy as np
 
 def f(x):
@@ -125,13 +125,13 @@ def midpoint_sum(n):
 Testing these functions with $n=4$ should yield the same results.
 
 ```python
-> print(lower_sum(4))
+>>> print(lower_sum(4))
 0.53125
 
-> print(upper_sum(4))
+>>> print(upper_sum(4))
 0.78125
 
-> print(midpoint_sum(4))
+>>> print(midpoint_sum(4))
 0.671875
 ```
 
