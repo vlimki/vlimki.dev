@@ -1,5 +1,5 @@
 ---
-title: "Day 33 of Machine Learning"
+title: "Day 34 of Machine Learning"
 description: "Very productive day. Set up my neural net to be trained on MNIST and did a lot of other stuff"
 published: true
 date: '2024-07-12'
