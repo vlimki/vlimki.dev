@@ -19,7 +19,7 @@
   <div class="flex flex-col">
 	{#each data.posts as post}
 	  <div class="flex flex-row items-center my-4">
-		<div class="w-[30px] h-[2px] bg-[#ebebeb]"/>
+		<div class="min-w-[30px] w-[30px] h-[2px] bg-[#ebebeb]"/>
 		<div class="w-[6px] h-[6px] rounded-full bg-[#ebebeb] rounded-full" />
 		<div class="flex flex-col ml-5">
 		  <h3><b>{formatDate(new Date(post.date))}</b></h3>
