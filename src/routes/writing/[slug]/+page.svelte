@@ -31,7 +31,7 @@
 
 <h1>{data.frontmatter.title}</h1>
 <div class="flex flex-row items-center mt-1 flex-wrap wrap">
-  <code>{formatDate(new Date(data.frontmatter.date))}</code>
+  <code class="font-normal">{formatDate(new Date(data.frontmatter.date))}</code>
   <div class="mx-2 text-[#aaaaaa]">•</div>
   <div class="flex flex-row items-center">
 	  <code>[</code>

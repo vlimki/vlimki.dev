@@ -10,7 +10,7 @@
   	  <p class="!my-0 !mb-1 text-[#666666] text-[15px] sm:text-[16px] leading-5 sm:leading-[1.4rem] md:text-[17px]">{post.description}</p>
 		</a>
     <div class="flex flex-row items-center flex-wrap wrap">
-    	<code class="text-[14px] sm:text-[15px]">{formatDate(new Date(post.date))}</code>
+    	<code class="text-[14px] !font-normal sm:text-[15px]">{formatDate(new Date(post.date))}</code>
       	<code class="text-[14px] sm:text-[15px] mx-2 text-[#aaaaaa]">•</code>
 		{#each post.tags as tag}
 			<Tag text={tag} />
