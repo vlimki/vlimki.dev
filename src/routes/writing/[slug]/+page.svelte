@@ -34,7 +34,7 @@
   <code class="font-normal">{formatDate(new Date(data.frontmatter.date))}</code>
   <div class="mx-2 text-[#aaaaaa]">•</div>
   <div class="flex flex-row items-center">
-	  <code>[</code>
+	  <code class="!text-md">[</code>
   	{#each data.frontmatter.tags as tag}
 		<Tag text={tag} />
   	{/each}
