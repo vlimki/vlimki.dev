@@ -26,7 +26,7 @@ html {
 
 code {
   font-family: "Noto Sans Mono";
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 14px;
 }
 
@@ -38,6 +38,10 @@ pre {
 	border-radius: 10px;
 	background: #fefefe;
 	margin-top: 10px;
+}
+
+pre code {
+  font-weight: 500;
 }
 
 pre[data-code-title]:before {
@@ -113,6 +117,9 @@ p a {
 	}
 	h3 {
 		@apply text-sm;
+	}
+  pre {
+    @apply no-scrollbar
 	}
 
 	article h3, strong, b {
@@ -338,11 +345,11 @@ article blockquote p b {
 article code:not(pre code) {
 	border: 1px solid #ebebeb;
 	background: white;
-	color: #444444 !important;
+	color: #252525 !important;
 	padding: 3px;
 	padding-left: 7px;
 	padding-right: 7px;
-	border-radius: 10px;
+	border-radius: 7px;
 }
 
 article p {
