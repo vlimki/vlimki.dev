@@ -1,7 +1,7 @@
 ---
 title: "Handwritten Digit Recognition From Scratch in Haskell"
 description: 'Learning about neural networks, linear algebra, and Haskell with a hands-on project - training a neural network on MNIST from scratch.'
-published: false
+published: true
 post: true
 date: '2024-07-15'
 slug: 'haskell-mnist'
@@ -169,8 +169,8 @@ Don't worry about `R`, it's just a type synonym for a `Double` (and the letter R
 Let's also define a function called `activate`, which takes a `Layer` and an input vector as parameters and returns us the activation value $g(z)$ for the layer.
 
 ```haskell
-activate :: Layer -> Matrix R -> Matrix R
-activate layer input = cmap (activation l) (weights layer <> x + biases layer)
+activate :: Matrix R -> Network -> Matrix R
+activate input layer = cmap (activation l) (weights layer <> x + biases layer)
 ```
 
 In Haskell, `::` is used to denote a type signature. The second line is the function body itself. This function definition is very simple. All you need to know to understand it is that `<>` stands for matrix multiplication, and `cmap` is a function that applies some function on a matrix element-wise.
@@ -195,4 +195,73 @@ Now that we have the core structure of the network defined, let's get to the coo
 
 ## How Neural Networks Actually Learn
 
-The information flows forward in a neural network by a process called **forward propagation**.
+The information flows forward in a neural network by a process called **forward propagation**. This is how the neural network runs the information through to ultimately compute the end result. But forward propagation isn't very useful by itself. There must be some algorithm that keeps updating our parameters $w, b$ for every neuron to get closer to a better fit. That sounds familiar --- and indeed it is; we can use gradient descent, just like we previously have! In particular, we want to use an application of gradient descent called **backpropagation**.
+
+### Forward Propagation
+
+Essentially forward propagation just does the two following steps:
+1. Does computations and calls the activation function on a layer.
+2. Take the output of that layer and treat it as the input to the next layer.
+3. Repeat 1-2 from the first layer all the way to the output layer.
+
+We can view forward propagation as a function composed of all the layer computation functions. Consider us having three layers $l_1$, $l_2$ and $l_3$. Let $f_{n}$ represent the entire computation (the linear function + the activation function) for some layer $l_n$. We can now express the entire forward propagation algorithm as:
+$$
+f_3(f_2(f_1(\mathbf{x})))) = (f_3 \circ f_2 \circ f_1)(\mathbf{x})
+$$
+
+That's all it is. So we just repeat the same process on every layer, using the output of the previous layer. To make notation consistent, $l_0$ is often used to represent the input vector $\mathbf{x}$ as the **input layer**.
+
+I find this quite funny --- the entire forward propagation function can be expressed using just two words in Haskell. Literally, just two words. Let's take a slightly longer approach first and simplify from there for optimized understanding.
+
+In Haskell, there is a function `foldl` that essentially maps over a list with an accumulator. It's a bit like JavaScript's `reduce` function. Let's take a look at the type of `foldl`:
+
+```haskell
+ghci> :type foldl
+foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
+```
+
+The `Foldable t =>` part means that the generic type `t` has to be a part of the `Foldable` typeclass. It's just like Rust's trait system (except it was established way back in the 80s). So the arguments are: 
+1. a function that takes two arguments of types `b` and `a` (in our case, `a` and `b` will be `Layer` and the input vector `Matrix R` respectively) and returns another `b` (`Layer`, that is),
+2. a `Foldable` (in our case a list) of values of type `a` (a list of `Layer` --- the `Network` type),
+3. and the inial accumulator value (the input vector).
+
+Let's look into how this compares with JavaScript's `reduce` function. If you've seen the code for getting the sum of an array in JavaScript:
+
+```javascript
+[1, 2, 3].reduce((a, b) => a + b)
+```
+
+you will understand how our implementation works. The difference is that `foldl` is explicitly specified the initial accumulator value, whereas `reduce` just implicitly uses the first element in the array as the initial accumulator.
+
+Here's how to replicate the array sum in Haskell using `foldl`:
+
+```haskell
+foldl (\a b -> a + b) 0 [1, 2, 3]
+```
+
+We use `0` as the initial accumulator value. Otherwise the code looks very similar.
+
+Well, enough of that. Let's get into the actual forward propagation implementation now. Here's how it looks:
+
+```haskell
+forwardProp :: Matrix R -> Network -> Matrix R
+forwardProp input net = foldl (\inp layer -> activate inp layer) input net
+```
+
+We take two arguments --- the initial input vector and the network. We fold over a list of `Layer`s with an accumulator of type `Matrix R`, which will be the input to the current layer we're folding over. Due to Haskell's currying ([read more here]()), we can simplify this code a bit:
+
+```haskell
+forwardProp :: Matrix R -> Network -> Matrix R
+forwardProp input net = foldl (activate) input net
+```
+
+Haskell is able to recognize that we will directly be calling another function with our lambda function's parameters, in the same order that in which they're defined. As a matter of fact, we can take this even further and utilize this on the actual function declaration:
+
+```haskell
+forwardProp :: Matrix R -> Network -> Matrix R
+forwardProp = foldl activate
+```
+
+Think about it. If `forwardProp x y = foldl activate x y`, should it not follow that `forwardProp = foldl activate`?
+
+Anyway, THAT is a concise forward propagation function. Tell me that is not beautiful. You may see why I find it so fun to write Haskell code.
