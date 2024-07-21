@@ -2,7 +2,7 @@
 title: "Day 42 of Machine Learning"
 description: "Relatively unproductive, only studied a bit of calculus."
 published: true
-date: '2024-07-18'
+date: '2024-07-20'
 slug: 'day42'
 tags: ['log']
 post: false

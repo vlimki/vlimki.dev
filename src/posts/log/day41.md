@@ -2,7 +2,7 @@
 title: "Day 41 of Machine Learning"
 description: "Unproductive day today."
 published: true
-date: '2024-07-18'
+date: '2024-07-19'
 slug: 'day41'
 tags: ['log']
 post: false
