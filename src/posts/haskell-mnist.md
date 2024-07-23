@@ -183,13 +183,74 @@ ghci> l = Layer { weights = (1><1) [0.5]
                 , biases = (1><1) [1]
                 , sz = 1
                 , activation = sigmoid }
-ghci>input = (1><1) [0.123]
-ghci>activate l x
+ghci> input = (1><1) [0.123]
+ghci> activate l x
 (1><1)
  [ 0.7429770928842059 ]
 ```
 
 Works as expected. This is just normal logistic regression where $w = 0.5$ and $b = 1$. Note that the `(n><m)` notation is used for creating a matrix with $n$ rows and $m$ columns.
+
+There is an important detail here --- we initialized both the weight matrix and the bias vector to be of size $1 \times 1$. We concluded before that the weight matrices and bias vectors must have a specific size; in particular, the weight vector must be of size $n \times m$, where $n$ is the number of features in the input vector, and $m$ is the number of neurons in the current layer. We also found that the bias vector must be of length $m$.
+
+Let's make functions that automate the entire network creation process --- including initializing weight and bias vectors of the proper size. Let's start with a function `initialize`, that essentially just creates placeholder `Layer` structures and lets the user determine the activation function and size of each layer:
+
+```haskell
+-- Initialize the network. Note that the dimensions of the weight and bias matrices aren't calculated here yet.
+-- This only initializes the layer structures with their intended numbers of neurons and activation functions.
+initialize :: [Int] -> [R -> R] -> Network
+initialize szs as = 
+  map (\(x, a) -> Layer{weights = (0><0) [], biases = (0><0) [], sz = x, activation = a}) $ zip szs as
+```
+
+So we take a list of integers for the layer sizes, and a list of activation functions of the form `R -> R` (or $\mathbb{R} \to \mathbb{R}$). `zip` converts the two lists into one list of tuples `[(Int, R -> R)]`. We map over that list and create a layer type for each element.
+
+Let's try this function out in `ghci`:
+```haskell
+ghci> a = initialize [4, 1] [sigmoid, sigmoid]
+ghci> :type a
+a :: Network
+```
+
+Before we go any further, let's create helper functions for initializing matrices with random values. Why? It is good practice to initialize the weights and biases in your neural network with random values, in order to prevent it from hitting local minima.
+
+```haskell showLineNumbers title="Initialization Function Helpers"
+-- The xavier weight initialization method. It works well with the sigmoid activation function.
+-- n = the number of neurons
+-- m = the number of features in the input vector
+initWeights :: Int -> Int -> IO (Matrix R)
+initWeights n m = do
+  let limit = sqrt (2.0 / fromIntegral n)
+  -- Generate a list of random numbers in the range [-sqrt(2/n), sqrt(2/n)], where n = number of neurons
+  values <- replicateM (n * m) (randomRIO (-limit, limit))
+
+  -- Build a matrix (n rows, m columns) from the list of values that `replicateM` outputs
+  return $ (n >< m) values
+
+-- Initialize every bias to a random value from the range [-0.1, 0.1].
+initBiases :: Int -> IO (Matrix R)
+initBiases n = do
+  values <- replicateM n (randomRIO (-0.1, 0.1))
+  return $ (n >< 1) values
+```
+
+Let's now make a function that automatizes the initialization process for the weights and biases using the functions we just defined, given just an input vector $\mathbf{x}$. Let's call this function --- in true scikit-learn style --- `fit`:
+
+```haskell showLineNumbers title="Determining The Dimensions Of The Weight And Bias Matrices"
+-- This is where the dimensions of the weight and bias matrices get initialized.
+fit :: Matrix R -> Network -> IO Network
+fit x n =
+  mapM
+    ( \(layer, idx) -> do
+        w <- initWeights (sz layer) (len idx)
+        b <- initBiases $ sz layer
+        return layer{weights = w, biases = b, sz = sz layer}
+    ) $ zip n [0..length n]
+  where
+    len idx = if idx == 0 then fst (size x) else sz $ n !! (idx - 1)
+```
+
+The `len idx` function takes the index of a layer, and calculates the number of features in the input of that layer. If we're dealing with the first layer (or if the index is $0$), we use the length of the input vector to determine the number of features. Otherwise, we use the length of the output vector of the previous layer (which is identical to the number of neurons in that layer). The `!!` operator is used for indexing in Haskell. So we take number of neurons in the `idx - 1`th layer. We iterate over `(layer, index)` pairs which we again get with the `zip` function.
 
 Now that we have the core structure of the network defined, let's get to the cool part --- how do we actually get the network to learn?
 
