@@ -35,7 +35,7 @@
 		{/if} 
 	{/each}
   </div>
-  <input type="text" class="!text-[13px] sm:!text-[15px] my-4 w-[95%] sm:w-2/3 h-12 rounded-2xl border border-[#ebebeb] px-5" placeholder="Search by title or tag..." bind:value={query} />
+  <input type="text" class="!text-[13px] sm:!text-[15px] my-4 w-[95%] sm:w-2/3 h-12 rounded-2xl border border-[#ebebeb] dark:border-[#333333] bg-white dark:bg-[#282828] px-5" placeholder="Search by title or tag..." bind:value={query} />
 </div>
 <PageBreak />
 

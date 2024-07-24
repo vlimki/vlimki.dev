@@ -8,7 +8,7 @@
 </svelte:head> 
 
 <div class="flex flex-row">
-	<img class="hidden sm:block sm:max-h-[150px] md:max-h-[170px] lg:max-h-[200px] rounded-full aspect-square object-cover" alt="image of Juho" src="/images/pfp.png" />
+	<img class="hidden sm:block shadow-lg sm:max-h-[150px] md:max-h-[170px] lg:max-h-[200px] rounded-full aspect-square object-cover" alt="image of Juho" src="/images/pfp.png" />
 	<div class="sm:ml-10">
 		<h1 class="">About</h1>
 		<p>Hey - I'm Juho Välimäki, and I aspire to be a machine learning engineer. At first I got into ML because I saw it as the only sensible route for the future (due to product advancements like ChatGPT), but soon enough it completely replaced my interest for web/software engineering.</p>
@@ -30,6 +30,5 @@
 		margin-bottom: 12px;
 	}
 	img {
-		box-shadow: 2px 4px 20px #eeeeee;
 	}
 </style>

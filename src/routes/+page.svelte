@@ -52,5 +52,5 @@
 	</ul>
 
 	<p>Technologies I know my way around include Svelte, JS/TS, Rust, TailwindCSS, Next.js and Flutter.</p>
-	<p>This website is written in Svelte. The source code for the website and blog posts is freely accessible on GitHub at <a href="https://github.com/vlimki/vlimki.dev">vlimki/vlimki.dev</a>.</p>
+	<p>This website is written in Svelte. The source code for the website and blog posts is freely accessible on GitHub at <a target="_blank" rel="noreferrer" href="https://github.com/vlimki/vlimki.dev">vlimki/vlimki.dev</a>.</p>
 </div>

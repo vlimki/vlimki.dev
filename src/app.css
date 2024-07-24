@@ -4,13 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Charter";
-	font-weight: normal;
-  color: #181818;
-  background: #fcfcfc;
-} 
-
 :root {
   --shiki-color-background: #27272a;
   --shiki-color-text: #54433a;
@@ -20,8 +13,21 @@ html {
   --shiki-token-keyword: #3a684a;
   --shiki-token-parameter: #54433a;
   --shiki-token-function: #a06d00;
-  --shiki-token-string-expression: #6ee7b7;
+  --shiki-token-string-expression: #465aa4;
   --shiki-token-punctuation: #54433a;
+}
+
+.dark {
+  --shiki-color-background: #181818;
+  --shiki-color-text: #d8d8d8;
+  --shiki-token-constant: #ba8baf;
+  --shiki-token-string: #465aa4;
+  --shiki-token-comment: #555555;
+  --shiki-token-keyword: #ab4642;
+  --shiki-token-parameter: #d8d8d8;
+  --shiki-token-function: #7cafc2;
+  --shiki-token-string-expression: #465aa4;
+  --shiki-token-punctuation: #d8d8d8;
 }
 
 code {
@@ -30,70 +36,16 @@ code {
 	font-size: 14px;
 }
 
-pre {
-  display: block;
-	overflow: scroll;
-	border: 1px solid #ebebeb;
-	width: 100%;
-	border-radius: 10px;
-	background: #fefefe;
-	margin-top: 10px;
-}
-
-pre[data-code-title]:before {
-	font-family: "Charter";
-	font-weight: 600;
-	color: #333333;
-  min-height: calc(3rem + 1px);
-  content: attr(data-code-title);
-  display: block;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-bottom: solid 1px #ebebeb;
-	margin-bottom: 7px;
-}
-
-code[data-line-numbers] > span[data-line-number] {
-  margin-bottom: -2px;
-  margin-top: -2px;
-}
-
-code[data-line-numbers] > span[data-line-number]::before {
-  /* Insert the line number data attribute before the line */
-  content: attr(data-line-number);
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 1.5rem;
-  margin-left: 0.5rem;
-  text-align: right;
-  color: gray;
-}
-
-pre {
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto; /* Allows horizontal scrolling */
-    max-width: 100%; /* Set the maximum width as per your requirement */
-    border: 1px solid #ddd;
-    padding: 10px;
-    white-space: pre; /* Preserves whitespace and keeps the code formatting */
-}
 
 pre code {
     display: flex;
     flex-direction: column;
 }
 
-p a {
-	color: #0471d7;
+p a:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
-
-	p a:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
 
 
 * {
@@ -103,6 +55,27 @@ p a {
 }
 
 @layer base {
+  html {
+    font-family: "Charter";
+  	font-weight: normal;
+		@apply text-[#181818] dark:text-[#fcfcfc] bg-[#fcfcfc] dark:bg-[#212121];
+  } 
+	p a {
+		@apply text-[#0471d7] dark:text-[#0b9ddd];
+	}
+
+
+	nav a {
+		@apply sm:mr-[20px] sm:ml-[20px] mr-[10px] ml-[10px];
+		color: #666666 !important;
+	}
+
+	nav a:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+
 	h1 {
 		@apply text-xl;
 	}
@@ -119,7 +92,7 @@ p a {
 	}
 
 	article h3, strong, b {
-		color: #181818;
+		@apply text-[#181818] dark:text-[#fcfcfc];
 		@apply font-bold;
 		letter-spacing: 0.1px;
 	}
@@ -145,7 +118,7 @@ p a {
 	}
 
 	span:not(.katex-display span) {
-		color: #181818;
+		@apply text-[#181818] dark:text-[#fcfcfc];
 		font-size: 100%;
 	}
 
@@ -153,6 +126,54 @@ p a {
 		margin-top: 5px;
 		margin-bottom: 15px;
 	}
+	pre {
+  	display: block;
+		overflow: scroll;
+		@apply border border-[#ebebeb] dark:border-[#333333];
+		width: 100%;
+		border-radius: 10px;
+		@apply bg-[#fefefe] dark:bg-[#181818];
+	  padding: 10px;
+		margin-top: 10px;
+	}
+
+	pre[data-code-title]:before {
+		font-family: "Charter";
+		font-weight: 600;
+		@apply text-[#333333] dark:text-[#fcfcfc];
+	  min-height: calc(3rem + 1px);
+  	content: attr(data-code-title);
+	  display: block;
+  	padding-top: 0.5rem;
+	  padding-left: 1rem;
+  	padding-right: 1rem;
+	  @apply border-b border-[#ebebeb] dark:border-[#333333];
+		margin-bottom: 7px;
+	}
+
+	code[data-line-numbers] > span[data-line-number] {
+  	margin-bottom: -2px;
+ 		margin-top: -2px;
+	}
+
+	code[data-line-numbers] > span[data-line-number]::before {
+  	/* Insert the line number data attribute before the line */
+  	content: attr(data-line-number);
+  	/* Other styling */
+  	display: inline-block;
+  	width: 1rem;
+  	margin-right: 1.5rem;
+  	margin-left: 0.5rem;
+  	text-align: right;
+  	@apply text-[#aaaaaa] dark:text-[#404040];
+	}
+
+	article hr {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		@apply border-[#ebebeb] dark:border-[#333333];
+	}
+
 	ul {
     	@apply list-disc;
   	}
@@ -167,6 +188,11 @@ p a {
 		@apply ml-8;
 		@apply mb-1;
   	}
+
+	a {
+		@apply text-[#0471d7] dark:text-[#0b9ddd];
+	}
+
 
 	article .math, article table {
 		@apply no-scrollbar;
@@ -236,10 +262,6 @@ a:hover {
   text-decoration: underline;
 }
 
-a {
-	color: #0471d7;
-}
-
 h2:hover .icon {
   display: block;
   margin-left: 10px;
@@ -294,11 +316,6 @@ article * li {
 	max-width: calc(100% - 2rem);
 }
 
-article hr {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
 article th {
 	border: 1px solid #aaaaaa;
 	padding-top: 2px;
@@ -339,9 +356,9 @@ article blockquote p b {
 }
 
 article code:not(pre code) {
-	border: 1px solid #ebebeb;
-	background: white;
-	color: #252525 !important;
+	@apply border border-[#ebebeb] dark:border-[#333333];
+	@apply bg-white dark:bg-[#181818];
+	@apply !text-[#252525] dark:!text-[#fcfcfc];
 	padding: 3px;
 	padding-left: 7px;
 	padding-right: 7px;
