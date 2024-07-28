@@ -333,8 +333,29 @@ Think about it. If `forwardProp x y = foldl activate x y`, should it not follow 
 
 Anyway, THAT is a concise forward propagation function. Tell me that is not beautiful. You may see why I find it so fun to write Haskell code.
 
+We can now test our code:
+```haskell
+forwardPropagate :: Matrix R
+forwardPropagate = do
+    let n1 = initialize [2, 2, 1] [sigmoid, sigmoid, sigmoid] [sigmoid', sigmoid', sigmoid']
+    let exampleInput = (2 >< 1) [0, 1]
+    -- We need to use the <- operator since `fit` is returns `IO Network`.
+    n2 <- fit exampleInput n1
+    forwardProp exampleInput n2
+```
 
-The dimensions of our weight initialization functions were indeed correct, and all matrix multiplication operations could be carried out with no errors. Nice! We have now fully implemented forward propagation. What's left for us to do now is to calculate the errors and gradients for the outputs, and compute the adjustments to the parameters $w,b$ for every neuron. Let's do that next.
+Remember the `fit` function works on just one input vector and only cares about the dimensions of it.
+
+Let's now test the function:
+
+```haskell
+ghci> forwardPropagate
+(1><1)
+ [ 0.4921254998138297 ]]
+```
+One neuron in the last layer means we get one output --- the dimensions of our weight initialization functions were indeed correct, and all matrix multiplication operations were carried out with no errors. Nice!
+
+We have now fully implemented forward propagation. What's left for us to do now is to calculate the errors and gradients for the outputs, and compute the adjustments to the parameters $w,b$ for every neuron. Let's do that next.
 
 ### Backpropagation
 
@@ -383,24 +404,3 @@ matrixToRows x = map (tr . asRow) (toRows x)
 
 The `toRows` function turns a `Matrix R` into a `[Vector R]`. We then map over that array, first converting each vector into a row matrix, and then transposing that matrix with the `tr` function. The `.` operator stands for the function composition operator from mathematics. The expression `(f . g) x` is the same as $(f \circ g)(x) = f(g(x))$.
 
-We can now test our the forwad propagation function we wrote previously:
-```haskell
-forwardPropagate :: Matrix R
-forwardPropagate = do
-    let n1 = initialize [2, 2, 1] [sigmoid, sigmoid, sigmoid] [sigmoid', sigmoid', sigmoid']
-    -- We simply take the first element of the column vectors `matrixToRows` gives us.
-    let firstInput = head $ matrixToRows xorInput
-    -- We need to use the <- operator since `fit` is impure and returns `IO Network`.
-    n2 <- fit firstInput n1
-    forwardProp firstInput n2
-```
-
-Remember the `fit` function works on just one input vector. Hence we only need to extract the first element of the entire input matrix.
-
-Let's now test the function:
-
-```haskell
-ghci> forwardPropagate
-(1><1)
- [ 0.4921254998138297 ]]
-```
