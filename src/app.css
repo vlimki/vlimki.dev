@@ -66,7 +66,7 @@ p a:hover {
 
 
 	nav a {
-		@apply sm:mr-[20px] sm:ml-[20px] mr-[10px] ml-[10px];
+		@apply md:mx-[15px] sm:mx-[15px] mx-[10px];
 		color: #666666 !important;
 	}
 

@@ -55,6 +55,8 @@
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
 				<a href="/writing"><code class={path.startsWith("/writing") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Writing</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
+				<a href="/library"><code class={path.startsWith("/library") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Library</code></a>
+				<p class="!my-0 text-xxs text-[#555555]">•</p>
 				<a href="/log"><code class={path.startsWith("/log") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Log</code></a>
 				<p class="!my-0 text-xs text-[#555555]">•</p>
 				<a href="/about"><code class={path.startsWith("/about") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>About</code></a>
