@@ -116,6 +116,29 @@ p a:hover {
 	nav a * {
 		@apply text-[15px] !important;
 	}
+	article blockquote {
+		border-left: 3px solid;
+		@apply border-[#dddddd] dark:border-[#333333]
+	}
+
+	article blockquote p {
+		font-family: "Charter";
+		font-style: italic;
+		@apply text-[#666666] dark:text-[#999999];
+		font-size: 20px;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	article blockquote p b {
+		font-family: "Charter";
+		font-style: normal;
+		@apply text-[#181818] dark:text-[#fcfcfc];
+		font-weight: 500;
+		font-size: 18px;
+	}
 
 	span:not(.katex-display span) {
 		@apply text-[#181818] dark:text-[#fcfcfc];
@@ -330,29 +353,6 @@ article td {
 	padding-bottom: 2px;
 	padding-left: 10px;
 		padding-right: 10px;
-}
-
-article blockquote {
-	border-left: 3px solid #dddddd;
-}
-
-article blockquote p {
-	font-family: "Charter";
-	font-style: italic;
-	color: #666666;
-	font-size: 20px;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-article blockquote p b {
-	font-family: "Charter";
-	font-style: normal;
-	color: #181818;
-	font-weight: 500;
-	font-size: 18px;
 }
 
 article code:not(pre code) {

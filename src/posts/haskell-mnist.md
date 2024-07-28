@@ -1,7 +1,7 @@
 ---
 title: "Handwritten Digit Recognition From Scratch in Haskell"
 description: 'Learning about neural networks, linear algebra, and Haskell with a hands-on project - training a neural network on MNIST from scratch.'
-published: false
+published: true
 post: true
 date: '2024-07-15'
 slug: 'haskell-mnist'
@@ -82,8 +82,11 @@ In this post I'll be going over all of the important neural network knowledge: w
 ### Why Haskell?
 
 Certainly it's not the most convenient language to be writing a neural network in --- but it sure is the most fun! Haskell is very theoretical and great for expressing mathematics. Considering the fact that a neural network is literally nothing but math, Haskell is a great fit. I also chose it for personal reasons --- mainly due to the fact that I really like math, but I also believe that Haskell will greatly assist me at majoring math in university.
-___
 
+### Prerequisites
+The prerequisites for this post can really just be boiled down to high school calculus knowledge and the basics of linear algebra (mostly matrices, their dimensions and matrix multiplication).
+
+___
 ## A Brief Introduction to Neural Networks
 
 <div class="my-3" />
@@ -234,6 +237,8 @@ initBiases n = do
   return $ (n >< 1) values
 ```
 
+Note that these function returns `IO (Matrix R`. It means that this function is not pure since it needs to perform an I/O operation for generating random numbers. You can read more on Haskell I/O AAAAAAAAAaahere.
+
 Let's now make a function that automatizes the initialization process for the weights and biases using the functions we just defined, given just an input vector $\mathbf{x}$. Let's call this function --- in true scikit-learn style --- `fit`:
 
 ```haskell showLineNumbers title="Determining The Dimensions Of The Weight And Bias Matrices"
@@ -251,6 +256,7 @@ fit x n =
 ```
 
 The `len idx` function takes the index of a layer, and calculates the number of features in the input of that layer. If we're dealing with the first layer (or if the index is $0$), we use the length of the input vector to determine the number of features. Otherwise, we use the length of the output vector of the previous layer (which is identical to the number of neurons in that layer). The `!!` operator is used for indexing in Haskell. So we take number of neurons in the `idx - 1`th layer. We iterate over `(layer, index)` pairs which we again get with the `zip` function.
+
 
 Now that we have the core structure of the network defined, let's get to the cool part --- how do we actually get the network to learn?
 
@@ -326,3 +332,75 @@ forwardProp = foldl activate
 Think about it. If `forwardProp x y = foldl activate x y`, should it not follow that `forwardProp = foldl activate`?
 
 Anyway, THAT is a concise forward propagation function. Tell me that is not beautiful. You may see why I find it so fun to write Haskell code.
+
+
+The dimensions of our weight initialization functions were indeed correct, and all matrix multiplication operations could be carried out with no errors. Nice! We have now fully implemented forward propagation. What's left for us to do now is to calculate the errors and gradients for the outputs, and compute the adjustments to the parameters $w,b$ for every neuron. Let's do that next.
+
+### Backpropagation
+
+**Backpropagation** is probably one of the harder topics for machine learning beginners to truly grasp --- at least that was the case for me! It's often just seen as a black box that magically does something. The mathematical formulas make VERY little sense at first, which is why we'll be taking a deeper look at it. 
+
+> NOTE: This post takes a very mathematical approach to backpropagation, as opposed to an intuitive one. One may find it helpful to look at a more intuitive explanation of backpropagation first through a resource like Andrej Karpathy's [micrograd video](https://youtube.com/watch?v=VMj-3S1tku0).
+
+## Solving The XOR Problem
+
+Let's start modeling our network for the XOR problem, which we'll try solving later with our neural network implementation. Let's first define our dataset. The XOR gate can take four different inputs: `[0, 0]`, `[0, 1]`, `[1, 0]` and `[1, 1]`. Hence our set of inputs looks something like this:
+$$
+\mathbf{X} = \{\begin{bmatrix}0 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1\end{bmatrix}, \begin{bmatrix}1 \\ 0\end{bmatrix}, \begin{bmatrix}1 \\ 1\end{bmatrix}\}
+$$
+
+The XOR gate produces the outputs $0, 1, 1, 0$ for the inputs respectively. Hence our set of outputs looks like this:
+
+$$
+\mathbf{Y} = \{0, 1, 1, 0\}
+$$
+
+Now that we have these sets, we can define ourselves an input matrix that contains every training example and an output matrix that contains every output. We do this to store all of our training data nicely in one structure. Recall that feature vectors are often stored as rows in a dataset, so we'll adopt this convention although it complicates things a bit. Our matrices now look like this:
+```haskell showLineNumbers
+xorInput :: Matrix R
+xorInput = (4 >< 2)
+    [ 0, 0
+    , 0, 1
+    , 1, 0,
+    , 1, 1
+    ] ::
+    Matrix R
+
+xorOutput :: Matrix R
+xorOutput = (4 >< 1) 
+    [ 0
+    , 1
+    , 1
+    , 0 ]
+```
+
+Let's also define a helper function to turn a matrix into an array of its rows (so we can eventually iterate over each training example when training the network):
+```haskell
+-- Converts a matrix into a list of column vectors from its rows
+matrixToRows :: Matrix R -> [Matrix R]
+matrixToRows x = map (tr . asRow) (toRows x)
+```
+
+The `toRows` function turns a `Matrix R` into a `[Vector R]`. We then map over that array, first converting each vector into a row matrix, and then transposing that matrix with the `tr` function. The `.` operator stands for the function composition operator from mathematics. The expression `(f . g) x` is the same as $(f \circ g)(x) = f(g(x))$.
+
+We can now test our the forwad propagation function we wrote previously:
+```haskell
+forwardPropagate :: Matrix R
+forwardPropagate = do
+    let n1 = initialize [2, 2, 1] [sigmoid, sigmoid, sigmoid] [sigmoid', sigmoid', sigmoid']
+    -- We simply take the first element of the column vectors `matrixToRows` gives us.
+    let firstInput = head $ matrixToRows xorInput
+    -- We need to use the <- operator since `fit` is impure and returns `IO Network`.
+    n2 <- fit firstInput n1
+    forwardProp firstInput n2
+```
+
+Remember the `fit` function works on just one input vector. Hence we only need to extract the first element of the entire input matrix.
+
+Let's now test the function:
+
+```haskell
+ghci> forwardPropagate
+(1><1)
+ [ 0.4921254998138297 ]]
+```
