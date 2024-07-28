@@ -15,7 +15,7 @@ export const load: PageServerLoad = async ({ url }) => {
 	);
 
 	const posts = await Promise.all(postPromises);
-	let publishedPosts = posts.filter((post) => post.published && post.tags.includes("log"));
+	let publishedPosts = posts.filter((post) => post.published && post.tags.includes("library"));
 
 	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 	let tag = url.searchParams.get("tag");
