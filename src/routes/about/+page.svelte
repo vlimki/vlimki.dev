@@ -7,7 +7,7 @@
 	<meta name="description" content="I'm an aspiring and ambition-driven machine learning engineer." />
 </svelte:head> 
 
-<div class="flex flex-row">
+<div class="flex flex-row ">
 	<img class="hidden sm:block shadow-lg sm:max-h-[150px] md:max-h-[170px] lg:max-h-[200px] rounded-full aspect-square object-cover" alt="image of Juho" src="/images/pfp.png" />
 	<div class="sm:ml-10">
 		<h1 class="">About</h1>

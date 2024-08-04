@@ -11,8 +11,11 @@
   <meta name="description" content="" />
 </svelte:head> 
 
+<article>
+{@html data.tasks.code}
+</article>
+<PageBreak />
 <div class="flex flex-row justify-center">
-  <h1>Log</h1>
 </div>
 <div class="flex flex-row">
   <div class="!w-[2px] !min-w-[2px] bg-[#ebebeb] dark:bg-[#333333] ml-5 rounded-full" />
