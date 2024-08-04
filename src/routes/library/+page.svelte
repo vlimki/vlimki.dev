@@ -1,9 +1,4 @@
 <script lang="ts">
-  import type { PageData } from './$types';
-  import PageBreak from '$lib/components/PageBreak.svelte';
-  import { formatDate } from '$lib/utils';
-
-  export let data: PageData;
 </script>
 
 <svelte:head>
@@ -17,6 +12,6 @@
 <p>I'm planning to write brief analyses about the books I read in this section. I'm doing it mainly to practice analyzing texts and to pursue my interest in philosophy.</p>
 
 <h3>Reading</h3>
-<ul>
+<ol>
 	<li>Friedrich Nietzsche — The Antichrist
-</ul>
+</ol>

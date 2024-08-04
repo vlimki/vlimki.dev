@@ -38,7 +38,7 @@ const parseTasks = (md: string): string[] => {
 }
 
 const fixTask = (task: string): string => {
-	let item = task.split("] ")[1];
+	let item = task.substring(5, task.length)
 	let id = task.replace(" ", "");
 	return task.startsWith("- [x") ? `- [x] <input id="${id}" type="checkbox" checked="true" disabled> <label for="${id}">${item}</label>` : `- [ ] <input id="${id}" type="checkbox" disabled> <label for="${id}">${item}</label>`
 }
