@@ -11,11 +11,13 @@
   <meta name="description" content="" />
 </svelte:head> 
 
-<article>
-{@html data.tasks.code}
-</article>
-<PageBreak />
-<div class="flex flex-row justify-center">
+<div class="flex flex-row">
+  <div class="!w-[2px] !min-w-[2px] bg-[#ebebeb] dark:bg-[#333333] ml-5 rounded-full" />
+	<div class="flex flex-row items-center">
+		<article class="ml-5 mb-5">
+			{@html data.tasks.code}
+		</article>
+	</div>
 </div>
 <div class="flex flex-row">
   <div class="!w-[2px] !min-w-[2px] bg-[#ebebeb] dark:bg-[#333333] ml-5 rounded-full" />

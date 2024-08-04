@@ -8,7 +8,13 @@ const config = {
 	},
 	css: {
 		postcss: true
-	}
+	},
+	build: {
+  	rollupOptions: {
+     	// cf. https://rollupjs.org/configuration-options/#external
+    	external: ['css-tree'],
+    }
+  }
 };
 
 export default config;

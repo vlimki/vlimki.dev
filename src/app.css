@@ -93,7 +93,7 @@ p a:hover {
 	}
 
 	article h3, strong, b {
-		@apply text-[#181818] dark:text-[#fcfcfc];
+		@apply text-[#282828] dark:text-[#fcfcfc];
 		@apply font-bold;
 		letter-spacing: 0.1px;
 	}

@@ -47,7 +47,7 @@
 
 <style>
 	input {
-		font-family: "Roboto Mono";
+		font-family: "Noto Sans Mono";
 		font-size: 14px;
 	}
 </style>
