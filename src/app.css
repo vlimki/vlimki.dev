@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,7 +58,7 @@ p a:hover {
 
 @layer base {
   html {
-    font-family: "Charter";
+    font-family: "PT Serif";
   	font-weight: normal;
 		@apply text-[#181818] dark:text-[#fcfcfc] bg-[#fcfcfc] dark:bg-[#212121];
   } 
@@ -94,7 +95,8 @@ p a:hover {
 
 	article h3, strong, b {
 		@apply text-[#282828] dark:text-[#fcfcfc];
-		@apply font-bold;
+		@apply font-semibold;
+		font-family: "Charter";
 		letter-spacing: 0.1px;
 	}
 
@@ -247,8 +249,9 @@ input[type="checkbox"]:checked:disabled + label:before {
  	ol {
    	@apply list-decimal;
  	}
+
  	ol li {
-		@apply ml-8;
+		@apply ml-5;
 		@apply mb-1;
  	}
 

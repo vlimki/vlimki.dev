@@ -1,6 +1,6 @@
 ---
 title: "Day 57 of Machine Learning"
-description: "Unproductive day. Definitely need to get back on track - badly."
+description: "Getting back on track."
 published: true
 date: '2024-08-04'
 slug: 'day57'

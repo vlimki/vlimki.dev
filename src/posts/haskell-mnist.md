@@ -12,65 +12,6 @@ tags: ['haskell', 'linalg', 'ml']
   import Image from '$lib/components/Image.svelte';
 </script>
 
-## Notes
-Do I go like this:
-1. Intro to NNs - what is a neural net? Visualizations, theory, etc.
-2. Forward prop (concept + math) & implementation
-3. Backprop (concept + math) & implementation
-4. Training on XOR
-5. Improvements
-6. Scaling & training on MNIST
-
-Or like this:
-1. Intro to NNs - what is a neural net? Visualizations, theory, etc.
-2. Mathematics to forward propagation and backpropagation
-3. Implementation of the entire network
-4. Training on XOR
-5. Improvements
-6. Scaling & training on MNIST
-
-The former probably.
-
-ChatGPT elaboration:
-
-1. **Introduction to Neural Networks**
-    - Overview of neural networks
-    - Importance and applications
-    - Basic structure and terminology
-    - Brief review of linear algebra essentials (vectors, matrices, etc.)
-    - Activation functions and their roles
-
-2. **Forward Propagation**
-    - Concept and mathematical formulation
-    - Step-by-step forward propagation in a neural network
-    - Implementation of forward propagation in Haskell
-
-3. **Backpropagation**
-    - Concept and mathematical formulation
-    - Detailed explanation of the gradient descent algorithm
-    - Implementation of backpropagation in Haskell
-
-4. **Training on XOR**
-    - Explanation of the XOR problem
-    - Training the neural network on the XOR dataset
-    - Analyzing results and understanding errors
-
-5. **Improvements and Optimization**
-    - Techniques for improving neural network performance
-    - Regularization, learning rate adjustments, etc.
-
-6. **Scaling Up: Training on MNIST**
-    - Introduction to the MNIST dataset
-    - Preprocessing data for Haskell
-    - Training the neural network on MNIST
-    - Evaluating performance and discussing results
-
-7. **Conclusion and Future Directions**
-    - Summary of what was learned
-    - Potential next steps and further reading
-
-___
-
 ## Foreword
 
 Neural networks are one of the most important cornerstones of machine learning, hence it's important to understand them extremely well, and be capable of working with one. Hence I've dedicated so much time to writing just this one post that summarizes most of the things I've learned, as opposed to writing many smaller posts. It's very important to see how all the small things in a neural network work together, and how they're connected.
