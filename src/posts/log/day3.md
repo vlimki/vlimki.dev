@@ -46,7 +46,7 @@ where $x_i$ is some feature and $w_i$ is the corresponding weight parameter for 
 
 I tried doing some simple linear regression from scratch with [London housing prices](https://www.kaggle.com/datasets/arnavkulkarni/housing-prices-in-london) in Python to follow the code-centric learning principle. Let's analyze the dataset a bit first:
 
-```python
+```python showLineNumbers
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -67,14 +67,13 @@ plt.xlabel('Area in sq ft')
 plt.ylabel('Price')
 plt.grid(True)
 plt.show()
-
 ```
 
 <Image src="/images/posts/day3/linreg-0.png" text="Visualization of the dataset." />
 
 Looks like a quite widely spread dataset. Let's try drawing some lines:
 
-```python
+```python showLineNumbers
 # arbitrary values
 w = 800
 b = 1000
@@ -102,7 +101,7 @@ plt.show()
 
 Let's try calculating the MSE for this line:
 
-```python
+```python showLineNumbers
 def loss(w, b, x, y):
     # prediction
     pred = f(x, w, b)

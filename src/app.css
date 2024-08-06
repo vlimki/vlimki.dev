@@ -58,7 +58,7 @@ p a:hover {
 
 @layer base {
   html {
-    font-family: "PT Serif";
+    font-family: "Charter";
   	font-weight: normal;
 		@apply text-[#181818] dark:text-[#fcfcfc] bg-[#fcfcfc] dark:bg-[#212121];
   } 
@@ -96,7 +96,6 @@ p a:hover {
 	article h3, strong, b {
 		@apply text-[#282828] dark:text-[#fcfcfc];
 		@apply font-semibold;
-		font-family: "Charter";
 		letter-spacing: 0.1px;
 	}
 
@@ -128,7 +127,7 @@ p a:hover {
 		font-family: "Charter";
 		font-style: italic;
 		@apply text-[#666666] dark:text-[#999999];
-		font-size: 20px;
+		font-size: 19px;
 		margin-top: 0px !important;
 		margin-bottom: 0px !important;
 		margin-left: 20px;
@@ -145,7 +144,7 @@ p a:hover {
 
 	span:not(.katex-display span) {
 		@apply text-[#181818] dark:text-[#fcfcfc];
-		font-size: 100%;
+		font-size: 100.5%;
 	}
 
 	p {
@@ -251,7 +250,7 @@ input[type="checkbox"]:checked:disabled + label:before {
  	}
 
  	ol li {
-		@apply ml-5;
+		@apply ml-7;
 		@apply mb-1;
  	}
 
@@ -277,7 +276,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 		}
 
 		nav a * {
-			@apply text-[16px] !important;
+			@apply text-[15px] !important;
 		}
 
 
@@ -293,9 +292,9 @@ input[type="checkbox"]:checked:disabled + label:before {
 			@apply text-[18px]
 		}
 
-		pre[class*=language-] {
+		pre code * {
 			@apply text-xxxs !important;
-			line-height: 1.5rem;
+			line-height: 1.6rem;
 		}
   }
 }

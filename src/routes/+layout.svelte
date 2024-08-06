@@ -63,9 +63,9 @@
 			</div>
 			<div class="sm:min-w-[92px] flex sm:max-w-[92px] !my-0 pr-3 justify-end items-end">
 				{#if darkMode}
-					<img on:click={handleDarkMode} class="cursor-pointer h-6 w-6" src="/images/darkmode.png" />
+					<img on:click={handleDarkMode} class="cursor-pointer h-5 w-5" src="/images/darkmode.png" />
 				{:else}
-					<img on:click={handleDarkMode} class="cursor-pointer h-6 w-6" src="/images/lightmode.png" />
+					<img on:click={handleDarkMode} class="cursor-pointer h-5 w-5" src="/images/lightmode.png" />
 				{/if}
 			</div>
 		</nav>
@@ -85,7 +85,7 @@
 
 <style lang="postcss">
 	.links a {
-		font-size: 19px;
+		font-size: 14px;
 	}
 
 	.links a {
