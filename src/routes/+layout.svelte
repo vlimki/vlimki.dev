@@ -75,7 +75,7 @@
 		<div class="flex ftr flex-row items-center justify-center sm:justify-between">
 		<div class="flex flex-row links text-[#0471d7] dark:text-[#0b9ddd]">
 			<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] sm:!text-base">GitHub</a>
-			<a target="_blank" rel="noreferrer" href="https://twitter.com/vlimkidev" class="mx-5 !text-[16px] sm:!text-base">X</a>
+			<a target="_blank" rel="noreferrer" href="https://twitter.com/vl1mki" class="mx-5 !text-[16px] sm:!text-base">X</a>
 			<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base">Email</a>
 		</div>
 		<code class="footercode text-xxs text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="/">vlimki.dev</a> | Based in 🇫🇮</code>
