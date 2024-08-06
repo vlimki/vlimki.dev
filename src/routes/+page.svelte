@@ -35,7 +35,7 @@
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
     <p class="text-base">Hey, I'm aspiring to become a cracked machine learning engineer. I'm currently focusing on becoming extremely good at mathematics and learning Haskell. This website is mainly for me to document my ML engineering journey and it works as a means of me becoming a better writer.</p>
 	<p>The <a href="/writing">writing</a> section of this website contains blog posts and articles from my daily <a href="/log">logs</a> of the things I learn in machine learning or mathematics. I've tried to compile them to a format that allows them to be used as learning resources.</p>
-	<p>Don't hesitate to contact me by e-mail at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a> or send me a message on X at <a href="https://x.com/vlimkidev" target="_blank" rel="noreferrer">@vl1mki</a>. I'd be more than happy to network with like-minded individuals.</p>
+	<p>Don't hesitate to contact me by e-mail at <a href="mailto:root@vlimki.dev">root@vlimki.dev</a> or send me a message on X at <a href="https://x.com/vl1mki" target="_blank" rel="noreferrer">@vl1mki</a>. I'd be more than happy to network with like-minded individuals.</p>
     <h2 class="mt-4 mb-2">Latest Posts</h2>
 	<div class="flex flex-col">
 	    {#each data.posts as post}
