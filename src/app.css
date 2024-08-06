@@ -212,7 +212,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-  @apply inline-flex items-center cursor-pointer;
+  @apply inline-flex items-center cursor-pointer mr-[-7px];
 }
 
 input[type="checkbox"] + label:before {
@@ -243,7 +243,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 
 	ul li {
 		@apply ml-2;
-		@pply mb-0;
+		@apply mb-1;
 	}
  	ol {
    	@apply list-decimal;
