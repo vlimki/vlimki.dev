@@ -349,7 +349,23 @@ $$
 \frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}} = \delta^{[l]}
 $$
 
-Now that we have all of the math covered, we should be ready for a code implementation. This is what a backpropagation function would look like in Haskell:
+Now that we have all of the math covered, we should be ready for a code implementation.
+
+Note first, that in order to backpropagate the gradients, we actually need the outputs for every layer. This means we must adjust our forward propagation function slightly. Here's a new version:
+
+```haskell
+forwardProp :: Matrix R -> Network -> Matrix R
+forwardProp = scanl activate
+```
+
+The only edit we did was changing the `foldl` function to `scanl`. These functions are very similar, but `scanl`  returns an array of all the intermediate results as opposed to just the final result. Here's an example:
+
+```haskell
+ghci> scanl (\a b -> a + b) 1 [0..10]
+[1,1,2,4,7,11,16,22,29,37,46,56]
+```
+
+This is what a backpropagation function would look like in Haskell:
 
 ```haskell showLineNumbers title="Backpropagation in Haskell"
 -- The backpropagation algorithm returns a list of tuples with weights and biases for every layer.
@@ -358,7 +374,7 @@ Now that we have all of the math covered, we should be ready for a code implemen
 backProp :: [Matrix R] -> Matrix R -> Network -> [(Matrix R, Matrix R)]
 backProp outputs target n = zip dW dB
  where
-  outputError = (last outputs - target) * cmap sigmoid' (last outputs)
+  outputError = (last outputs - target) * cmap (activation' (last n)) (last outputs)
 
   reversedLayers = tail $ reverse n
   reversedOutputs = tail $ reverse outputs
@@ -368,8 +384,11 @@ backProp outputs target n = zip dW dB
   deltas = reverse $ scanl (flip calculateDelta) outputError layersWithOutputs
 
   dW = [delta LA.<> tr out | (delta, out) <- zip deltas (init outputs)]
-  d
 ```
+
+Let's go through this code one line at a time.
+
+The `outputError` definition makes quite a bit of sense --- it does closely resembles the mathematical formula out of the box. We simply take the loss and we multiply it with $\sigma'(\mathbf{Z}^{[L]})$ --- the derivative of the activation function of the last layer, with respect to the output of the last layer.
 
 ## Solving The XOR Problem
 

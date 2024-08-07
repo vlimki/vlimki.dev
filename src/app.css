@@ -96,6 +96,17 @@ p a:hover {
     @apply !overflow-y-hidden;
 	}
 
+	pre::-webkit-scrollbar-track {
+		background: #ffffff !important;
+		border-bottom: #ebebeb 0px solid;
+		height: 1px;
+	}
+
+	pre::-webkit-scrollbar {
+		height: 1px;
+		width: 8px;
+	}
+
 	article h3, strong, b {
 		@apply text-[#282828] dark:text-[#fcfcfc];
 		@apply font-semibold;
