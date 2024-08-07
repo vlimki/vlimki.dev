@@ -17,7 +17,6 @@ const fixTask = (task) => {
 function rehypeFixCheckboxes() {
   return function transformer(tree) {
     visit(tree, 'element', (node, idx, parent) => {
-			console.log(node)
 			let newNode = structuredClone(node);
 			if(node.tagName === "input" && node.properties.type==="checkbox") {
 				newNode.properties = {added: true, ...newNode.properties}

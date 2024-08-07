@@ -256,9 +256,11 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 
 	ul li {
+		display: block;
 		@apply ml-2;
 		@apply mb-1;
 	}
+
  	ol {
    	@apply list-decimal;
  	}
