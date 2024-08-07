@@ -1,7 +1,7 @@
 ---
 title: "Handwritten Digit Recognition From Scratch in Haskell"
 description: 'Learning about neural networks, linear algebra, and Haskell with a hands-on project - training a neural network on MNIST from scratch.'
-published: false
+published: true
 post: true
 date: '2024-07-15'
 slug: 'haskell-mnist'
@@ -300,9 +300,54 @@ We have now fully implemented forward propagation. What's left for us to do now 
 
 ### Backpropagation
 
-**Backpropagation** is probably one of the harder topics for machine learning beginners to truly grasp --- at least that was the case for me! It's often just seen as a black box that magically does something. The mathematical formulas make VERY little sense at first, which is why we'll be taking a deeper look at it. 
+**Backpropagation** is probably one of the harder topics for machine learning beginners to truly grasp --- at least that was the case for me! It's often just seen as a black box that magically results in learning. The mathematical formulas make VERY little sense at first.
 
-> NOTE: This post takes a very mathematical approach to backpropagation, as opposed to an intuitive one. One may find it helpful to look at a more intuitive explanation of backpropagation first through a resource like Andrej Karpathy's [micrograd video](https://youtube.com/watch?v=VMj-3S1tku0).
+> NOTE: This post takes a very direct approach to backpropagation, as opposed to an intuitive one. One may find it helpful to look at a more intuitive explanation of backpropagation first through a resource like Andrej Karpathy's [micrograd video](https://youtube.com/watch?v=VMj-3S1tku0).
+
+We shall get started. Backpropagation is fundamentally just gradient descent. We use the chain rule from calculus to calculate the gradients for every parameter in every layer. We go backwards in the network; we start at the output layer, and then propagate gradients all the way back to the first hidden layer.
+
+First, just like gradient descent, we take the loss of the forward-propagated output (=the difference of the target output and the prediction).
+
+$$
+\delta^{[L]} = (\mathbf{\hat y} - \mathbf{y}) \cdot \sigma'(\mathbf{Z}^{[L]})
+$$
+
+We multiply the loss with the expression $\sigma'(\mathbf{Z}^{[L]})$, where $\sigma'$ is the derivative of the activation function of the last layer, and $\mathbf{Z}^{[L]}$ is the output of the linear function of the last layer (so no activation function has been applied to it yet).
+
+Now we have the gradients of the output layer. We can now introduce the formulas from propagating these gradients backwards from the $l$th layer to the layer before it. They're going to be quite a handful of math to grasp for someone with little prior experience, so bear with me here.
+
+For the $l$th layer, we can get the previous layer's ($l - 1$) gradients with the following formula:
+$$
+\delta^{[l - 1]} = (\mathbf{W}^{[l]})^T \cdot \delta^{[l]} \cdot \sigma'(\mathbf{Z}^{[l-1]})
+$$
+where
+- $\mathbf{W}^{[l]}$ is the weight matrix for the $l$th layer,
+- $\delta^{[l]}$ is the computed gradients for the $l$th layer, and
+- $\sigma'(\mathbf{Z}^{[l - 1]})$ is the derivative of the $l$th layer's activation function, with respect to the output of the linear function of the previous layer.
+
+Alright! Now that we can propagate the gradients backwards, how do we actually update the parameters for each layer?
+
+We have formulas for updating both the weight matrix $\mathbf{W}$ and the bias vector $\mathbf{b}$ for every layer. They're actually exactly like the gradient descent formulas, so this should be nothing new:
+
+$$
+\mathbf{W}^{[l]} \leftarrow \mathbf{W}^{[l]} - \eta \frac{\partial \mathbf{L}}{\partial \mathbf{W^{[l]}}}
+$$
+$$\mathbf{b}^{[l]} \leftarrow \mathbf{b}^{[l]} - \eta \frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}}
+$$
+where $\eta$ is the learning rate. **However**, the calculation of the partial derivatives $\frac{\partial \mathbf{L}}{\partial \mathbf{W^{[l]}}}$ and $\frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}}$ differs quite a bit.
+
+We obtain $\frac{\partial \mathbf{L}}{\partial \mathbf{W^{[l]}}}$ with the following formula:
+
+$$
+\frac{\partial \mathbf{L}}{\partial \mathbf{W^{[l]}}} = \delta^{[l]}(A^{[l - 1]})^T
+$$
+
+Here $A^{[l-1]}$ is the output of the previous layer (with the activation function applied), or in other words, the input to the $l$th layer, and $\delta^{[l]}$ is the gradients we previously computed.
+
+Fortunately the computation for $\frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}}$ is very simple. As a matter of fact:
+$$
+\frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}} = \delta^{[l]}
+$$
 
 ## Solving The XOR Problem
 

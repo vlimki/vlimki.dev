@@ -49,6 +49,9 @@ p a:hover {
 	cursor: pointer;
 }
 
+.katex .mathbf {
+	color: #333333;
+}
 
 * {
     text-rendering: optimizeLegibility;
