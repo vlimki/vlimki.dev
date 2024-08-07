@@ -93,7 +93,7 @@ p a:hover {
 		@apply text-sm;
 	}
   pre {
-    @apply no-scrollbar
+    @apply !overflow-y-hidden;
 	}
 
 	article h3, strong, b {

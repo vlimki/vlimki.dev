@@ -349,6 +349,28 @@ $$
 \frac{\partial \mathbf{L}}{\partial \mathbf{b^{[l]}}} = \delta^{[l]}
 $$
 
+Now that we have all of the math covered, we should be ready for a code implementation. This is what a backpropagation function would look like in Haskell:
+
+```haskell showLineNumbers title="Backpropagation in Haskell"
+-- The backpropagation algorithm returns a list of tuples with weights and biases for every layer.
+-- outputs = the output from the forwardProp function - so a list of output vectors
+-- target = the target output
+backProp :: [Matrix R] -> Matrix R -> Network -> [(Matrix R, Matrix R)]
+backProp outputs target n = zip dW dB
+ where
+  outputError = (last outputs - target) * cmap sigmoid' (last outputs)
+
+  reversedLayers = tail $ reverse n
+  reversedOutputs = tail $ reverse outputs
+  reversedNextLayers = reverse $ tail n
+
+  layersWithOutputs = zip3 reversedLayers reversedOutputs reversedNextLayers
+  deltas = reverse $ scanl (flip calculateDelta) outputError layersWithOutputs
+
+  dW = [delta LA.<> tr out | (delta, out) <- zip deltas (init outputs)]
+  d
+```
+
 ## Solving The XOR Problem
 
 Let's start modeling our network for the XOR problem, which we'll try solving later with our neural network implementation. Let's first define our dataset. The XOR gate can take four different inputs: `[0, 0]`, `[0, 1]`, `[1, 0]` and `[1, 1]`. Hence our set of inputs looks something like this:
