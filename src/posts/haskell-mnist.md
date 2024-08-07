@@ -1,7 +1,7 @@
 ---
 title: "Handwritten Digit Recognition From Scratch in Haskell"
 description: 'Learning about neural networks, linear algebra, and Haskell with a hands-on project - training a neural network on MNIST from scratch.'
-published: true
+published: false
 post: true
 date: '2024-07-15'
 slug: 'haskell-mnist'
