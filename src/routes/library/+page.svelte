@@ -14,4 +14,5 @@
 <h3>Reading</h3>
 <ol>
 	<li>Friedrich Nietzsche — The Antichrist
+	<li>Plato — The Republic
 </ol>
