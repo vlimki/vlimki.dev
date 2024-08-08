@@ -38,7 +38,6 @@ code {
 	font-size: 14px;
 }
 
-
 pre code {
     display: flex;
     flex-direction: column;
@@ -68,7 +67,6 @@ p a:hover {
 	p a {
 		@apply text-[#0471d7] dark:text-[#0b9ddd];
 	}
-
 
 	nav a {
 		@apply md:mx-[15px] sm:mx-[15px] mx-[10px];
