@@ -212,8 +212,9 @@ p a:hover {
 	}
 
 	ul:not(.contains-task-list) {
-    @apply list-disc;
+    @apply !list-disc;
   }
+
  	ul li:not(.task-list-item) {
 		@apply ml-8;
 		@apply mb-1;
@@ -253,8 +254,11 @@ input[type="checkbox"]:checked:disabled + label:before {
   background-repeat: no-repeat;
 }
 
-	ul li {
+	.task-list-item {
 		display: block;
+	}
+
+	ul li {
 		@apply ml-2;
 		@apply mb-1;
 	}
