@@ -3,7 +3,7 @@ title: "Day 65 of Machine Learning"
 description: "Basically no work done today."
 published: true
 date: '2024-08-12'
-slug: 'day64'
+slug: 'day65'
 tags: ['log']
 post: false
 ---
