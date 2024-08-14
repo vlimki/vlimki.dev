@@ -19,6 +19,6 @@ Basically recovered from the cold now. Can't use it as a reason for not getting 
 - [ ] (ML) Backprop function for autograd engine (not necessarily for today, just here so that I remember).
 - [ ] (In the future) Write a "Day X of ML" style blog post about CNNs.
 
-**Time spent**: 2.5h<br /> **Total**: 190.5h/10000h
+**Time spent**: 2.5h<br /> **Total**: 193h/10000h
 
 ___
