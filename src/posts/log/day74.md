@@ -1,9 +1,9 @@
 ---
-title: "Day 73 of Machine Learning"
+title: "Day 74 of Machine Learning"
 description: "Unproductive day again."
 published: true
 date: '2024-08-21'
-slug: 'day73'
+slug: 'day74'
 tags: ['log']
 post: false
 ---
