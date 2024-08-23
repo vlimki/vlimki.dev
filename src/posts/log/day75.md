@@ -17,6 +17,6 @@ Need to think more about what ML subfield to pick. Robotics seems very interesti
 - [x] Get going with math again.
 - [ ] (Chess engine) (In the future) Connect UI with engine. How? Wasm? An API?
 
-**Time spent**: 2h<br /> **Total**: 198h/10000h
+**Time spent**: 2h<br /> **Total**: 200h/10000h
 
 ___
