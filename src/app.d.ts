@@ -31,6 +31,7 @@ declare namespace App {
     slug: string;
     title: string;
     description: string;
+		post: boolean;
     date: string;
     published: boolean;
     tags: string[]
