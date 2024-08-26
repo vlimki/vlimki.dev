@@ -24,20 +24,9 @@
   <meta name="description" content={titles} />
 </svelte:head> 
 
-<div class="flex flex-col w-full items-center justify-center">
+<div class="flex flex-col w-full items-center justify-center mb-5">
   <h1 class="text-center">Posts</h1>
-  <div class="flex flex-row justify-center items-center flex-wrap mt-3 mb-1 w-[100%] sm:w-[80%] lg:w-[60%]">
-  	{#each data.tags.split(",") as t}
-		{#if data.tag == t}
-			<SelectedTag text={t} />
-		{:else}
-			<Tag text={t} />
-		{/if} 
-	{/each}
-  </div>
-  <input type="text" class="!text-[13px] sm:!text-[15px] my-4 w-[95%] sm:w-2/3 h-12 rounded-2xl border border-[#ebebeb] dark:border-[#333333] bg-white dark:bg-[#282828] px-5" placeholder="Search by title or tag..." bind:value={query} />
 </div>
-<PageBreak />
 
 <div class="flex flex-col">
 {#each filterByTag(data, query) as post}
