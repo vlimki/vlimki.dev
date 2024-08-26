@@ -44,15 +44,16 @@
 	}
 </script>
 
-<div class="max-w-screen overflow-hidden flex flex-col items-center justify-center">
+<div class="max-w-screen overflow-x-hidden flex flex-col items-center justify-center">
 	<div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full px-7 pb-10">
 		<nav class="flex flex-row w-full items-center justify-between mt-5 code text-md">
-			<div class="hidden lg:block items-center">
+			<div class="items-center">
 				<a href="/"><b><code class="!text-[#444444] dark:!text-[#cccccc] text-sm">vlimki.dev</code></b></a>
 			</div>
 			<div class="flex flex-row items-center">
 				<!--<a href="/"><code class={path == "/" ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Home</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
+				<a href="/about"><code class={path.startsWith("/about") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>About</code></a>
 				<a href="/writing"><code class={path.startsWith("/writing") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Writing</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
 				<a href="/library"><code class={path.startsWith("/library") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Library</code></a>
@@ -70,15 +71,21 @@
 			</div>
 		</nav>
 		<PageBreak />
-		<slot />
+			<slot />
 		<PageBreak />
 		<div class="flex ftr flex-row items-center justify-center sm:justify-between">
-		<div class="flex flex-row links text-[#0471d7] dark:text-[#0b9ddd]">
-			<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] sm:!text-base">GitHub</a>
-			<a target="_blank" rel="noreferrer" href="https://twitter.com/vl1mki" class="mx-5 !text-[16px] sm:!text-base">X</a>
-			<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base">Email</a>
+		<div class="flex flex-row links text-[#0471d7] dark:text-[#0b9ddd] items-center justify-center">
+				{#if darkMode}
+					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/github-light.png" /></a>
+					<a target="_blank" rel="noreferrer" href="https://twitter.com/vl1mki" class="mx-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/x-light.png"/></a>
+					<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base w-5 h-5 mt-[6px]"><img src="/images/email-light.png" /></a>
+				{:else}
+					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/github.png" /></a>
+					<a target="_blank" rel="noreferrer" href="https://twitter.com/vl1mki" class="mx-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/x.png"/></a>
+					<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base w-5 h-5 mt-[6px]"><img src="/images/email.png" /></a>
+				{/if}
 		</div>
-		<code class="footercode text-xxs text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="/">vlimki.dev</a> | Based in 🇫🇮</code>
+		<code class="text-xxs text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="/">vlimki.dev</a> | Based in 🇫🇮</code>
 		</div>
 	</div>
 </div>

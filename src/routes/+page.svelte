@@ -8,11 +8,11 @@
 
 <svelte:head>
   <title>Personal Website of Juho Välimäki • https://vlimki.dev</title>
-  <meta name="description" content="The personal website and blog of Juho Välimäki, a software developer & aspiring machine learning engineer. Posts about ML, math and coding." />
+  <meta name="description" content="The personal website and blog of Juho Välimäki. Posts about engineering and mathematics." />
 		<meta property="og:type" content="website" />
 	  <meta property="og:url" content="https://vlimki.dev/" />
   	<meta property="og:title" content="Personal Website of Juho Välimäki" />
-	  <meta property="og:description" content="The personal website and blog of Juho Välimäki, an aspiring machine learning engineer. Posts about ML, math and coding." />
+	  <meta property="og:description" content="The personal website and blog of Juho Välimäki. Posts about machine learning, engineering and mathematics." />
   	<meta property="og:image" content="https://vlimki.dev/favicon.png" />
 	  <meta property="og:image:alt" content="Website logo" />
 
@@ -33,6 +33,12 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
+		<p>On the road to becoming a machine learning engineer. Currently focusing heavily on mathematics and physics (mainly for school).</p><p>What gets measured gets done.</p>
+		<h2 class="mb-1">Currently Reading (as of Aug 26)</h2>
+		<ul>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (27.5%)</li>
+			<li><i>The Antichrist</i> by Friedrich Nietzsche</li>
+		</ul>
     <p class="text-base">Website under reconstruction.</p>
 </div>
 </div>
