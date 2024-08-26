@@ -45,7 +45,7 @@
 </script>
 
 <div class="max-w-screen overflow-x-hidden flex flex-col items-center justify-center">
-	<div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full px-7 pb-10">
+	<div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full pb-10">
 		<nav class="flex flex-row w-full items-center justify-between mt-5 code text-md">
 			<div class="items-center">
 				<a href="/"><b><code class="!text-[#444444] dark:!text-[#cccccc] text-sm">vlimki.dev</code></b></a>
@@ -73,7 +73,7 @@
 		<PageBreak />
 			<slot />
 		<PageBreak />
-		<div class="flex ftr flex-row items-center justify-center sm:justify-between">
+		<div class="flex ftr flex-row items-center justify-center sm:justify-between px-3">
 		<div class="flex flex-row links text-[#0471d7] dark:text-[#0b9ddd] items-center justify-center">
 				{#if darkMode}
 					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/github-light.png" /></a>
