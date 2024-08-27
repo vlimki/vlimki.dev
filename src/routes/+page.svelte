@@ -33,10 +33,11 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
-		<p>On the road to becoming a machine learning engineer. Currently focusing heavily on mathematics and physics (mainly for school).</p><p>What gets measured gets done.</p>
-		<h2 class="mb-1">Currently Reading (as of Aug 26)</h2>
+		<p>On the road to becoming a machine learning engineer. Currently focusing heavily on mathematics and physics (mainly for school). Right now this website is mainly used for personal note-taking.</p>
+		<p>What gets measured gets done.</p>
+		<h2 class="mb-1">Currently Reading (as of Aug 27)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (27.5%)</li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (31.3%)</li>
 			<li><i>The Antichrist</i> by Friedrich Nietzsche</li>
 		</ul>
     <p class="text-base">Website under reconstruction.</p>
