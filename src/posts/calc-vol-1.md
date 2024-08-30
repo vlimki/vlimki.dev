@@ -20,6 +20,6 @@ First finish this book and gather a deeper understanding of all the topics. Then
 
 **Notes**
 - Finish by October 15, this means 6.4 pages per day on average.
-- Read pages 0-535 (currently on page 120).
+- Read pages 0-535 (currently on page 150).
 - Skip pages 297-397 (differential equations, polynomial approximations to functions).
 - Do exercises in the morning and read further in the afternoon.
