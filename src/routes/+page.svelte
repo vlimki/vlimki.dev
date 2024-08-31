@@ -37,7 +37,7 @@
 		<p>What gets measured gets done.</p>
 		<h2 class="mb-1">Currently Reading (as of Aug 27)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (34.5%)</li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (37.0%)</li>
 			<li><i>The Antichrist</i> by Friedrich Nietzsche</li>
 		</ul>
     <p class="text-base">Website under reconstruction.</p>
