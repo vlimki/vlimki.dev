@@ -45,7 +45,7 @@
 </script>
 
 <div class="max-w-screen overflow-x-hidden flex flex-col items-center justify-center">
-	<div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full pb-10">
+	<div class="w-full md:w-2/3 xl:w-[55%] 2xl:w-[41%] h-full pb-10 px-7">
 		<nav class="flex flex-row w-full items-center justify-between mt-5 text-md">
 			<div class="items-center">
 				<a href="/"><b><code class="!text-[#444444] dark:!text-[#cccccc] text-sm">vlimki.dev</code></b></a>
