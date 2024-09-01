@@ -2,7 +2,7 @@
 title: "Notes regarding Calculus, Volume I"
 description: 'Personal notes, no better place to put them than here.'
 published: true
-post: true
+post: false
 date: '2024-08-26'
 slug: 'calc-vol-1'
 tags: ['math']

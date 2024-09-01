@@ -51,10 +51,11 @@
 				<a href="/"><b><code class="!text-[#444444] dark:!text-[#cccccc] text-sm">vlimki.dev</code></b></a>
 			</div>
 			<div class="flex flex-row items-center">
-				<!--<a href="/"><code class={path == "/" ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Home</code></a>
+				<a href="/"><code class={path == "/" ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Home</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
-				<a href="/about"><code class={path.startsWith("/about") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>About</code></a>
 				<a href="/writing"><code class={path.startsWith("/writing") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Writing</code></a>
+				<!--
+				<a href="/about"><code class={path.startsWith("/about") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>About</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>
 				<a href="/library"><code class={path.startsWith("/library") ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Library</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>

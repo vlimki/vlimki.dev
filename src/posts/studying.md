@@ -2,7 +2,7 @@
 title: "Studying"
 description: 'More personal notes.'
 published: true
-post: true
+post: false
 date: '2024-08-30'
 slug: 'studying'
 tags: ['math']
