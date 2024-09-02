@@ -169,7 +169,7 @@ p a:hover {
 		@apply border border-[#ebebeb] dark:border-[#333333];
 		width: 100%;
 		border-radius: 10px;
-		@apply bg-[#fefefe] dark:bg-[#181818];
+		@apply bg-[#ffffff] dark:bg-[#101010];
 	  padding: 10px;
 		margin-top: 10px;
 	}
@@ -329,7 +329,7 @@ input[type="checkbox"]:checked:disabled + label:before {
     }
   }
 
-code {
+code:not(pre code) {
   font-family: "Noto Sans Mono";
   color: #777777;
 }
