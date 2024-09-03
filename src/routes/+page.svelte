@@ -35,9 +35,9 @@
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
 		<p>On the road to becoming a machine learning engineer. Currently focusing heavily on mathematics and physics (mainly for school). Right now this website is mainly used for personal note-taking.</p>
 		<p>What gets measured gets done.</p>
-		<h2 class="mb-1">Currently Reading (as of Aug 27)</h2>
+		<h2 class="mb-1">Currently Reading (as of Sep 3)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (37.0%)</li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (38.8%)</li>
 			<li><i>The Antichrist</i> by Friedrich Nietzsche</li>
 		</ul>
     <p class="text-base">Website under reconstruction.</p>
