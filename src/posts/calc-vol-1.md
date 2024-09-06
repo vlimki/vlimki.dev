@@ -12,14 +12,10 @@ NOTE: These are just personal notes regarding the topic, nothing of value here n
 
 ___
 
-I'm mainly reading this book to optimize for performance in the mathematics final in HS. 
-
-Only when you're insanely good at the topics in said exam should you move on to the other topics.
-
-First finish this book and gather a deeper understanding of all the topics. Then just grind exercises from Thomas' Calculus and a precalculus book. 
+First finish this book and gather a deeper understanding of all the topics. Then just grind exercises from Thomas' Calculus and some precalculus book. 
 
 **Notes**
-- Finish by October 15, this means 6.4 pages per day on average.
-- Read pages 0-535 (currently on page 150).
+- Finish by October 15
+- Read pages 0-535 (currently on page 170).
 - Skip pages 297-397 (differential equations, polynomial approximations to functions).
 - Do exercises in the morning and read further in the afternoon.
