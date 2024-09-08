@@ -19,3 +19,4 @@ First finish this book and gather a deeper understanding of all the topics. Then
 - Read pages 0-535 (currently on page 170).
 - Skip pages 297-397 (differential equations, polynomial approximations to functions).
 - Do exercises in the morning and read further in the afternoon.
+- Do exercises on page 178 at some point.
