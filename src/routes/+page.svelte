@@ -37,7 +37,7 @@
 		<p>What gets measured gets done.</p>
 		<h2 class="mb-1">Currently Reading (as of Sep 3)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (51.7%)</li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol — finish by Oct 15. (48.2%)</li>
 			<li><i>The Brothers Karamazov</i> by Fyodor Dostoevsky</li>
 		</ul>
     <p class="text-base">Website under reconstruction.</p>
