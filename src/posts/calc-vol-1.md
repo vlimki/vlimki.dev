@@ -16,7 +16,7 @@ First finish this book and gather a deeper understanding of all the topics. Then
 
 **Notes**
 - Finish by October 15
-- Read pages 0-535 (currently on page 210).
+- Read pages 0-535 (currently on page 240).
 - Skip pages 297-397 (differential equations, polynomial approximations to functions).
 - Do exercises in the morning and read further in the afternoon.
-- Do exercises on page 178 at some point.
+- Do exercises on page 178, 240, 245-248 at some point.
