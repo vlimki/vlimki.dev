@@ -12,11 +12,9 @@ NOTE: These are just personal notes regarding the topic, nothing of value here n
 
 ___
 
-First finish this book and gather a deeper understanding of all the topics. Then just grind exercises from Thomas' Calculus and some precalculus book. 
+First finish this book and gather a deeper understanding of all the topics. Then just grind exercises from ~~Thomas' Calculus and some precalculus book.~~ this book mainly.
 
 **Notes**
-- Finish by October 15
-- Read pages 0-535 (currently on page 240).
-- Skip pages 297-397 (differential equations, polynomial approximations to functions).
-- Do exercises in the morning and read further in the afternoon.
+- Finish reading by September 19
+- After you finish reading, start focusing on chemistry and physics. Do math exercises for a couple of hours in the morning though. Start grinding chapter 4 (and partially 3 and 6) at first, then later go to chapter 5.
 - Do exercises on page 178, 240, 245-248 at some point.
