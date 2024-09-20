@@ -8,6 +8,16 @@ slug: 'workout-routine'
 tags: ['fitness']
 ---
 
+| **Day**   | **Workout** |
+|-----------|-------------|
+| Monday    | Gym (light) |
+| Tuesday   | Boxing      |
+| Wednesday | Boxing      |
+| Thursday  | Rest        |
+| Friday    | Gym         |
+| Saturday  | Run         |
+| Sunday    | Gym         |
+
 <div class="w-full justify-center items-center flex flex-row text-center">
     <p>Sunday | Workout 1</p>
 </div>
