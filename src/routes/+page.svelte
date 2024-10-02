@@ -33,13 +33,14 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
-		<p>On the road to becoming a machine learning engineer — in particular, I'm looking to specialize in computer vision and hopefully in robotics later on. Currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking.</p>
+		<p>On the road to becoming a machine learning engineer — in particular, I'm looking to specialize in computer vision and robotics later on. Currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking.</p>
 		<p>What gets measured gets done.</p>
-		<h2 class="mb-1">Currently Reading (as of Sep 30)</h2>
+		<h2 class="mb-1">Reading List (as of Sep 30)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom Apostol</li>
-			<li><i>The Brothers Karamazov</i> by Fyodor Dostoevsky</li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol (14.9%) </li>
+			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
 		</ul>
-    <p class="text-base">Website under reconstruction.</p>
-</div>
+	</div>
+	<h2>Reading Log</h2>
+	{@html data.log.code}
 </div>
