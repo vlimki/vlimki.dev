@@ -41,6 +41,8 @@
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
 		</ul>
 	</div>
-	<h2>Reading Log</h2>
-	{@html data.log.code}
+	<h2>Log</h2>
+	<div class="reading-log">
+		{@html data.log.code}
+	</div>
 </div>

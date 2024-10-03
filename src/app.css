@@ -38,6 +38,14 @@ code {
 	font-size: 14px;
 }
 
+.reading-log * {
+	margin-top: 10px;
+}
+
+.reading-log * * {
+	margin-top: -5px;
+}
+
 pre code {
     display: flex;
     flex-direction: column;
