@@ -37,7 +37,7 @@
 		<p>What gets measured gets done.</p>
 		<h2 class="mb-1">Reading List (as of Sep 30)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol (14.9%) </li>
+			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol</li>
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
 		</ul>
 	</div>
