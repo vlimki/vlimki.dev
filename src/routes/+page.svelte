@@ -39,6 +39,7 @@
 		<ul>
 			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol (currently reading)</li>
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
+			<li><i>The Basics of Chemistry</i> by Richard L. Myers (currently reading)</li>
 		</ul>
 	</div>
 	<h2>Log</h2>
