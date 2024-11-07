@@ -38,8 +38,8 @@
 		<h2 class="mb-1">Reading List (as of Sep 30)</h2>
 		<ul>
 			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol (currently reading)</li>
+			<li><i>Classical Mechanics</i> by John R. Taylor</li>
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
-			<li><i>The Basics of Chemistry</i> by Richard L. Myers (currently reading)</li>
 		</ul>
 	</div>
 	<h2>Log</h2>
