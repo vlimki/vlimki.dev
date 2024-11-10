@@ -14,6 +14,4 @@ ___
 
 
 **Notes**
-- Have two math blocks during the day. Just do as many chapters as you can in those two blocks.
-- Regarding exercises --- the key is to understand the material. Literally, that's it. This does mean that you should understand every theorem and why they're useful, but it does NOT mean that you should be able to complete every exercise. Use your intuition. If you have trouble developing intuition for a theorem, just ask ChatGPT and do some exercises regarding it. Avoid repetition in exercises.
 - Return to differential equations, vector calculus and sequences and series of functions later.

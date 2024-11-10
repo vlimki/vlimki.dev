@@ -35,11 +35,11 @@
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
 		<p>On the road to becoming a machine learning engineer — in particular, I'm looking to specialize in computer vision and robotics later on. Currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking.</p>
 		<p>What gets measured gets done.</p>
-		<h2 class="mb-1">Reading List (as of Sep 30)</h2>
+		<h2 class="mb-1">Reading List (as of Nov 10)</h2>
 		<ul>
-			<li><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol (currently reading)</li>
-			<li><i>Classical Mechanics</i> by John R. Taylor</li>
+			<li><i>Calculus</i> by Michael D. Spivak (currently reading)</li>
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
+			<li class="line-through text-[#777777]"><i><a href="/writing/calc-vol-1">Calculus, Volume I</a></i> by Tom M. Apostol</li>
 		</ul>
 	</div>
 	<h2>Log</h2>
