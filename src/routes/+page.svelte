@@ -33,9 +33,9 @@
 <div class="flex flex-col justify-between">
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
-		<p>On the road to becoming a machine learning engineer — in particular, I'm looking to specialize in computer vision and robotics later on. Currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking.</p>
+		<p>On the road to becoming a machine learning engineer — in particular, I'm looking to specialize in computer vision and robotics later on. I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking.</p>
 		<p>What gets measured gets done.</p>
-		<h2 class="mb-1">Reading List (as of Nov 10)</h2>
+		<h2 class="mb-1">Reading List (as of Jan 10)</h2>
 		<ul>
 			<li><i>Calculus</i> by Michael D. Spivak (currently reading)</li>
 			<li><i>Linear Algebra</i> by Georgi E. Shilov</li>
