@@ -77,7 +77,6 @@
 		<div class="flex flex-row links text-[#0471d7] dark:text-[#0b9ddd] items-center justify-center">
 				{#if darkMode}
 					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/github-light.png" /></a>
-					<a target="_blank" rel="noreferrer" href="https://x.com/vl1mki" class="mx-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/x-light.png"/></a>
 					<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base w-5 h-5 mt-[6px]"><img src="/images/email-light.png" /></a>
 				{:else}
 					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-5 h-5 sm:!text-base"><img src="/images/github.png" /></a>
