@@ -49,7 +49,7 @@ Ei ratkaise ongelmaa: ei vastaa "miksi"-kysymykseen + meillä ei olisi luotettav
 
 ## Osa 3. Miten teismi vastaa ongelmaan?
 
-Jos ateismi ei kykene tarjoamaan loogista perustelua logiikalle, niin miten teismi selviää siitä? Tarkastellaan sitä tarkemmin tässä osiossa. Jos pystymme osoittaa, että teismi pystyy vastaamaan ongelmaan, mutta ateismi ei, se teknisesti riittäisi jo kumoamaan kaikki ateistien esittämät väitteet. Siirrymme myös myöhemmin käsittelemään perusteluja tiedon olemassaololle, emme logiikan. Logiikka on vain välttämätön edellytys tiedolle. *Huomioi: tässä osiossa Jumalalla tarkoitetaan geneeristä teististä jumalaa, ei kristinuskon Jumalaa.*
+Jos ateismi ei kykene tarjoamaan loogista perustelua logiikalle, niin miten teismi selviää siitä? Tarkastellaan sitä tarkemmin tässä osiossa. Jos pystymme osoittamaan, että teismi pystyy vastaamaan ongelmaan, mutta ateismi ei, se teknisesti riittäisi jo kumoamaan kaikki ateistien esittämät väitteet. Ne vetoaisivat logiikkaan, ilman, että voisivat oikeuttaa sitä. *Huomioi: tässä osiossa Jumalalla tarkoitetaan geneeristä teististä jumalaa, ei kristinuskon Jumalaa. Kristinuskoon siirrytään vasta neljännessä osassa.*
 
 Aloitetaan kysymyksestä: *mikä voisi tarjota perustelun logiikalle?*
 
@@ -68,11 +68,13 @@ Totesimme aiemmin, että logiikka ei voi olla vain ihmismielen tuote. Tämä tar
 **2. Universaaliuus** <br />
 Jos logiikan lait eivät ole sidottuja aikaan tai paikkaan, niiden perustan täytyy olla myös rajaton. Theismissä Jumala on kaikkialla läsnä, eikä Hänen olemuksensa riipu maailmankaikkeudesta. Tästä seuraa, että Hänen ajattelunsa mukaiset loogiset lait ovat myös universaalisti päteviä kaikkialla ja aina.
 
-**3. Muuttumattomuus ja Euthyfronin dilemma** <br />
-Euthyfronin dilemmaa käytetään usein kyseenalaistamaan Jumalaa objektiivisen moraalin perustana:
-*Päättävätkö jumalat, mikä on hyvää, koska se on hyvää, vai onko se hyvää siksi että jumalat päättävät niin?* Eli joko hyvä on olemassa ilman Jumalaa, tai hyvän käsitys on mielivaltainen. Eikö samaa dilemmaa voisi käyttää, korvaamalla sanan "hyvä" sanalla "logiikka".
+**3. Muuttumattomuus ja Euthyfronin dilemma** <br /> 
+*(Huom.: kristinuskon Jumalan muuttumattomuutta käsitellään neljännessä osassa)*
 
-Kuitenkin, dilemma on väärä vastakkainasettelu. Logiikan lait eivät ole erillinen "kokoelma sääntöjä", vaan ne ovat suora heijastus Jumalan järjellisestä olemuksesta. Tämä tarkoittaa, että Jumala ei "päätä" logiikan lakeja, vaan ne ovat Hänen olemuksensa mukaisia - sama koskee objektiivista moraalia. Jumalan olemus on muuttumaton, joten logiikka tai moraali (tai luonnon toimintaperiaatteet; induktion ongelma) eivät ole mielivaltaisia.
+Euthyfronin dilemmaa käytetään usein kyseenalaistamaan Jumalaa objektiivisen moraalin perustana:
+*Päättävätkö jumalat, mikä on hyvää, koska se on hyvää, vai onko se hyvää siksi että jumalat päättävät niin?* Eli joko hyvä on olemassa ilman Jumalaa, tai hyvän käsitys on mielivaltainen. Monet ateistit käyttävät Euthyfronin dilemmaa moraalin perustaa vastaan, mutta harvat huomaavat, että sama kysymys voidaan esittää myös logiikasta: Onko logiikka olemassa itsenäisesti Jumalasta, vai päättääkö Jumala sen mielivaltaisesti?
+
+Kuitenkin, dilemma on väärä vastakkainasettelu. On olemassa kolmas vaihtoehto: logiikan lait ovat suora heijastus Jumalan järjellisestä olemuksesta. Tämä tarkoittaa, että Jumala ei "päätä" logiikan lakeja, vaan ne ovat Hänen olemuksensa mukaisia - sama koskee objektiivista moraalia. Jumalan olemus on muuttumaton, joten logiikka tai moraali (tai luonnon toimintaperiaatteet; induktion ongelma) eivät ole mielivaltaisia.
 
 ### Transsendentaalinen argumentti
 Tästä pääsemmekin ydinaiheeseen, eli transsendentaaliseen argumenttiin (TAG). TAG on muodollisesti yksinkertainen:
@@ -81,24 +83,44 @@ Tästä pääsemmekin ydinaiheeseen, eli transsendentaaliseen argumenttiin (TAG)
 2. Logiikka on olemassa.
 3. Jumala on olemassa. (kohdista 1. ja 2.)
 
-Ensimmäinen premissi vetoaa **vastakohdan mahdottomuuteen**, eli pyrkii osoittamaan, että logiikkaa jää perustelemattomaksi ilman Jumalaa, joten Jumala on pakollinen ehto logiikalle. Tätä sanotaan **disjunktiiviseksi syllogismiksi**.
+Ensimmäinen premissi perustuu **vastakohdan mahdottomuuteen**: jos Jumalaa ei ole, ei ole mahdollista oikeuttaa logiikkaa. Mutta koska logiikka on olemassa, täytyy sen perustan olla myös olemassa. Täten Jumala on looginen välttämättömyys. Tätä sanotaan **disjunktiiviseksi syllogismiksi**.
 
 Disjunktiivinen syllogismi on myös muodollisesti yksinkertainen:
 1. $P$ tai $Q$ (ainakin toinen vaihtoehto on tosi)
 2. $\neg Q$ (yksi vaihtoehto eliminoidaan)
 3. $P$ (toinen on siis tosi)
 
-**"Mutta eikö ensimmäisen premissin osoittaminen vaatisi, että osoitetaan jokainen teoreettinen maailmankuva yksitellen vääräksi?"**
-Ei. Maailmankuvien lähtökohdat ovat rajallisia. On olemassa rajallinen määrä tiettyjä perustavanlaatuisia kysymyksiä, joita jokainen maailmankuva seuraa. Voimme osoittaa, että tietyt vastausvaihtoehdot tulevat aina johtamaan ongelmiin logiikan perustelemisessa.
+**"Mutta eikö ensimmäisen premissin osoittaminen vaatisi, että osoitetaan jokainen teoreettinen maailmankuva yksitellen vääräksi?"** <br /> 
+Ei. Maailmankuvien lähtökohdat ovat rajallisia. On olemassa rajallinen määrä tiettyjä perustavanlaatuisia kysymyksiä, joita jokainen maailmankuva seuraa. Voimme osoittaa, että tietyt vastausvaihtoehdot tulevat aina johtamaan ongelmiin logiikan perustelemisessa. 
 
-On myös hyvä muistaa, että TAG:ia ei saa sekoittaa "God of the gaps" -argumenttiin, joka on virheellinen. TAG ei väitä Jumalan olevan tosi, koska ateismilla ei **vielä** ole perusteluja, vaan väittää, että **perusteleminen on mahdotonta** ateismissa.
+Argumentin toinen premissi jokaisen on helppo hyväksyä, sillä sen kieltäjä käyttäisi logiikkaa sen kieltämiseen.
+
+On myös hyvä muistaa, että TAG:ia ei saa sekoittaa "God of the gaps" -argumenttiin, joka on virheellinen. TAG ei väitä Jumalan olevan tosi, koska esim. tieteellä ei **vielä** ole perusteluja, vaan väittää, että **perusteleminen on mahdotonta** muilla maailmankuvilla.
+
+**"Mutta eikö tuo ole kehäpäätelmä, koska oletat jo valmiiksi että Jumala on olemassa, koska käytät logiikkaa?"** <br /> 
+TAG on maailmankuva-argumentti, joka tarkastelee maailmankuvan perimmäisiä lähtökohtia. Jokainen maailmankuva vetoaa ylimmällä tasolla jonkinlaiseen kehäpäätelmään, koska kaikilla ajattelujärjestelmillä on lopulta perustana joitakin itsensä oikeuttavia oletuksia (aksioomia).
+
+Loogikko Kurt Gödel osoitti epätäydellisyyslauseellaan, että mikään järjestelmä ei voi todistaa itseään täysin sisältäpäin -- eli kaikilla loogisilla järjestelmillä täytyy olla ulkopuolinen perusta tai itsensä oikeuttava lähtökohta. Tämä tarkoittaa, että kehäisyys on väistämätöntä kaikissa perususkomuksissa.
+
+Kysymys ei siis ole siitä, onko maailmankuvan perustus kehämäinen, vaan siitä, onko se itseään oikeuttava ja riittävä selittämään todellisuutta. Ateistinen maailmankuva nojaa mielivaltaiseen kehämäisyyteen ("logiikka vain on"), kun taas teismi antaa perustellun kehämäisyyden, koska Jumala on absoluuttinen ja itsensä perusteella olemassa oleva olento (*aseity*).
+
+Okei, no nyt kun olemme rakentaneet perustan sille, miksi ateismi ei toimi, miten pääsemme siitä kristinuskoon? Miksi argumentti ei toimisi esim. pakanajumalille? Tätä käsitellään seuraavassa osiossa.
 
 ## Osa 4. Miksi ainoastaan kristinusko tarjoaa vastauksen?
+Pääsimme edellisessä osassa geneeriseen teismiin. Voimme jatkaa vielä eteenpäin, ja päätyä nimenomaan kristinuskoon. Tässä vaiheessa jotkin TAG:in kannattajat alkavat käyttämään evidentialismia (eli katsotaan mikä uskonto on järkevin ja todennäköisin esimerkiksi historiallisten todisteiden perusteella) ratkaisevana tekijänä. Kuitenkin, tämä on filosofiakanava, joten olisi soveliaampaa jatkaa filosofian keinoilla :)
+
+Olemme tähän mennessä puhuneet logiikasta ja sen oikeuttamisesta. Nyt siirrämme keskustelun **tietoon**. Logiikka on vain osa laajempaa ongelmaa, eli tiedon oikeuttamista.
+
 Muistiinpanot:
-- Autonominen epistemologia vs. teonominen epistemologia, Jumalan ilmestys totuuden lähteenä
+- Cornelius Van Til 
+- Autonominen vs. teonominen epistemologia, Jumalan ilmestys totuuden lähteenä
+- Kristinuskon Jumalan muuttumattomuus
+
 
 ## Lähteet
 <ul>
     <p><li><a target="_blank" href="https://www.patristicfaith.com/senior-contributors/an-orthodox-theory-of-knowledge-the-epistemological-and-apologetic-methods-of-the-church-fathers/">An Orthodox Theory of Knowledge: The Epistemological and Apologetic Methods of the Church Fathers</a></li></p>
     <p><li><a target="_blank" href="https://fi.wikipedia.org/wiki/Euthyfronin_dilemma">Wikipedia: Euthyfronin dilemma</a></li></p>
+    <p><li><a target="_blank" href="https://fi.wikipedia.org/wiki/G%C3%B6delin_ep%C3%A4t%C3%A4ydellisyyslause">Wikipedia: Gödelin Epätäydellisyyslause</a></li></p>
+    <p><li><a target="_blank" href="https://en.wikipedia.org/wiki/Aseity">Wikipedia: Aseity</a></li></p>
 </ul>
