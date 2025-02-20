@@ -44,4 +44,8 @@
 			<li><i>Mechanics</i> by Lev D. Landau & Evgeny M. Lifshitz</li>
 		</ul>
 	</div>
+	<h2>Log</h2>
+	<div class="reading-log">
+		{@html data.log.code}
+	</div>
 </div>
