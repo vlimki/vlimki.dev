@@ -34,7 +34,7 @@
   <div class="flex flex-col">
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
 		<p>GPU engineering and machine learning.</p>
-		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be writing posts about mathematics and GPUs in the near future.</p>
+		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be updating it soon.</p>
 		<p>What gets measured gets done.</p>
 		<h2 class="mb-1">Reading List (as of Mar 7)</h2>
 		<ul>
