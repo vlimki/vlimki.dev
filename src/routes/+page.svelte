@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Personal Website of Juho Välimäki • https://vlimki.dev</title>
+  <title>Personal Website of Juho Välimäki</title>
   <meta name="description" content="The personal website and blog of Juho Välimäki. Posts about engineering and mathematics." />
 		<meta property="og:type" content="website" />
 	  <meta property="og:url" content="https://vlimki.dev/" />
@@ -35,8 +35,8 @@
     <h1 class="font-medium mb-2">Personal Website of Juho Välimäki</h1>
 		<p>GPU engineering and machine learning.</p>
 		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be updating it soon.</p>
-		<p>What gets measured gets done.</p>
-		<h2 class="mb-1">Reading List (as of Mar 7)</h2>
+		<p>Feel free to reach out on <a href="https://x.com/vl1mki" rel="noreferrer" target="_blank">X</a> or <a href="mailto:root@vlimki.dev">by email</a>. <br/> Also, check out my <a href="/reading">reading list</a>.</p>
+		<!--<h2 class="mb-1">Reading List (as of Mar 7)</h2>
 		<ul>
 			<li><i>Linear Algebra</i> by Georgiy E. Shilov (currently reading)</li>
 			<li><i>Calculus, Volume I</i> by Tom M. Apostol (currently reading)</li>
@@ -44,7 +44,7 @@
 			<li><i>Calculus, Volume II</i> by Tom M. Apostol</li>
 			<li><i>Ordinary Differential Equations</i> by Vladimir I. Arnold</li>
 			<li><i>Mechanics</i> by Lev D. Landau & Evgeny M. Lifshitz</li>
-		</ul>
+		</ul>-->
 	</div>
 	<h2>Log</h2>
 	<div class="reading-log">

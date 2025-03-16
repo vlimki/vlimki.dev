@@ -8,7 +8,7 @@ const MAX_POSTS = 3;
 export const load: PageServerLoad = async (_) => {
 	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);
 	const response = await fetch('https://vlimki.dev/upload/tasks/tasks');
-  const text = await response.text();
+    const text = await response.text();
 
 
 	const postPromises = Object.entries(modules).map(([path, resolver]) =>

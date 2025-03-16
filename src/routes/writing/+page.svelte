@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-  <title>Writing • Juho Välimäki</title> 
+  <title>Writing · Juho Välimäki</title> 
   <meta name="description" content={titles} />
 </svelte:head> 
 

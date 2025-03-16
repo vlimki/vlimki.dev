@@ -10,7 +10,7 @@ export default {
 			sm: ['17px', '1.5rem'],
 			base: ['19px', '1.7rem'],
 			lg: ['19px', '1.7rem'],
-			xl: ['22px', '1.7rem'],
+			xl: ['21px', '1.7rem'],
 			xxl: ['26px', '1.7rem'],
 		},
     	extend: {},
