@@ -21,7 +21,7 @@
 	<div class="flex flex-col">
 		<ul class="grid grid-cols-2">
 			<li>
-				<Book title="Linear Algebra" description="" imageUrl="/images/books/shilov.jpg" author="Georgi E. Shilov" />
+				<Book title="Linear Algebra" notes="/writing/notes-shilov" description="" imageUrl="/images/books/shilov.jpg" author="Georgi E. Shilov" />
 				</li>
 			<li>
 				<Book title="Calculus" description="" imageUrl="/images/books/apostol.jpg" author="Tom M. Apostol" />

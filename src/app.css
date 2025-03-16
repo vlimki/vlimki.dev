@@ -35,7 +35,7 @@
 code {
   font-family: "Noto Sans Mono";
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .reading-log * {
@@ -298,7 +298,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 			@apply text-xl;
 		}
 		h3 {
-			@apply text-[16px];
+			@apply text-[17px];
 		}
 
 		nav a * {

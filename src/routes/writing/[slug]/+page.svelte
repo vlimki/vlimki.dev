@@ -34,7 +34,7 @@
   <code class="font-normal">{formatDate(new Date(data.frontmatter.date))}</code>
   <div class="mx-2 text-[#aaaaaa]">•</div>
   <div class="flex flex-row items-center">
-    <code class="!text-md">[</code>
+    <code class="!text-sm">[</code>
     {#each data.frontmatter.tags as tag}
     <Tag text={tag} />
     {/each}
@@ -50,6 +50,6 @@
 
 <style>
   code {
-    font-size: 15px;
+    font-size: 13px;
   }
 </style>
