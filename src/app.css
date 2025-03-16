@@ -70,7 +70,7 @@ p a:hover {
   html {
     font-family: "Charter";
   	font-weight: normal;
-		@apply text-[#181818] dark:text-[#fcfcfc] bg-[#fefefe] dark:bg-[#181818];
+		@apply text-[#181818] dark:text-[#fcfcfc] bg-[#fefefe] dark:bg-[#030303];
   } 
 	p a {
 		@apply text-[#0471d7] dark:text-[#0b9ddd];
@@ -136,7 +136,7 @@ p a:hover {
 	}
 
 	nav a * {
-		@apply text-[15px] !important;
+		@apply text-[14px] !important;
 	}
 	article blockquote {
 		border-left: 3px solid;
@@ -298,11 +298,11 @@ input[type="checkbox"]:checked:disabled + label:before {
 			@apply text-xl;
 		}
 		h3 {
-			@apply text-[20px];
+			@apply text-[16px];
 		}
 
 		nav a * {
-			@apply text-[15px] !important;
+			@apply text-[14px] !important;
 		}
 
 
@@ -315,7 +315,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 		}
 
 		strong, b {
-			@apply text-[18px]
+			@apply text-[16px]
 		}
 
 		pre code * {
