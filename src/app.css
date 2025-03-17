@@ -56,8 +56,21 @@ p a:hover {
 	cursor: pointer;
 }
 
+::-webkit-scrollbar {
+	@apply dark:bg-[#080808] bg-[#ebebeb];
+}
+
+::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+	@apply dark:bg-[#181818] bg-[#e0e0e0];
+}
+
 .katex .mathbf {
-	color: #333333;
+	@apply text-[#333333] dark:text-[#eeeeee];
 }
 
 * {
@@ -168,8 +181,8 @@ p a:hover {
 	}
 
 	p {
-		margin-top: 5px;
-		margin-bottom: 15px;
+		margin-top: 7.5px;
+		margin-bottom: 7.5px;
 	}
 	pre {
   	display: block;
@@ -436,14 +449,7 @@ article code:not(pre code) {
 article p {
 	margin-top: 9px;
 	margin-bottom: 9px;
-}
-
-article ol, article ul {
-	margin-top: -5px;
-}
-
-article h2, article h3 {
-	margin-bottom: -7px !important;
+	text-align: justify;
 }
 
 article img {
