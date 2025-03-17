@@ -175,9 +175,13 @@ p a:hover {
 		font-size: 18px;
 	}
 
+	span {
+		@apply text-[98.5%] md:text-[100.5%];
+	}
+
 	span:not(.katex-display span) {
 		@apply text-[#181818] dark:text-[#fcfcfc];
-		font-size: 100.5%;
+		@apply text-[98.5%] md:text-[100.5%];
 	}
 
 	p {
