@@ -275,14 +275,14 @@ $$
 4.  **The linear property.** If all the elements of a column $j$ can be
     expressed as linear combinations of two columns, i.e.:
     
-$$
-a_{ij} = \lambda b_i + \mu c_i \text{ for } i = 1,2,\dots,n
-$$
- for
-    some $\lambda$ and $\mu$, we have 
-$$
-D = \lambda D_1 + \mu D_2
-$$
+    $$
+        a_{ij} = \lambda b_i + \mu c_i \text{ for } i = 1,2,\dots,n
+    $$
+        for
+        some $\lambda$ and $\mu$, we have 
+        $$
+        D = \lambda D_1 + \mu D_2
+    $$
 
     where $D_1$ and $D_2$ are identical to $D$, just that the $j$th
     column of $D_1$ consists of elements $b_i$ and the $j$th column of
