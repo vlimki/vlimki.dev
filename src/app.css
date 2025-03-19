@@ -453,7 +453,7 @@ article code:not(pre code) {
 article p {
 	margin-top: 9px;
 	margin-bottom: 9px;
-	text-align: justify;
+	@apply text-start md:text-justify;
 }
 
 article img {
