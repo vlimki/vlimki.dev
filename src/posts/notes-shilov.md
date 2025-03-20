@@ -95,7 +95,7 @@ solution is called compatible. If a sytem has a unique solution, it is
 called determinate. If it has at least two solution, it is called
 indeterminate. The basic problems of studying a system are:
 
-1.  Whether the system is compatible or incompatible;
+1.  Whether the ystem is compatible or incompatible;
 
 2.  If the system is compatible, to find whether it is determinate or
     indeterminate;
@@ -180,7 +180,16 @@ do not contain the same terms, nor do they contain any more than one
 element from each column. We denote the determinant D by one of the
 following symbols:
 
-For example, we get the
+
+$$
+D = \begin{vmatrix}
+        a_{11} & a_{12} & \dots & a_{1n} \\
+        a_{21} & a_{22} & \dots & a_{2n} \\
+        \vdots & \vdots & \vdots & \vdots \\
+        a_{n1} & a_{n2} & \dots & a_{nn} \\
+    \end{vmatrix} = \det \, ||a_{ij}||
+$$
+ For example, we get the
 following expressions from the determinants of orders $2$ and $3$:
 
 $$
@@ -226,8 +235,6 @@ $$
         a_{21}x_1 + a_{22} x_2 = b_2
     \end{aligned}
 $$
-
-
 
 $$
 x_1 = \frac{b_1 a_{22} - b_2 a_{12}}{a_{11}a_{22} - a_{21}a_{12}} = \frac{\begin{vmatrix} b_1 & a_{12} \\ b_2 & a_{22} \end{vmatrix}}{\begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix}}, \,\,\,\,
@@ -275,14 +282,14 @@ $$
 4.  **The linear property.** If all the elements of a column $j$ can be
     expressed as linear combinations of two columns, i.e.:
     
-    $$
-        a_{ij} = \lambda b_i + \mu c_i \text{ for } i = 1,2,\dots,n
-    $$
-        for
-        some $\lambda$ and $\mu$, we have 
-        $$
-        D = \lambda D_1 + \mu D_2
-    $$
+$$
+a_{ij} = \lambda b_i + \mu c_i \text{ for } i = 1,2,\dots,n
+$$
+ for
+    some $\lambda$ and $\mu$, we have 
+$$
+D = \lambda D_1 + \mu D_2
+$$
 
     where $D_1$ and $D_2$ are identical to $D$, just that the $j$th
     column of $D_1$ consists of elements $b_i$ and the $j$th column of
@@ -346,13 +353,18 @@ $$
 $D$ containing $a_{11}$, but with $a_{11}$ removed, we get $M_{11}$.
 Since the determinant is a sum of signed products of elements from
 different rows and columns, we can write: 
-
-The sum of all valid products from the remaining
-$(n-1)×(n-1)$ matrix is exactly the determinant of that smaller matrix,
+$$
+\begin{aligned}
+        D =a_{11}(\text{sum of all valid products from remaining (n-1)×(n-1) matrix}) \\
+        + (\text{terms without $a_{11}$})
+\end{aligned}
+$$
+ The sum of all valid products from the remaining
+$(n-1) \times (n-1)$ matrix is exactly the determinant of that smaller matrix,
 which is the minor $M_{11}$. So, we get:
 
 $$
-\sum(\text{terms containing } \, a_{11})=a_{11}M_{11} = a_{11}A_{11} \implies A_{11} = M_{11}
+\sum(\text{terms containing } a_{11})=a_{11}M_{11} = a_{11}A_{11} \implies A_{11} = M_{11}
 $$
 
 For arbitrary $i,j$, we simply do $i - 1 + j - 1 = i + j - 2$ adjacent
@@ -446,13 +458,14 @@ second equation by $A_{21}$, the third by $A_{31}$, and so on, and
 finally the last equation by $A_{n1}$. Then we add all the equations so
 obtained. The result is 
 $$
-\begin{aligned}
+\begin{split}
         &(a_{11}A_{11} + a_{21}A_{21} + \cdots + a_{n1}A_{n1})c_1 \\
         &+ (a_{12}A_{11} + a_{22}A_{21} + \cdots + a_{n2}A_{n1})c_2 \\
         &+ \cdots \\
         &+ (a_{1n}A_{11} + a_{2n}A_{21} + \cdots + a_{nn}A_{n1})c_n \\
         &= b_1A_{11} + b_2A_{21} + \cdots + b_nA_{n1}.
-    \end{aligned}
+    \end{split}
+    \tag{19}
 $$
 
 
@@ -946,7 +959,7 @@ equations
 $$
 \begin{aligned}
         a_{11}x_1 + a_{12}x_2 + &\dots + a_{1n}x_n = b_1, \\
-        a_{11}x_1 + a_{12}x_2 + &\dots + a_{2n}x_n = b_2, \\
+        a_{21}x_1 + a_{22}x_2 + &\dots + a_{2n}x_n = b_2, \\
                                 &\vdots \\
         a_{k1}x_1 + a_{12}x_2 + &\dots + a_{kn}x_n = b_k,
     \end{aligned}
@@ -977,6 +990,97 @@ $y$ ranges over the set of all solutions of the corresponding
 homogeneous system. The set of all solutions to the nonhomogeneous
 system is just $x_0 + y$.
 
+Say we know that the rank of the coefficient matrix of a system of order
+$m$ is $r$. We can put the rest of the columns to the other side in the
+following manner: 
+$$
+\begin{aligned}
+        a_{11}x_1 + a_{12}x_2 + &\dots + a_{1r}x_r = b_1 - a_{1,r+1}x_{r+1} - \dots - a_{1n}x_{n}   \\
+        a_{21}x_1 + a_{22}x_2 + &\dots + a_{2r}x_r = b_2 - a_{2,r+1}x_{r+1} - \dots - a_{2n}x_{n}   \\
+                                &\vdots \\
+        a_{k1}x_1 + a_{k2}x_2 + &\dots + a_{kr}x_r = b_k - a_{k,r+1}x_{r+1} - \dots - a_{kn}x_{n}.  \\
+    \end{aligned}
+$$
+
+
+We can give the unknowns $x_{r+1}, \dots, x_n$ arbitrary values
+$c_{r+1},\dots,c_n$, and see that the right-hand side can be expressed
+as a linear combination of the vectors $x_1, \dots, x_r$. We can use
+Cramer's Rule to solve this system. We get
+
+$$
+c_j = \frac{M_j}{M}(b_1 - a_{1,r+1}x_{r+1} - \dots - a_{1n}x_{n}) \text{ for } j = 1,2,\dots,r
+$$
+
+
 ## Geometric Properties of the Solution Space
 
-TODO
+As we have seen, the solutions of a generic homogeneous linear system
+with a coefficient matrix of rank $r$ form a linear solution space, $L$.
+The dimension of $L$ is $n-r$. The solution space and the space
+$K_{n-r}$ are isomorphic.
+
+Any system of $n -r$ linearly dependent solutions of a homogenous linear
+system of equations (which forms a basis in the space of *all*
+solutions) is called a *fundamental system of solutions*.
+
+We can construct a fundamental system of solutions by using any basis of
+the space $K_{n-r}$.
+
+## Methods for Calculating the Rank of a Matrix
+
+Given a matrix with $n$ rows and $k$ columns, formed from vectors
+$x_1, x_2, \dots, x_k$ in the $n$-dimensional space $R_n$, we can
+calculate the rank of a matrix using the following elementary
+operations:
+
+1.  *Permutation of columns.* The dimension of the linear manifold
+    spanned by the vectors is not affected by the order in which the
+    vectors are written.
+
+2.  *Dividing out a nonzero common factor of the elements of a column.*
+    Say we factor out a number $\lambda \neq 0$ from the $j$th vector.
+    This is equivalent to replacing the system of vectors
+    $x_1, x_2, \dots, \lambda x_j, \dots, x_k$ with
+    $x_1, x_2, \dots, x_j, \dots, x_k$. This does not actually change
+    the dimension of the linear manifold spanned by the vectors.
+
+3.  *Adding a multiple of one column to another column.*
+
+4.  *Deletion of a column consisting entirely of zeros.* Deleting the
+    zero vector from the system does not change the linear manifold.
+
+5.  *Deletion of a column which is a linear combination of the other
+    columns.*
+
+We can reduce a matrix $A$ to one of the two following forms:
+
+$$
+A_1 = \begin{bmatrix}
+\alpha_1 & 0 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
+c_{21} & \alpha_2 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
+c_{31} & c_{32} & \alpha_3 & \cdots & 0 & 0 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \cdots & \vdots \\
+c_{k1} & c_{k2} & c_{k3} & \cdots & \alpha_k & 0 & \cdots & 0 \\
+c_{k+1,1} & c_{k+1,2} & c_{k+1,3} & \cdots & c_{k+1,k} & 0 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \cdots & \vdots \\
+c_{n1} & c_{n2} & c_{n3} & \cdots & c_{nk} & 0 & \cdots & 0
+\end{bmatrix}
+$$
+
+
+or 
+$$
+A_2 = \begin{bmatrix}
+\alpha_1 & 0 & 0 & \cdots & 0 \\
+c_{21} & \alpha_2 & 0 & \cdots & 0 \\
+c_{31} & c_{32} & \alpha_3 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+c_{m1} & c_{m2} & c_{m3} & \cdots & \alpha_m \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+c_{n1} & c_{n2} & c_{n3} & \cdots & c_{nm}
+\end{bmatrix}
+$$
+ where $\alpha_1, \alpha_2, \dots \neq 0$. The rank of
+$A_1$ is $k$ and its basis minor is at the upper left-hand corner. The
+rank of $A_2$ is $m$ and its basis minor is in the first $m$ rows.
