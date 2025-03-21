@@ -32,6 +32,10 @@
   --shiki-token-punctuation: #d8d8d8;
 }
 
+del {
+	@apply text-[#999999] dark:text-[#333333];
+}
+
 code {
   font-family: "Noto Sans Mono";
 	font-weight: 500;
@@ -250,7 +254,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-  @apply inline-flex items-center cursor-pointer mr-[-7px];
+  @apply inline-flex justify-center items-center cursor-pointer mr-[-7px]
 }
 
 input[type="checkbox"] + label:before {
