@@ -15,8 +15,7 @@
     <h1 class="font-medium mb-2">Reading List</h1>
 
 	<p>A collection of books, articles, and online resources I'm reading or plan to read. <br/>Mainly mathematics, machine learning and GPUs, but also other topics.</p>
-	<h2 class="mb">Mathematics, GPUs, Machine Learning</h2>
-	<p class="mb-3 text-[#666666] text-sm">Note: Most of these books are from <a href="https://sheafification.com/the-fast-track/" rel="noreferrer" target="_blank">The Fast Track</a>.</p>
+	<h2 class="mb-2">Mathematics, GPU Programming</h2>
 	<div class="flex flex-col">
 		<ul class="grid grid-cols-2">
 			<li>
@@ -36,7 +35,7 @@
 			</li>
 		</ul>
 	</div>
-	<h2 class="mb-3">Physics</h2>
+	<h2 class="mb-2">Physics</h2>
 	<div class="flex flex-col">
 		<ul class="grid grid-cols-2">
 			<li>
@@ -47,7 +46,7 @@
 			</li>
 		</ul>
 	</div>
-	<h2 class="mb-3">Other</h2>
+	<h2 class="mb-2">Other</h2>
 	<ul class="grid grid-cols-2">
 		<li>
 			<Book title="The Brothers Karamazov" description="" imageUrl="/images/books/bk.jpg" author="Fyodor M. Dostoevsky" />
@@ -57,6 +56,14 @@
 		</li>
 	</ul>
 	<PageBreak/>
-	<h2 class="mb-3">Links</h2>
+	<h2 class="mb-2">Links</h2>
+	<ul class="grid grid-cols-1">
+		<li>
+			<a href="https://siboehm.com/articles/22/CUDA-MMM">How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance</a>
+		</li>
+		<li>
+			<a href="https://sheafification.com/the-fast-track">The Fast Track - Sheafification</a>
+		</li>
+	</ul>
   </div>
 </div>
