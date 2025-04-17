@@ -36,15 +36,7 @@
 		<p>GPU engineering and machine learning.</p>
 		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be updating it soon.</p>
 		<p>Feel free to reach out on <a href="https://x.com/vl1mki" rel="noreferrer" target="_blank">X</a> or <a href="mailto:root@vlimki.dev">by email</a>. <br/> Also, check out my <a href="/reading">reading list</a>.</p>
-		<!--<h2 class="mb-1">Reading List (as of Mar 7)</h2>
-		<ul>
-			<li><i>Linear Algebra</i> by Georgiy E. Shilov (currently reading)</li>
-			<li><i>Calculus, Volume I</i> by Tom M. Apostol (currently reading)</li>
-			<li><i>Programming Massively Parallel Procesors</i> by David B. Kirk</li>
-			<li><i>Calculus, Volume II</i> by Tom M. Apostol</li>
-			<li><i>Ordinary Differential Equations</i> by Vladimir I. Arnold</li>
-			<li><i>Mechanics</i> by Lev D. Landau & Evgeny M. Lifshitz</li>
-		</ul>-->
+		<h2>Recent Posts</h2>
 	</div>
 	<div class="reading-log">
 		{@html data.log.code}

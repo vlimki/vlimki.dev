@@ -6,7 +6,7 @@
   export let notes;
 </script>
 
-<div class="flex flex-row items-center justify-start">
+<div class="flex flex-row items-center justify-start mb-1">
 	<div class="flex flex-col items-start text-start justify-start">
 		<div class="flex flex-row justify-center items-center">
 			<p class="!m-0 leading-[1.2] italic">{title}</p>
