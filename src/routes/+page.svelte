@@ -2,6 +2,7 @@
   import PageBreak from '$lib/components/PageBreak.svelte';
   import type { PageData } from './$types';
   import Post from '$lib/components/Post.svelte';
+  import Project from '$lib/components/Project.svelte';
 
   export let data: PageData = { posts: [] };
 </script>
@@ -36,9 +37,22 @@
 		<p>GPU engineering and machine learning.</p>
 		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be updating it soon.</p>
 		<p>Feel free to reach out on <a href="https://x.com/vl1mki" rel="noreferrer" target="_blank">X</a> or <a href="mailto:root@vlimki.dev">by email</a>. <br/> Also, check out my <a href="/reading">reading list</a>.</p>
-		<h2>Recent Posts</h2>
-	</div>
-	<div class="reading-log">
-		{@html data.log.code}
+		<h2 class="mb-3">Recent Posts</h2>
+		{#each data.posts.slice(0, 1) as post}
+			<Post post={post} />
+		{/each}
+		<div class="mb-[-20px]" />
+		<h2 class="mb-3">Projects</h2>
+		<ul class="grid sm:grid-cols-2">
+			<li>
+				<Project title="hdax - Haskell Data Analysis eXtension" description="A simple tabular data analysis library for Haskell." github="https://github.com/vlimki/hdax" />
+			</li>
+			<li>
+				<Project title="vlimki.dev - My Personal Website" description="The website you're looking at. Built with Svelte and TailwindCSS." github="https://github.com/vlimki/vlimki.dev" />
+			</li>
+			<li>
+				<Project title="Building and optimizing an MNIST classifier with CUDA" description="My next project. Coming later." />
+			</li>
+		</ul>
 	</div>
 </div>

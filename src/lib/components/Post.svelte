@@ -11,9 +11,11 @@
 		</a>
     <div class="flex flex-row items-center flex-wrap wrap">
     	<code class="text-[12px] !font-normal sm:text-[12px]">{formatDate(new Date(post.date))}</code>
-      	<code class="text-[12px] sm:text-[12px] mx-2 text-[#aaaaaa]">•</code>
+      	<code class="text-[12px] sm:text-[12px] mx-2 dark:text-[#aaaaaa] text-[#777777]">•</code>
 		{#each post.tags as tag}
+		<div class="mt-[-3px]">
 			<Tag text={tag} />
+		</div>
   		{/each}
     </div>
 </div>

@@ -19,6 +19,10 @@
   --shiki-token-punctuation: #54433a;
 }
 
+.katex-display {
+	margin: 0.5em;
+}
+
 .dark {
   --shiki-color-background: #181818;
   --shiki-color-text: #d8d8d8;
@@ -185,7 +189,7 @@ p a:hover {
 
 	span:not(.katex-display span) {
 		@apply text-[#181818] dark:text-[#fcfcfc];
-		@apply text-[99%] md:text-[100.5%];
+		@apply text-[100%] md:text-[100%];
 	}
 
 	p {
