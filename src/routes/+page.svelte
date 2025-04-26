@@ -45,7 +45,7 @@
 		<h2 class="mb-3">Projects</h2>
 		<ul class="grid sm:grid-cols-2">
 			<li>
-				<Project title="hdax - Haskell Data Analysis eXtension" description="A simple tabular data analysis library for Haskell." github="https://github.com/vlimki/hdax" />
+				<Project title="hdax - Haskell Data Analysis eXtension" description="A simple data analysis library for tabular data in Haskell." github="https://github.com/vlimki/hdax" />
 			</li>
 			<li>
 				<Project title="vlimki.dev - My Personal Website" description="The website you're looking at. Built with Svelte and TailwindCSS." github="https://github.com/vlimki/vlimki.dev" />
