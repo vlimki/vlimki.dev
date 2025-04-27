@@ -59,13 +59,13 @@
 	<h2 class="mb-2">Links</h2>
 	<ul class="grid grid-cols-1">
 		<li>
-			<a href="https://siboehm.com/articles/22/CUDA-MMM">How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance</a>
+			<a target="_blank" rel="noreferrer" href="https://siboehm.com/articles/22/CUDA-MMM">How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance</a>
 		</li>
 		<li>
-			<a href="https://sheafification.com/the-fast-track">The Fast Track - Sheafification</a>
+			<a target="_blank" rel="noreferrer" href="https://sheafification.com/the-fast-track">The Fast Track - Sheafification</a>
 		</li>
 		<li>
-			<a href="https://youtu.be/9qlqVEUgdgo">Alain Connes - How a Mathematician Works</a>
+			<a target="_blank" rel="noreferrer" href="https://youtu.be/9qlqVEUgdgo">Alain Connes - How a Mathematician Works</a>
 		</li>
 	</ul>
   </div>
