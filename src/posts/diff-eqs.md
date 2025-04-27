@@ -71,4 +71,14 @@ $$
 $$
 g(x) = g(a)e^{-A(x)} + e^{-A(x)} \int_a^x e^{A(t)} Q(t) dt
 $$
-where $A(x) = \int_a^x P(t) dt$.
+where $A(x) = \int_a^x P(t) dt$. When we also satisfy the initial-value problem, we get the known formula. We can state our results in the following manner:
+
+*Assume $P$ and $Q$ are continuous on an open interval $I$. Choose any point $a$ in $I$ and let $b$ be any real number. Then there is only one function $y = f(x)$ which satisfies the initial-value problem*
+$$
+y' + P(x)y = Q(x),  \quad \text{with } f(a) = b,
+$$
+*on the interval $I$. This function is given by the formula*
+$$
+f(x) = be^{-A(x)} + e^{-A(x)} \int_a^x Q(t) e^{A(t)} dt
+$$
+*where $A(x) = \int_a^x P(t) dt$*.
