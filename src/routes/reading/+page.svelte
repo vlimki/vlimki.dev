@@ -64,6 +64,9 @@
 		<li>
 			<a href="https://sheafification.com/the-fast-track">The Fast Track - Sheafification</a>
 		</li>
+		<li>
+			<a href="https://youtu.be/9qlqVEUgdgo">Alain Connes - How a Mathematician Works</a>
+		</li>
 	</ul>
   </div>
 </div>
