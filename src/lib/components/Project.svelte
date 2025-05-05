@@ -11,7 +11,7 @@
 		</div>
 		<p class="pb-0 m-0 text-xs leading-[1.2rem] text-[#666666]">{description}</p>
 		{#if github != null}
-			<a class="text-xxs !m-0">GitHub</a>
+			<a href={github} target="_blank" rel="noreferrer" class="text-xxs !m-0">GitHub</a>
 		{/if}
 	</div>
 </div>

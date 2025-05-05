@@ -59,11 +59,11 @@
 				{#if darkMode}
 					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-4 h-4 sm:!text-base"><img src="/images/github-light.png" /></a>
 					<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/email-light.png" /></a>
-					<a href="https://x.com/vl1mki" rel="noreferrer" target="_blank" class="mx-5 mb-1 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/x-light.png" /></a>
+					<!--<a href="https://x.com/vl1mki" rel="noreferrer" target="_blank" class="mx-5 mb-1 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/x-light.png" /></a>-->
 				{:else}
 					<a target="_blank" rel="noreferrer" href="https://github.com/vlimki" class="mr-5 !text-[16px] w-4 h-4 sm:!text-base"><img src="/images/github.png" /></a>
 					<a href="mailto:root@vlimki.dev" class="mx-5 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/email.png" /></a>
-					<a href="https://x.com/vl1mki" target="_blank" rel="noreferrer" class="mb-1 mx-5 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/x.png" /></a>
+					<!--<a href="https://x.com/vl1mki" target="_blank" rel="noreferrer" class="mb-1 mx-5 !text-[16px] sm:!text-base w-4 h-4 mt-[6px]"><img src="/images/x.png" /></a>-->
 				{/if}
 		</div>
 		<code class="text-[13px] text-[#aaaaaa] hidden mt-2 sm:block"><a class="font-semibold text-[#888888] footer-link" href="/">vlimki.dev</a> | Based in 🇫🇮</code>

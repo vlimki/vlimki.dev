@@ -45,13 +45,16 @@
 		<h2 class="mb-3">Projects</h2>
 		<ul class="grid sm:grid-cols-2">
 			<li>
+				<Project title="tensoron - CUDA-Accelerated Linear Algebra in Rust" description="A CUDA-accelerated linear algebra library for Rust. Planning to use it to build an MNIST classifier eventually." github="https://github.com/vlimki/tensoron" />
+			</li>
+			<li>
 				<Project title="hdax - Haskell Data Analysis eXtension" description="A simple data analysis library for tabular data in Haskell." github="https://github.com/vlimki/hdax" />
 			</li>
 			<li>
 				<Project title="vlimki.dev - My Personal Website" description="The website you're looking at. Built with Svelte and TailwindCSS." github="https://github.com/vlimki/vlimki.dev" />
 			</li>
 			<li>
-				<Project title="Building and optimizing an MNIST classifier with CUDA" description="My next project. Coming later." />
+				<Project title="Building And Optimizing an MNIST Classifier With CUDA" description="My next project. Coming later." />
 			</li>
 		</ul>
 	</div>

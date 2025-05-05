@@ -35,6 +35,14 @@
 			</li>
 		</ul>
 	</div>
+	<h2 class="mb-2">Machine Learning</h2>
+	<div class="flex flex-col">
+		<ul class="grid grid-cols-2">
+			<li>
+				<Book description="" title="Mathematics for Machine Learning" imageUrl="/images/books/pmpp.jpg" author="M. P. Deisenroth, A. A. Faisal, C. S. Ong" />
+			</li>
+		</ul>
+	</div>
 	<h2 class="mb-2">Physics</h2>
 	<div class="flex flex-col">
 		<ul class="grid grid-cols-2">
@@ -66,6 +74,9 @@
 		</li>
 		<li>
 			<a target="_blank" rel="noreferrer" href="https://youtu.be/9qlqVEUgdgo">Alain Connes - How a Mathematician Works</a>
+		</li>
+		<li>
+			<a target="_blank" rel="noreferrer" href="https://mml-book.com">Mathematics for Machine Learning</a>
 		</li>
 	</ul>
   </div>
