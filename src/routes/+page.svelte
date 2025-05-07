@@ -38,7 +38,7 @@
 		<p>I'm currently focusing heavily on mathematics and physics. Right now this website is mainly used for personal note-taking, but I will be updating it soon.</p>
 		<p>Feel free to reach out on <a href="https://x.com/vl1mki" rel="noreferrer" target="_blank">X</a> or <a href="mailto:root@vlimki.dev">by email</a>. <br/> Also, check out my <a href="/reading">reading list</a>.</p>
 		<h2 class="mb-3">Recent Posts</h2>
-		{#each data.posts.slice(0, 1) as post}
+		{#each data.posts.slice(0, 2) as post}
 			<Post post={post} />
 		{/each}
 		<div class="mb-[-20px]" />

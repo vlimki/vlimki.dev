@@ -24,7 +24,7 @@
 }
 
 .dark {
-  --shiki-color-background: #181818;
+  --shiki-color-background: #000000;
   --shiki-color-text: #d8d8d8;
   --shiki-token-constant: #ba8baf;
   --shiki-token-string: #465aa4;
@@ -37,7 +37,7 @@
 }
 
 del {
-	@apply text-[#999999] dark:text-[#333333];
+	@apply text-[#999999] dark:text-[#222222];
 }
 
 code {
@@ -78,7 +78,7 @@ p a:hover {
 }
 
 .katex .mathbf {
-	@apply text-[#333333] dark:text-[#eeeeee];
+	@apply text-[#222222] dark:text-[#eeeeee];
 }
 
 * {
@@ -113,7 +113,7 @@ p a:hover {
 	}
 	h2 {
 		@apply text-lg;
-		@apply flex flex-row-reverse items-center justify-end;
+		@apply flex flex-row items-center justify-start;
 		@apply mt-3
 	}
 	h3 {
@@ -161,7 +161,7 @@ p a:hover {
 	}
 	article blockquote {
 		border-left: 3px solid;
-		@apply border-[#dddddd] dark:border-[#333333]
+		@apply border-[#dddddd] dark:border-[#222222]
 	}
 
 	article blockquote p {
@@ -197,33 +197,32 @@ p a:hover {
 		margin-bottom: 7.5px;
 	}
 	pre {
-  	display: block;
+  		display: block;
 		overflow: scroll;
-		@apply border border-[#ebebeb] dark:border-[#333333];
+		@apply border border-[#ebebeb] dark:border-[#222222];
 		width: 100%;
-		border-radius: 10px;
-		@apply bg-[#ffffff] dark:bg-[#101010];
-	  padding: 10px;
+		border-radius: 7px;
+		@apply bg-[#ffffff] dark:bg-[#080808];
+		padding: 10px;
 		margin-top: 10px;
 	}
 
 	pre[data-code-title]:before {
 		font-family: "Charter";
 		font-weight: 600;
-		@apply text-[#333333] dark:text-[#fcfcfc];
-	  min-height: calc(3rem + 1px);
-  	content: attr(data-code-title);
-	  display: block;
-  	padding-top: 0.5rem;
-	  padding-left: 1rem;
-  	padding-right: 1rem;
-	  @apply border-b border-[#ebebeb] dark:border-[#333333];
+		font-size: 14px;
+		@apply text-[#222222] dark:text-[#fcfcfc];
+	    min-height: calc(2.5rem + 1px);
+	  	content: attr(data-code-title);
+	  	display: block;
+  		padding-top: 0.5rem;
+	  	padding-left: 1rem;
+  		padding-right: 1rem;
+	  	@apply border-b border-[#ebebeb] dark:border-[#222222];
 		margin-bottom: 7px;
 	}
 
 	code[data-line-numbers] > span[data-line-number] {
-  	margin-bottom: -2px;
- 		margin-top: -2px;
 	}
 
 	code[data-line-numbers] > span[data-line-number]::before {
@@ -232,8 +231,8 @@ p a:hover {
   	/* Other styling */
   	display: inline-block;
   	width: 1rem;
-  	margin-right: 1.5rem;
-  	margin-left: 0.5rem;
+  	margin-right: 1rem;
+  	margin-left: 0.0rem;
   	text-align: right;
   	@apply text-[#aaaaaa] dark:text-[#404040];
 	}
@@ -241,7 +240,7 @@ p a:hover {
 	article hr {
 		margin-top: 10px;
 		margin-bottom: 10px;
-		@apply border-[#ebebeb] dark:border-[#333333];
+		@apply border-[#ebebeb] dark:border-[#222222];
 	}
 
 	ul:not(.contains-task-list) {
@@ -345,7 +344,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 
 		pre code * {
 			@apply text-xxxs !important;
-			line-height: 1.6rem;
+			line-height: 1.3rem;
 		}
   }
 }
@@ -378,7 +377,7 @@ a:hover {
   text-decoration: underline;
 }
 
-h2:hover .icon {
+/*h2:hover .icon {
   display: block;
   margin-left: 10px;
   background-image: url("$lib/assets/link.png");
@@ -390,7 +389,7 @@ h2:hover .icon {
   height: 16px;
   width: 16px;
   margin-right: 0px;
-}
+}*/
 
 /* ---------- ARTICLE STYLING ----------- */
 article ul, article ol {
@@ -449,19 +448,19 @@ article td {
 }
 
 article code:not(pre code) {
-	@apply border border-[#ebebeb] dark:border-[#333333];
-	@apply bg-white dark:bg-[#181818];
+	@apply border border-[#ebebeb] dark:border-[#222222];
+	@apply bg-white dark:bg-[#080808];
 	@apply !text-[#252525] dark:!text-[#fcfcfc];
-	padding: 3px;
-	padding-left: 7px;
-	padding-right: 7px;
-	border-radius: 7px;
+	padding: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
 }
 
 article p {
 	margin-top: 9px;
 	margin-bottom: 9px;
-	@apply sm:text-justify;
+	@apply lg:text-justify;
 }
 
 article img {
@@ -474,19 +473,22 @@ pre::-webkit-scrollbar {
     height: 8px;
     width: 10px;
 	border-radius: 9999px;
-    background: #ebebeb;
+	@apply bg-[#ebebeb] dark:bg-[#181818];
+ 	display: none;               /* Chrome, Safari, Edge */
+
 }
 
 /* Track */
 pre::-webkit-scrollbar-track {
-    background: #fbfbfb;
+	@apply bg-[#ebebeb] dark:bg-[#181818];
 	border-radius: 10px;
 }
 
 /* Handle */
 pre::-webkit-scrollbar-thumb {
-    background: #ebebeb;
+	@apply bg-[#ebebeb] dark:bg-[#181818];
 	border-radius: 16px;
+
 }
 
 /* Handle on hover */
