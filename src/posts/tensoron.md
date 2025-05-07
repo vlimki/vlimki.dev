@@ -12,7 +12,7 @@ I wanted to try to make an MNIST classifier from scratch in Rust---a good low-le
 
 I had recently purchased a 4060 Ti for machine learning purposes, so I decided that this time I would give myself very ambitious performance requirements for the project. This naturally meant that everything should be running on the GPU. Since I was writing this from scratch, I also did not want to use pre-made ML libraries so I could make my own abstractions instead.
 
-I started looking for a sufficiently capable linear algebra library that could also run operations on the GPU through CUDA---and to my surprise, one did not exist. Obviously the natural next step was to write one myself.
+I started looking for a sufficiently capable library that could also run operations on the GPU through CUDA---and to my surprise, one did not exist.$^{[1]}$ Obviously the natural next step was to write one myself.
 
 I had three approaches for building my own library:
 1. Use the entire `Rust-CUDA` toolkit to write kernels in Rust;
@@ -25,7 +25,7 @@ Rust was the trivial choice. However, I now had to choose between options 1 and 
 
 Say we have a regular addition kernel:
 
-```c
+```c showLineNumbers
 extern "C" __global__ void add(float* m1, float* m2, int n) {
 	int idx = blockIdx.x * blockDim.x + threadIdx.x;
 
@@ -80,3 +80,5 @@ I want to try to keep the library very GPU-local. This means that data should be
 
 **Updating soon...**
 
+## Footnotes
+[1]: It turned out that I was just bad at searching, [dfdx](https://github.com/coreylowman/dfdx) being a great counterexample to the statement I made. But we ball
