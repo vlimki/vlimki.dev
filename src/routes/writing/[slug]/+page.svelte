@@ -34,11 +34,9 @@
   <code class="font-normal">{formatDate(new Date(data.frontmatter.date))}</code>
   <div class="mx-2 text-[#aaaaaa]">•</div>
   <div class="flex flex-row items-center">
-    <code class="!text-sm">[</code>
     {#each data.frontmatter.tags as tag}
     <Tag text={tag} />
     {/each}
-    <code>]</code>
   </div>
   <div class="mx-2 text-[#aaaaaa]">•</div>
   <code>{data.readTime} min read</code>
