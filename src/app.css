@@ -38,7 +38,7 @@
 }
 html{
   font-family:"Charter";
-  @apply text-[#181818] dark:text-[#fcfcfc] bg-[#fefefe] dark:bg-[#030303];
+  @apply text-[#181818] dark:text-[#fcfcfc] bg-[#fcfcfc] dark:bg-[#030303];
 }
 code{
   font-family:"Noto Sans Mono";
@@ -105,7 +105,7 @@ input[type=checkbox]:checked:disabled+label::before{@apply bg-blue-400}
 /* ─── Inline code & line numbers ──────────────────────────────── */
 article code:not(pre code){
   @apply border border-[#ebebeb] dark:border-[#222] bg-white dark:bg-[#080808] text-[#252525] dark:text-[#fcfcfc] px-[5px] py-[1px] rounded;
-  @apply md:text-[13px] text-[11px];
+  @apply md:text-[13px] text-[11.5px];
 }
 code[data-line-numbers]>span[data-line-number]::before{
   content:attr(data-line-number);
