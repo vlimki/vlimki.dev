@@ -35,7 +35,7 @@
 <div class="max-w-screen overflow-x-hidden flex flex-col items-center justify-center dark:imgbg">
 	<div class="w-full md:w-2/3 xl:w-[47%] 2xl:w-[45%] h-full pb-10 px-7">
 		<nav class="flex flex-row w-full items-center justify-between mt-5 text-md">
-				<a class="md:block hidden" href="/"><b class="md:block hidden m-0 p-0"><code class="!text-[#444444] dark:!text-[#cccccc] !text-[14px] hidden sm:block">vlimki.dev</code></b></a>
+				<a class="sm:block hidden" href="/"><b class="sm:block hidden m-0 p-0"><code class="!text-[#444444] dark:!text-[#cccccc] !text-[13px] hidden sm:block">vlimki.dev</code></b></a>
 			<div class="flex flex-row items-center">
 				<a href="/"><code class={path == "/" ? "font-semibold text-[#444444] dark:text-[#cccccc]" : ""}>Home</code></a>
 				<p class="!my-0 text-xxs text-[#555555]">•</p>

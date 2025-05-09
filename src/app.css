@@ -44,7 +44,8 @@ code{
   font-family:"Noto Sans Mono";
   font-weight:500;
 }
-p,li{@apply text-sm md:text-base my-1}
+p,li,strong{@apply text-sm md:text-base my-1}
+strong{@apply text-xs}
 a{@apply text-[#0471d7] dark:text-[#0b9ddd]}
 a:hover{text-decoration:underline;cursor:pointer}
 del{@apply text-[#999] dark:text-[#222]}
@@ -58,7 +59,7 @@ nav a:hover{@apply underline cursor-pointer}
 
 /* ─── Blocks ──────────────────────────────────────────────────── */
 pre{
-  @apply border border-[#ebebeb] dark:border-[#222] rounded bg-[#fff] dark:bg-[#080808] p-[10px] mt-[10px] overflow-scroll no-scrollbar;
+  @apply border border-[#ebebeb] dark:border-[#222] rounded-lg bg-[#fff] dark:bg-[#080808] p-[10px] mt-[10px] overflow-scroll no-scrollbar;
 }
 pre code{@apply flex flex-col}
 pre code * { @apply md:text-[13px] text-[11.5px] }
@@ -129,8 +130,13 @@ pre::-webkit-scrollbar-thumb:hover{background:#0471d7}
 /* ─── KaTeX ───────────────────────────────────────────────────── */
 .katex-display{margin:.5em text-[99%]}
 span {
-		@apply text-[98%] md:text-[99%];
+		@apply text-[98%] md:text-[97%];
 }
+
+span:not(.katex-display span) {
+		@apply text-[#181818] dark:text-[#fcfcfc];
+		@apply text-[100%] md:text-[100%];
+	}
 .math {
 	scrollbar-width: none;
 	@apply my-[-5px]
