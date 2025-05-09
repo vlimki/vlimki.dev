@@ -21,7 +21,7 @@ I had three approaches for building my own library:
 
 Rust was the trivial choice. However, I now had to choose between options 1 and 2. The problem was that I barely knew how to write CUDA kernels. I had only made extremely basic kernels in the past, so I realized that maybe I can teach myself some CUDA C/C++ and kernel optimization on the way. This would match perfectly with my ambitious performance goals. So option 2 it was.
 
-## Writing a Tensor Computation Library
+## Part 1: Writing a Tensor Computation Library
 
 Say we have a regular addition kernel:
 
@@ -165,6 +165,27 @@ fn get_type<T>() -> &'static str {
 Let `t = get_type<T>()`. Then in our `launch!` macro we simply invoke the kernel `{kernel}_{t}`.
 
 ### Tensor Views
+
+We want to give the user a flexible way to analyze tensors on the CPU and perform operations like indexing and slicing. We also want these operations to not be heavy. For this we define **tensor views**. Views store a reference to data in a tensor, and tensor views should merely give methods for interpreting that data without mutating it. This makes chaining operations easy and efficient. Let's define `TensorView<'a, T, R>`.
+
+```rust showLineNumbers
+pub struct TensorView<'a, T, const R: usize> {
+    shape: [usize; R],
+    data: &'a [T],
+    strides: [usize; R],
+}
+```
+
+This allows us to do operations like:
+```rust
+let t = tensor!([2, 2][1.0, 2.0, 3.0, 4.0]);
+
+t.view().at([0, 1]).value() // 2.0
+```
+for indexing a matrix.
+
+## Part 2: Building an MNIST Classifier
+
 
 **Updating soon...**
 
