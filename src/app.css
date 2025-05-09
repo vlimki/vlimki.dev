@@ -61,7 +61,7 @@ pre{
   @apply border border-[#ebebeb] dark:border-[#222] rounded bg-[#fff] dark:bg-[#080808] p-[10px] mt-[10px] overflow-scroll no-scrollbar;
 }
 pre code{@apply flex flex-col}
-pre code * { @apply md:text-[13px] text-[11px] }
+pre code * { @apply md:text-[13px] text-[11.5px] }
 pre[data-code-title]::before{
   content:attr(data-code-title);
   font-family:"Charter";
@@ -116,7 +116,7 @@ code[data-line-numbers]>span[data-line-number]::before{
   @apply text-[#aaa] dark:text-[#404040];
 }
 
-pre code {@apply leading-4 md:leading-6}
+pre code {@apply leading-5 md:leading-6}
 code { @apply text-xxxs text-[#777777] }
 
 /* ─── Scrollbars ──────────────────────────────────────────────── */
