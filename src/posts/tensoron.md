@@ -5,8 +5,13 @@ published: true
 post: true
 date: '2025-05-07'
 slug: 'tensoron'
-tags: ['ml', 'math']
+tags: ['ml', 'cuda']
 ---
+
+<script>
+    import FooterText from '$lib/components/FooterText.svelte';
+    import PageBreak from '$lib/components/PageBreak.svelte';
+</script>
 
 I wanted to try to make an MNIST classifier from scratch in Rust---a good low-level project to learn about ML basics and the operation of neural networks under the hood. This is something I've experimented with before in Haskell, but with moderate success.
 
@@ -184,10 +189,187 @@ t.view().at([0, 1]).value() // 2.0
 ```
 for indexing a matrix.
 
+It is now time to see what the library can do in a real use case. Doing so is most often totally worth the effort; I for example ended up making a lot of API changes because I realized the library was a bit clumsy to use---lots of cloning and redundant typing. This for example made me change the `device_ptr` field of a tensor to an `Arc` to allow for easy cloning. An `Arc` actually works great here, since the device pointer doesn't need to be internally mutated.
+
 ## Part 2: Building an MNIST Classifier
 
+We shall not get into the inner workings of neural networks too comprehensively here; the MNIST classifier shall function as merely a proof-of-concept for the tensor library. In building the network, I will be taking a lot of inspiration from [mlp.hs](https://github.com/vlimki/mlp.hs), the project I was referring to at the start of the article. 
+
+Let us start with type definitions. A network is defined simply as an array of `Layer`s, and we may define `Layer` as follows:
+
+```rust showLineNumbers
+pub type R = f32;
+
+pub struct Layer {
+    weights: Matrix<R>,
+    biases:  Matrix<R>,
+    activation: Box<dyn Activation>,
+    sz: usize,
+}
+```
+
+<div class="mx-3"/>
+
+### Data Propagation
+
+Recall that in forward propagation we simply do the following operation on the $l$th layer:
+$$
+a^{[l]} = g\!\bigl(W^{[l]}a^{[l-1]} + b^{[l]}\bigr) \quad (l = 1,2,\dots,N)
+$$
+
+where $N$ is the number of layers in our network and $a^{[0]}$ is the input data. We shall also denote by $z^{[l]}$ the linear activation of layer $l$, i.e. the expression upon which the activation function $g$ is called:
+$$
+z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} \quad (l = 1,2,\dots,N)
+$$
+
+We will need to store both the pre- and post-activation values for backpropagation. We we may formulate a function for computing them as follows:
+
+```rust showLineNumbers
+pub fn forward(&mut self, x: &Matrix<R>) -> (Vec<Matrix<R>>, Vec<Matrix<R>>) {
+    // Initialize a[0], z[0] to the input vector
+    let mut acc = x.clone();
+    let mut z_vec = vec![acc.clone()];
+    let mut a_vec = z_vec.clone();
+    for layer in self.layers.iter() {
+        let z = &(&layer.weights * &acc) + &layer.biases;
+        let a = layer.activation.activate(&z);
+        acc = a;
+        z_vec.push(z);
+        a_vec.push(acc.clone());
+    }
+    (zs, a_vec)
+}
+```
+
+We must now propagate the data backwards using the chain rule. For this we perform backpropagation.
+
+We first calculate the gradient of the output layer:
+
+$$
+\delta^{[N]} = (\hat y - y)\odot g'(z^{[N]})
+$$
+
+where $\hat y - y$ denotes the difference between the target output and the predicted output, and $\odot$ stands for componentwise multiplication.
+
+
+Then we calculate the gradients for the $l$th layer by application of the chain rule:
+$$
+\delta^{[l-1]} = (W^{[l]})^\top\delta^{[l]}\odot g'(z^{[l-1]}) \quad (l = 1,2,\dots,N)
+$$
+
+
+We then update the network parameters for every layer $l$:
+$$
+W^{[l]} \leftarrow W^{[l]} - \eta\,\delta^{[l]}(a^{[l-1]})^\top,\quad
+
+b^{[l]} \leftarrow b^{[l]} - \eta\,\delta^{[l]}
+$$
+
+where $\eta$ is the learning rate, a small positive real number.
+
+```rust showLineNumbers
+fn backprop(
+    &mut self,
+    (zs, outputs): (Vec<Matrix<R>>, Vec<Matrix<R>>), 
+    target: Matrix<R>,
+) -> (Vec<Matrix<R>>, Vec<Matrix<R>>) {
+    let mut delta = outputs.last().unwrap() - &target;
+    delta = delta.gpu_cmul(
+        &self
+            .layers
+            .last()
+            .unwrap()
+            .activation
+            .derivative(zs.last().unwrap()),
+    );
+
+    let mut grad_w = Vec::new();
+    let mut grad_b = Vec::new();
+
+    for l in (0..self.layers.len()).rev() {
+        let a_prev = &outputs[l];
+        // weight gradient: delta · a_prev^T
+        let dw = &delta * &a_prev.transpose();
+        grad_w.push(dw);
+        grad_b.push(delta.clone());
+        if l > 0 {
+            let w = &self.layers[l].weights;
+            let prev = &w.transpose() * &delta;
+            delta = prev.gpu_cmul(&self.layers[l].activation.derivative(&zs[l]));
+        }
+    }
+
+    grad_w.reverse();
+    grad_b.reverse();
+    (grad_w, grad_b)
+}
+```
+
+In batch gradient descent, we update the parameters by the average of the gradients for each sample in the dataset. We simply loop over the dataset, calculate the gradients, store them, calculate their average for every layer, and update the parameters of each layer.
+
+We are now ready to solve XOR. The XOR dataset is defined as follows:
+
+$$
+\mathbf{X} = \{\begin{bmatrix}0 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1\end{bmatrix}, \begin{bmatrix}1 \\ 0\end{bmatrix}, \begin{bmatrix}1 \\ 1\end{bmatrix}\}
+$$
+
+The XOR gate produces the outputs $0, 1, 1, 0$ for the inputs respectively. Hence our set of outputs looks like this:
+
+$$
+\mathbf{Y} = \{0, 1, 1, 0\}.
+$$
+
+We can define these with the `tensor!` macro in Tensoron.
+
+```rust showLineNumbers
+let xor_input = tensor!([4,2][
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1
+]).map(|x| *x as f32);
+
+let xor_output: Matrix<R> = tensor!([4,1][
+    0.0,
+    1.0,
+    1.0,
+    0.0
+]);
+```
+
+Now we only have to initialize the network, convert the dataset to column vectors, and call
+```rust
+net.train(&i, &o, 500, lr);
+```
+
+We shall evaluate the network now:
+```rust showLineNumbers
+for input in input_vec {
+    let out = net.predict(&input).cpu();
+    println!("Prediction: {:#?}", out);
+}
+```
+
+`cargo r` now yields:
+```rust
+Prediction: [1, 1][0.0065198555]
+Prediction: [1, 1][0.9847574]
+Prediction: [1, 1][0.98524183]
+Prediction: [1, 1][0.02257292]
+```
+
+Learning is definitely happening. Now we simply replace the XOR dataset with the MNIST dataset and update the final layer to use softmax activation.
+
+<PageBreak />
+
+I will later be writing a third section to this article on optimization---the best part in engineering---and benchmarking to give concrete results. Such a section will most likely contain optimizing the network structure, CUDA kernels, Rust code, and more.
+
+## Part 3: Optimization
 
 **Updating soon...**
+
+Notes:
+- Read [Learning CUDA by optimizing softmax: A worklog](https://maharshi.bearblog.dev/optimizing-softmax-cuda/)
 
 ## Footnotes
 [1]: It turned out that I was just bad at searching, [dfdx](https://github.com/coreylowman/dfdx) being a great counterexample to the statement I made. But we ball

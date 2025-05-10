@@ -61,7 +61,7 @@ nav a:hover{@apply underline cursor-pointer}
 pre{
   @apply border border-[#ebebeb] dark:border-[#222] rounded-lg bg-[#fff] dark:bg-[#080808] p-[10px] mt-[10px] overflow-scroll no-scrollbar;
 }
-pre code{@apply flex flex-col}
+pre code{@apply flex flex-col dark:text-[#fefefe] text-[#181818]}
 pre code * { @apply md:text-[13px] text-[11.5px] }
 pre[data-code-title]::before{
   content:attr(data-code-title);
@@ -153,6 +153,8 @@ article>*{@apply w-full}
 article table,article div{@apply block max-w-full overflow-x-scroll mt-[10px]}
 article p,article li{@apply my-[9px] lg:text-justify}
 article img{@apply border border-[#ebebeb] rounded-[10px]}
+article hr{@apply my-5 dark:!bg-[#333333]}
+article hr{background-color: red; height: 10px}
 
 /* ─── Font faces ──────────────────────────────────────────────── */
 @font-face{
