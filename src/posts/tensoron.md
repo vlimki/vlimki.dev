@@ -197,9 +197,7 @@ We shall not get into the inner workings of neural networks too comprehensively 
 
 Let us start with type definitions. A network is defined simply as an array of `Layer`s, and we may define `Layer` as follows:
 
-```rust showLineNumbers
-pub type R = f32;
-
+```rust
 pub struct Layer {
     weights: Matrix<R>,
     biases:  Matrix<R>,
@@ -208,7 +206,16 @@ pub struct Layer {
 }
 ```
 
-<div class="mx-3"/>
+where `type R = f32`. `Activation` is just a trait for now:
+
+```rust
+pub trait Activation {
+    fn activate(&self, m: Matrix<R>) -> Matrix<R>;
+    fn derivative(&self, m: Matrix<R>) -> Matrix<R>;
+}
+```
+
+This should probably be changed to an enum though.
 
 ### Data Propagation
 

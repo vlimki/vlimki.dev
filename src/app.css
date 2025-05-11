@@ -51,7 +51,7 @@ a:hover{text-decoration:underline;cursor:pointer}
 del{@apply text-[#999] dark:text-[#222]}
 
 /* ─── Headings & nav ──────────────────────────────────────────── */
-h1{@apply text-xl md:text-xl leading-none}
+h1{@apply text-xl md:text-xl leading-6}
 h2{@apply text-base md:text-lg flex items-center mt-3}
 h3{@apply text-sm font-bold md:text-[16px]}
 nav a{@apply mx-[10px] md:mx-[15px] text-[#666] !important}
