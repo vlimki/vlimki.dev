@@ -117,7 +117,7 @@ code[data-line-numbers]>span[data-line-number]::before{
   @apply text-[#aaa] dark:text-[#404040];
 }
 
-pre code {@apply leading-5 md:leading-6}
+pre code {@apply leading-[1.5] md:leading-[1.7]}
 code { @apply text-xxxs text-[#777777] }
 
 /* ─── Scrollbars ──────────────────────────────────────────────── */
@@ -128,7 +128,6 @@ pre::-webkit-scrollbar-thumb:hover{background:#0471d7}
 .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
 
 /* ─── KaTeX ───────────────────────────────────────────────────── */
-.katex-display{margin:.5em text-[99%]}
 span {
 		@apply text-[98%] md:text-[97%];
 }
