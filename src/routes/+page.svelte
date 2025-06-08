@@ -45,7 +45,7 @@
 		<h2 class="mb-3">Projects</h2>
 		<ul class="grid sm:grid-cols-2">
 			<li>
-				<Project title="tensoron - CUDA-Accelerated Linear Algebra in Rust" description="A CUDA-accelerated linear algebra library for Rust. Planning to use it to build an MNIST classifier eventually." github="https://github.com/vlimki/tensoron" />
+				<Project title="tensoron - CUDA-Accelerated Tensor Computation with Rust" description="A CUDA-accelerated linear algebra library for Rust. Planning to use it to build an MNIST classifier eventually." github="https://github.com/vlimki/tensoron" />
 			</li>
 			<li>
 				<Project title="hdax - Haskell Data Analysis eXtension" description="A simple data analysis library for tabular data in Haskell." github="https://github.com/vlimki/hdax" />
