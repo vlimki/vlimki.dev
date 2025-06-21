@@ -1,8 +1,8 @@
 ---
 title: "Notes on Shilov's Linear Algebra"
 description: 'Personal notes converted from LaTeX.'
-published: true
-post: true
+published: false
+post: false
 date: '2025-03-17'
 slug: 'notes-shilov'
 tags: ['math']

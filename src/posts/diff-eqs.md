@@ -1,8 +1,8 @@
 ---
 title: "Deriving Formulas for Differential Equations"
 description: "Originally derived in Apostol's book. Found it cool so I wrote it down."
-published: true
-post: true
+published: false
+post: false
 date: '2025-04-26'
 slug: 'diff-eqs'
 tags: ['math']

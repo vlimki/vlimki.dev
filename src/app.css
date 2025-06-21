@@ -44,6 +44,9 @@ code{
   font-family:"Noto Sans Mono";
   font-weight:500;
 }
+p:not(article p) {
+	@apply my-1;
+}
 p,li,strong{@apply text-sm md:text-base my-1}
 strong{@apply text-xs}
 a{@apply text-[#0471d7] dark:text-[#0b9ddd]}
