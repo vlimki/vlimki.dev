@@ -67,9 +67,6 @@
 		<li>
 			<a target="_blank" rel="noreferrer" href="https://youtu.be/9qlqVEUgdgo">Alain Connes - How a Mathematician Works</a>
 		</li>
-		<li>
-			<a target="_blank" rel="noreferrer" href="https://mml-book.com">Mathematics for Machine Learning</a>
-		</li>
 	</ul>
   </div>
 </div>
